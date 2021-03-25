@@ -1,0 +1,279 @@
+[
+    {
+      "label": "Total Tiros a puerta",
+      "id": 1002035667,
+      "betplay_id": 1002035667,
+      "name": "totalShotsOnTarget",
+      "xbet": {
+        "marketId": "tiros-entre-los-tres-palos",
+        "G": 17
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Número total de tiros",
+      "id": 1004544389,
+      "betplay_id": 1004544389,
+      "name": "totalShots",
+      "xbet": {
+        "marketId": "tiros",
+        "G": 17
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Número total de tiros por parte del local",
+      "id": 1004544390,
+      "betplay_id": 1004544390,
+      "name": "totalShotsHome",
+      "xbet": {
+        "marketId": "tiros",
+        "G": 15
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Número total de tiros por parte del visitante",
+      "id": 1004544391,
+      "betplay_id": 1004544391,
+      "name": "totalShotsAway",
+      "xbet": {
+        "marketId": "tiros",
+        "G": 62
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Número total de tiros a puerta por parte del local",
+      "id": 1002035672,
+      "betplay_id": 1002035672,
+      "name": "totalShotsOnTargetHome",
+      "xbet": {
+        "marketId": "tiros-entre-los-tres-palos",
+        "G": 15
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Número total de tiros a puerta por parte del visitante",
+      "id": 1002035671,
+      "betplay_id": 1002035671,
+      "name": "totalShotsOnTargetAway",
+      "xbet": {
+        "marketId": "tiros-entre-los-tres-palos",
+        "G": 62
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de fueras de juego",
+      "id": 1001159628,
+      "betplay_id": 1001159628,
+      "name": "totalOffsides",
+      "xbet": {
+        "marketId": "fueras-de-juego",
+        "G": 17
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de faltas cometidas",
+      "id": 1001159913,
+      "betplay_id": 1001159913,
+      "name": "totalFoulsCommitted",
+      "xbet": {
+        "marketId": "faltas",
+        "G": 17
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total Cornes",
+      "id": 1001159897,
+      "betplay_id": 1001159897,
+      "name": "totalCorners",
+      "xbet": {
+        "marketId": "saques-de-esquina",
+        "G": 17
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total Cornes Local",
+      "id": 1001159598,
+      "betplay_id": 1001159598,
+      "name": "totalCornersHome",
+      "xbet": {
+        "marketId": "saques-de-esquina",
+        "G": 15
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total Cornes Visitante",
+      "id": 1001159697,
+      "betplay_id": 1001159697,
+      "name": "totalCornersAway",
+      "xbet": {
+        "marketId": "saques-de-esquina",
+        "G": 62
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "1X2",
+      "id": 1001159858,
+      "betplay": {
+        "id": 1001159858
+      },
+      "name": "winDrawWin",
+      "xbet": {
+        "marketId": "main",
+        "G": 1
+      },
+      "type": "OBJECT",
+      "options": {
+        "OT_1": {
+          "betplay": {
+            "type": "OT_ONE"
+          },
+          "xbet": {
+            "T": 1
+          },
+          "opposite":{
+            "label": "2X",
+            "route": "doubleChance.OT_2X"
+          }
+        },
+        "OT_X": {
+          "betplay": {
+            "type": "OT_CROSS"
+          },
+          "xbet": {
+            "T": 2
+          },
+          "opposite":{
+            "label": "12",
+            "route": "doubleChance.OT_12"
+          }
+        },
+        "OT_2": {
+          "betplay": {
+            "type": "OT_TWO"
+          },
+          "xbet": {
+            "T": 3
+          },
+          "opposite":{
+            "label": "1X",
+            "route": "doubleChance.OT_1X"
+          }
+        }
+      },
+      "enable": true
+    },
+    {
+      "label": "Doble oportunidad",
+      "id": 1001159922,
+      "betplay": {
+        "id": 1001159922
+      },
+      "name": "doubleChance",
+      "xbet": {
+        "marketId": "main",
+        "G": 8
+      },
+      "type": "OBJECT",
+      "options": {
+        "OT_1X": {
+          "betplay": {
+            "type": "OT_ONE_OR_CROSS"
+          },
+          "xbet": {
+            "T": 4
+          },
+          "opposite":{
+            "label": "2",
+            "route": "doubleChance.OT_2"
+          }
+        },
+        "OT_12": {
+          "betplay": {
+            "type": "OT_ONE_OR_TWO"
+          },
+          "xbet": {
+            "T": 5
+          },
+          "opposite":{
+            "label": "X",
+            "route": "doubleChance.OT_X"
+          }
+        },
+        "OT_2X": {
+          "betplay": {
+            "type": "OT_CROSS_OR_TWO"
+          },
+          "xbet": {
+            "T": 6
+          },
+          "opposite":{
+            "label": "1",
+            "route": "doubleChance.OT_1"
+          }
+        }
+      },
+      "enable": true
+    },
+    {
+      "label": "Ambos Equipos Marcan",
+      "id": 1001642858,
+      "betplay": {
+        "id": 1001642858
+      },
+      "name": "bothTeamsToScore",
+      "xbet": {
+        "marketId": "main",
+        "G": 19
+      },
+      "type": "OBJECT",
+      "options": {
+        "YES": {
+          "betplay": {
+            "type": "OT_YES"
+          },
+          "xbet": {
+            "T": 180
+          },
+          "opposite":{
+            "label": "NO",
+            "route": "bothTeamsToScore.NO"
+          }
+        },
+        "NO": {
+          "betplay": {
+            "type": "OT_NO"
+          },
+          "xbet": {
+            "T": 181
+          },
+          "opposite":{
+            "label": "YES",
+            "route": "bothTeamsToScore.YES"
+          }
+        }
+      },
+      "enable": true
+    }
+  ]
+  
