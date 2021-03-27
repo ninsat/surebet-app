@@ -145,6 +145,7 @@
       "type": "OBJECT",
       "options": {
         "OT_1": {
+          "label": "1",
           "betplay": {
             "type": "OT_ONE"
           },
@@ -152,11 +153,13 @@
             "T": 1
           },
           "opposite":{
+            "market": "Doble oportunidad",
             "label": "2X",
             "route": "doubleChance.OT_2X"
           }
         },
         "OT_X": {
+          "label": "X",
           "betplay": {
             "type": "OT_CROSS"
           },
@@ -164,11 +167,13 @@
             "T": 2
           },
           "opposite":{
+            "market": "Doble oportunidad",
             "label": "12",
             "route": "doubleChance.OT_12"
           }
         },
         "OT_2": {
+          "label": "2",
           "betplay": {
             "type": "OT_TWO"
           },
@@ -176,6 +181,7 @@
             "T": 3
           },
           "opposite":{
+            "market": "Doble oportunidad",
             "label": "1X",
             "route": "doubleChance.OT_1X"
           }
@@ -197,6 +203,7 @@
       "type": "OBJECT",
       "options": {
         "OT_1X": {
+          "label": "1X",
           "betplay": {
             "type": "OT_ONE_OR_CROSS"
           },
@@ -204,11 +211,13 @@
             "T": 4
           },
           "opposite":{
+            "market": "1X2",
             "label": "2",
             "route": "doubleChance.OT_2"
           }
         },
         "OT_12": {
+          "label": "12",
           "betplay": {
             "type": "OT_ONE_OR_TWO"
           },
@@ -216,11 +225,13 @@
             "T": 5
           },
           "opposite":{
+            "market": "1X2",
             "label": "X",
             "route": "doubleChance.OT_X"
           }
         },
         "OT_2X": {
+          "label": "2X",
           "betplay": {
             "type": "OT_CROSS_OR_TWO"
           },
@@ -228,6 +239,7 @@
             "T": 6
           },
           "opposite":{
+            "market": "1X2",
             "label": "1",
             "route": "doubleChance.OT_1"
           }
@@ -249,6 +261,7 @@
       "type": "OBJECT",
       "options": {
         "YES": {
+          "label": "SI",
           "betplay": {
             "type": "OT_YES"
           },
@@ -256,11 +269,13 @@
             "T": 180
           },
           "opposite":{
+            "market": "Ambos Equipos Marcan",
             "label": "NO",
             "route": "bothTeamsToScore.NO"
           }
         },
         "NO": {
+          "label": "NO",
           "betplay": {
             "type": "OT_NO"
           },
@@ -268,7 +283,8 @@
             "T": 181
           },
           "opposite":{
-            "label": "YES",
+            "market": "Ambos Equipos Marcan",
+            "label": "SI",
             "route": "bothTeamsToScore.YES"
           }
         }

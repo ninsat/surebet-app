@@ -96,13 +96,20 @@ const getBetOffersBetPlay = async (id) => {
     };
   
     const res = await fetch(
-      "https://us1-api.aws.kambicdn.com/offering/v2018/betplay/listView/football.json?lang=es_ES&market=CO&client_id=2&channel_id=1&ncid=1615994622222&useCombined=true",
+    `https://us1-api.aws.kambicdn.com/offering/v2018/betplay/listView/football.json?lang=es_ES&market=CO&client_id=2&channel_id=1&ncid=${new Date().getTime()}&useCombined=true`,
       requestOptions
     );
   
     const data = await res.json();
   
-    return data.events;
+    return data.events.map(match => ({
+      ...match,
+      id: match.event.id,
+      team1: match.event.homeName,
+      team2: match.event.awayName ? match.event.awayName : "",
+      eventName: match.event.name,
+      date_start: new Date(match.event.start).getTime()
+    }));
   };
   
   const formatBetOffer = (match, market) => {

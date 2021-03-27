@@ -9,6 +9,7 @@ const isSurebet = (c1, c2) => {
 };
 
 const compareFunction = (match, market, option1, option2) => {
+  const resultSurebets = []
   const companies = Object.keys(match);
   companies.forEach((company) => {
     const marketList = match[company].markets[market];
@@ -19,13 +20,16 @@ const compareFunction = (match, market, option1, option2) => {
         if (actualOdds === undefined) return console.log("--- no surebet ---");
         const under = isSurebet(option[option1].v, actualOdds[option2].v);
         const over = isSurebet(option[option2].v, actualOdds[option1].v);
-        if (under || over) {
+        if (under) {
+          
           return console.log(
             "HAY UNA FUCKING SUREBET!!!!!!!!",
-            match.betPlay.event.name,
-            option.type,
-            match
           );
+        }else if(over){
+          return console.log(
+            "HAY UNA FUCKING SUREBET!!!!!!!!",
+          );
+
         } else {
           console.log("--- no surebet ---");
         }
@@ -99,6 +103,7 @@ const compareMatches = (matchGroup) => {
 };
 
 const compareMatches2 = (matchGroup, markets = []) => {
+  const result = [];
   const companies = Object.keys(matchGroup);
   companies.forEach((company) => {
     const companyMatchMarket = matchGroup[company].markets;
@@ -130,17 +135,71 @@ const compareMatches2 = (matchGroup, markets = []) => {
               marketOption.under.v,
               otherCompanyOption.over.v
             );
-            if (op1 || op2) {
+            if (op1) {
+              result.push({
+                profit: 0.3,
+                date: new Date(),
+                options:[
+                  {
+                    comapanyName: company,
+                    market: marketObject.label,
+                    odds: marketOption.over.v,
+                    type: marketOption.type,
+                    oddsType: "Más de",
+                    eventName: matchGroup[company].eventName,
+                    date_start: matchGroup[company].date_start
+                  },
+                  {
+                    comapanyName: otherCompany,
+                    market: marketObject.label,
+                    odds: otherCompanyOption.under.v,
+                    type: otherCompanyOption.type,
+                    oddsType: "Menos de",
+                    eventName: matchGroup[otherCompany].eventName,
+                    date_start: matchGroup[otherCompany].date_start
+                  }
+                ]
+              })
               console.log(
                 "HAY SURBET",
                 matchGroup.betPlay.event.name,
                 mathcMarket
               );
-              return;
-            } else {
-              console.log("-- no surebet --");
-              return;
             }
+            
+            if(op2){
+              result.push({
+                profit: 0.3,
+                date: new Date(),
+                options:[
+                  {
+                    comapanyName: company,
+                    market: marketObject.label,
+                    odds: marketOption.under.v,
+                    oddsType: "Menos de",
+                    type: marketOption.type,
+                    eventName: matchGroup[company].eventName,
+                    date_start: matchGroup[company].date_start
+                  },
+                  {
+                    comapanyName: otherCompany,
+                    market: marketObject.label,
+                    odds: otherCompanyOption.over.v,
+                    type: otherCompanyOption.type,
+                    oddsType: "Más de",
+                    eventName: matchGroup[otherCompany].eventName,
+                    date_start: matchGroup[otherCompany].date_start
+                  }
+                ]
+              })
+              console.log(
+                "HAY SURBET",
+                matchGroup.betPlay.event.name,
+                mathcMarket
+              );
+            } 
+            //console.log("-- no surebet --");
+            return;
           });
         });
       } else if (marketObject.type === "OBJECT") {
@@ -158,6 +217,30 @@ const compareMatches2 = (matchGroup, markets = []) => {
             ).v;
             const op = isSurebet(odds1, odds2);
             if (op) {
+              result.push({
+                profit: 0.3,
+                date: new Date(),
+                options:[
+                  {
+                    comapanyName: company,
+                    market: marketObject.label,
+                    odds: odds1,
+                    oddsType: marketObject.options[marketOption].label,
+                    type: "",
+                    eventName: matchGroup[company].eventName,
+                    date_start: matchGroup[company].date_start
+                  },
+                  {
+                    comapanyName: otherCompany,
+                    market: marketObject.options[marketOption].opposite.market,
+                    odds: odds2,
+                    type: "",
+                    oddsType: marketObject.options[marketOption].opposite.label,
+                    eventName: matchGroup[otherCompany].eventName,
+                    date_start: matchGroup[otherCompany].date_start
+                  }
+                ]
+              })
               return console.log(
                 "HAY SUREBET!",
                 matchGroup,
@@ -171,6 +254,13 @@ const compareMatches2 = (matchGroup, markets = []) => {
       }
     });
   });
+
+  if(result.length){
+    return result;
+  }
+
+  return null;
+
 };
 
 const compareOdds = (match) => {

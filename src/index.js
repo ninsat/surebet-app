@@ -80,7 +80,7 @@ const testXbet = async () => {
     //Comparo todos los mercados para ver si se encuentra una surbet en alguno de los partidos
     //Hay que mostrar el partido en que se encuentra, el mercado, y que cuota debo seleccionar
     //para cada casa de apuestas
-    result.forEach((matchGroup) => surebets.compareMatches2(matchGroup, markets));
-    console.log("FIN");
+    const allSurebets = result.map((matchGroup) => surebets.compareMatches2(matchGroup, markets));
+    console.log(allSurebets);
   };
   

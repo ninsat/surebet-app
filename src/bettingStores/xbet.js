@@ -63,6 +63,7 @@ const getEvents1Xbet = async () => {
       id: match.CI,
       team1: match.O1,
       team2: match.O2 ? match.O2 : "",
+      eventName: match.O1 + " - " + match.O2,
       date_start: match.S * 1000
     }));
   };
@@ -119,6 +120,9 @@ const getEvents1Xbet = async () => {
       };
     }
 
+    if(!mainMarket.SG){
+      mainMarket.SG = []
+    }
     //mapeo el mercado para que me quden los ids de los mercdos con los nombres
     //para poder identificarlos
     //ejemplo tiros-entre-los-tres-palos
