@@ -8,6 +8,14 @@ const isSurebet = (c1, c2) => {
   return p1 + p2 < 1;
 };
 
+const getProfit = (c1,c2)=> {
+  const p1 = (1/c1) 
+  const p2 = (1/c2) 
+  const totalP = p1 + p2
+
+  return (100/totalP) - 100
+}
+
 const compareFunction = (match, market, option1, option2) => {
   const resultSurebets = []
   const companies = Object.keys(match);
@@ -137,7 +145,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
             );
             if (op1) {
               result.push({
-                profit: 0.3,
+                profit: getProfit(marketOption.over.v, otherCompanyOption.under.v),
                 date: new Date(),
                 options:[
                   {
@@ -147,6 +155,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                     type: marketOption.type,
                     oddsType: "Más de",
                     eventName: matchGroup[company].eventName,
+                    sport: matchGroup[company].sport,
                     date_start: matchGroup[company].date_start
                   },
                   {
@@ -156,6 +165,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                     type: otherCompanyOption.type,
                     oddsType: "Menos de",
                     eventName: matchGroup[otherCompany].eventName,
+                    sport: matchGroup[otherCompany].sport,
                     date_start: matchGroup[otherCompany].date_start
                   }
                 ]
@@ -169,7 +179,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
             
             if(op2){
               result.push({
-                profit: 0.3,
+                profit: getProfit(marketOption.under.v, otherCompanyOption.over.v),
                 date: new Date(),
                 options:[
                   {
@@ -218,7 +228,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
             const op = isSurebet(odds1, odds2);
             if (op) {
               result.push({
-                profit: 0.3,
+                profit: getProfit(odds1, odds2),
                 date: new Date(),
                 options:[
                   {
@@ -228,7 +238,8 @@ const compareMatches2 = (matchGroup, markets = []) => {
                     oddsType: marketObject.options[marketOption].label,
                     type: "",
                     eventName: matchGroup[company].eventName,
-                    date_start: matchGroup[company].date_start
+                    date_start: matchGroup[company].date_start,
+                    sport: matchGroup[company].sport,
                   },
                   {
                     comapanyName: otherCompany,
@@ -237,6 +248,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                     type: "",
                     oddsType: marketObject.options[marketOption].opposite.label,
                     eventName: matchGroup[otherCompany].eventName,
+                    sport: matchGroup[otherCompany].sport,
                     date_start: matchGroup[otherCompany].date_start
                   }
                 ]
@@ -272,5 +284,6 @@ export default {
   isSurebet,
   compareOdds,
   compareMatches,
-  compareMatches2
+  compareMatches2,
+  getProfit
 };

@@ -108,7 +108,8 @@ const getBetOffersBetPlay = async (id) => {
       team1: match.event.homeName,
       team2: match.event.awayName ? match.event.awayName : "",
       eventName: match.event.name,
-      date_start: new Date(match.event.start).getTime()
+      date_start: new Date(match.event.start).getTime(),
+      sport: match.event.sport
     }));
   };
   

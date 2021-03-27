@@ -64,7 +64,8 @@ const getEvents1Xbet = async () => {
       team1: match.O1,
       team2: match.O2 ? match.O2 : "",
       eventName: match.O1 + " - " + match.O2,
-      date_start: match.S * 1000
+      date_start: match.S * 1000,
+      sport: match.SE
     }));
   };
   
