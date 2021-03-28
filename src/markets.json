@@ -132,6 +132,180 @@
       "enable": true
     },
     {
+      "label": "Total de Goles",
+      "id": 1001159926,
+      "betplay_id": 1001159926,
+      "name": "totalGoals",
+      "xbet": {
+        "marketId": "main",
+        "G": 17
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de Goles Local",
+      "id": 1001159967,
+      "betplay_id": 1001159967,
+      "name": "totalGoalsHome",
+      "xbet": {
+        "marketId": "main",
+        "G": 15
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de Goles Visitante",
+      "id": 1001159633,
+      "betplay_id": 1001159633,
+      "name": "totalGoalsAway",
+      "xbet": {
+        "marketId": "main",
+        "G": 62
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total asiático",
+      "id": 1002244276,
+      "betplay_id": 1002244276,
+      "name": "asianTotal",
+      "xbet": {
+        "marketId": "main",
+        "G": 99
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de tarjetas",
+      "id": 1001159529,
+      "betplay_id": 1001159529,
+      "name": "totalCards",
+      "xbet": {
+        "marketId": "tarjetas",
+        "G": 17
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de tarjetas Local",
+      "id": 1002506038,
+      "betplay_id": 1002506038,
+      "name": "totalCardsHome",
+      "xbet": {
+        "marketId": "tarjetas",
+        "G": 15
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de tarjetas Visitante",
+      "id": 1002506039,
+      "betplay_id": 1002506039,
+      "name": "totalCardsAway",
+      "xbet": {
+        "marketId": "tarjetas",
+        "G": 62
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de tarjetas Amarillas",
+      "id": null,
+      "betplay_id": null,
+      "name": "totalYellowCards",
+      "xbet": {
+        "marketId": "tarjetas-amarillas",
+        "G": 17
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de tarjetas Amarillas Local",
+      "id": null,
+      "betplay_id": null,
+      "name": "totalYellowCardsHome",
+      "xbet": {
+        "marketId": "tarjetas-amarillas",
+        "G": 15
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de tarjetas Amarillas Visitante",
+      "id": null,
+      "betplay_id": null,
+      "name": "totalYellowCardsAway",
+      "xbet": {
+        "marketId": "tarjetas-amarillas",
+        "G": 62
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de tarjetas Amarillas - Total Tarjetas",
+      "id": 1001159529,
+      "betplay_id": 1001159529,
+      "name": "totalYellowCardTotalCards",
+      "xbet": {
+        "marketId": "tarjetas-amarillas",
+        "G": 17,
+        "onlyUnder": true,
+        "market": "Total de tarjetas Amarillas"
+      },
+      "betplay":{
+        "onlyOver": true,
+        "market": "Total Tarjetas"
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de tarjetas Amarillas Local - Total Tarjetas Local",
+      "id": 1002506038,
+      "betplay_id": 1002506038,
+      "name": "totalYellowCardTotalCardsHome",
+      "xbet": {
+        "marketId": "tarjetas-amarillas",
+        "G": 15,
+        "onlyUnder": true,
+        "market": "Total de tarjetas Amarillas Local"
+      },
+      "betplay":{
+        "onlyOver": true,
+        "market": "Total Tarjetas Local"
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de tarjetas Amarillas Visitante - Total Tarjetas Visitante",
+      "id": 1002506039,
+      "betplay_id": 1002506039,
+      "name": "totalYellowCardTotalCardsAway",
+      "xbet": {
+        "marketId": "tarjetas-amarillas",
+        "G": 62,
+        "onlyUnder": true,
+        "market": "Total de tarjetas Amarillas Visitante"
+      },
+      "betplay":{
+        "onlyOver": true,
+        "market": "Total Tarjetas Visitante"
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
       "label": "1X2",
       "id": 1001159858,
       "betplay": {

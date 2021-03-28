@@ -16,7 +16,6 @@ const matchTheMatch = (match, matches = []) => {
   
   
   if(!sameDateMatches.length){
-    console.log("No hay ningun partido que empice a  la misma hora del partido => ",match.eventName)
     return undefined;
   } 
 
@@ -33,7 +32,12 @@ const matchTheMatch = (match, matches = []) => {
   if (actualMatch === undefined) {
     const eventListNames = sameDateMatches.map(m => m.eventName.toLocaleLowerCase())
     const matchObject = stringSimilarity.findBestMatch(match.eventName.toLocaleLowerCase(), eventListNames)
-    console.log(match.eventName, matchObject)
+    if(matchObject.bestMatch.rating >= 0.5){
+      return {
+        betplay: match,
+        xbet: sameDateMatches[matchObject.bestMatchIndex]
+      };
+    }
     return undefined;
   }
 
@@ -44,13 +48,12 @@ const matchTheMatch = (match, matches = []) => {
     ) >= 0.2;
 
   if (!secontTeamEqual) {
-    console.log("El segundo equipo no tiene coincidencia => ",match.eventName)
     return undefined;
   }
 
   return {
-    betPlay: match,
-    xBet: actualMatch
+    betplay: match,
+    xbet: actualMatch
   };
 };
 

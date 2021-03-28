@@ -130,11 +130,11 @@ const compareMatches2 = (matchGroup, markets = []) => {
           companies.forEach((otherCompany) => {
             const otherCompanyMarket =
               matchGroup[otherCompany].markets[mathcMarket];
-            if (!otherCompanyMarket) return console.log("-- no surebet --");
+            if (!otherCompanyMarket) return;
             const otherCompanyOption = otherCompanyMarket.find(
               (v) => v.type === marketOption.type
             );
-            if (!otherCompanyOption) return console.log("-- no surebet --");
+            if (!otherCompanyOption) return;
             const op1 = isSurebet(
               marketOption.over.v,
               otherCompanyOption.under.v
@@ -143,14 +143,14 @@ const compareMatches2 = (matchGroup, markets = []) => {
               marketOption.under.v,
               otherCompanyOption.over.v
             );
-            if (op1) {
+            if (op1 && !marketObject[company.toLocaleLowerCase()]?.onlyUnder) {
               result.push({
                 profit: getProfit(marketOption.over.v, otherCompanyOption.under.v),
                 date: new Date(),
                 options:[
                   {
                     comapanyName: company,
-                    market: marketObject.label,
+                    market: marketObject[company]?.market? marketObject[company]?.market : marketObject.label,
                     odds: marketOption.over.v,
                     type: marketOption.type,
                     oddsType: "Más de",
@@ -160,7 +160,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                   },
                   {
                     comapanyName: otherCompany,
-                    market: marketObject.label,
+                    market: marketObject[otherCompany]?.market? marketObject[otherCompany]?.market : marketObject.label,
                     odds: otherCompanyOption.under.v,
                     type: otherCompanyOption.type,
                     oddsType: "Menos de",
@@ -172,19 +172,19 @@ const compareMatches2 = (matchGroup, markets = []) => {
               })
               console.log(
                 "HAY SURBET",
-                matchGroup.betPlay.event.name,
+                matchGroup.betplay.event.name,
                 mathcMarket
               );
             }
             
-            if(op2){
+            if(op2 && !marketObject[company]?.onlyOver){
               result.push({
                 profit: getProfit(marketOption.under.v, otherCompanyOption.over.v),
                 date: new Date(),
                 options:[
                   {
                     comapanyName: company,
-                    market: marketObject.label,
+                    market: marketObject[company]?.market? marketObject[company]?.market : marketObject.label,
                     odds: marketOption.under.v,
                     oddsType: "Menos de",
                     type: marketOption.type,
@@ -193,7 +193,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                   },
                   {
                     comapanyName: otherCompany,
-                    market: marketObject.label,
+                    market: marketObject[otherCompany]?.market? marketObject[otherCompany]?.market : marketObject.label,
                     odds: otherCompanyOption.over.v,
                     type: otherCompanyOption.type,
                     oddsType: "Más de",
@@ -204,7 +204,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
               })
               console.log(
                 "HAY SURBET",
-                matchGroup.betPlay.event.name,
+                matchGroup.betplay.event.name,
                 mathcMarket
               );
             } 
