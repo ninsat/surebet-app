@@ -1,0 +1,85 @@
+  .header {
+    display: flex;
+  }
+  
+  .profit {
+    width: 70px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .profit > span {
+    font-weight: 900;
+    color: white;
+  }
+  
+  .sport {
+    flex: 1;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    background: rgb(136, 136, 240);
+  }
+  
+  .sport > span {
+    color: white;
+  }
+  
+  .time {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    background: rgb(136, 136, 240);
+  }
+  .time > span {
+    color: white;
+  }
+  
+  .item {
+    display: flex;
+    background: #eee;
+  }
+  
+  .item .company {
+    width: 70px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .item .event {
+    flex: 4;
+    padding: 5px 10px;
+  }
+  .item .event .name {
+    font-weight: 600;
+    display: block;
+    font-size: 15px;
+  }
+  .item .event .date {
+    font-size: 13px;
+    font-weight: 300;
+  }
+  
+  .item .market {
+    flex: 2;
+    font-size: 13px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .item .odds {
+    flex: 1;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  

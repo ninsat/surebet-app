@@ -58,13 +58,21 @@ const getBetOffersBetPlay = async (id) => {
     });
   };
   
-  const addAllBetOffers2 = async (matches = []) => {
+  const addAllBetOffers2 = async (matches = [], cb) => {
     const resultArray = [];
+    let count = 0;
     for (let match of matches) {
       await delay(500);
       const data = await getBetOffersBetPlay(match.event.id);
       resultArray.push({ ...match, betOffers: data });
       console.log("YA");
+      count += 1;
+      cb && cb({
+        loading: true,
+        progress: (count*100)/matches.length,
+        message: "Analizando los partidos de BetPlay",
+        extra: match.event.name
+      })
     }
     return resultArray;
   };

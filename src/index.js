@@ -1,17 +1,19 @@
+import React, {useState} from 'react';
+import ReactDom from 'react-dom';
+
+
+import SurebetCard from './components/SurebetCard'
+import NavBar from './components/NavBar'
+import ProgressBar from './components/ProgressBar'
+
 import utilities from './libs/utilities.js'
 import surebets from './libs/surebets.js'
 import betplay from './bettingStores/betplay.js'
 import xbet from './bettingStores/xbet.js'
 import markets from './markets.json'
 
-const button = document.getElementById("btn")
 
 
-button.addEventListener("click", ()=>{
-    console.log("CLICK!");
-    secondMain();
-    //testXbet();
-})
 
 
 const testXbet = async () => {
@@ -21,15 +23,18 @@ const testXbet = async () => {
   };
   
   // Segundo intento de conseguir los matches
-  const secondMain = async () => {
+  const secondMain = async (cb) => {
     //Obtengo todos los partidos de BetPlay
     const betPlayArray = await betplay.getEventsBetPlay();
     console.log(betPlayArray.length);
   
     //Agrego todas las ofertas de mercados a cada partido
     //ya que en la anterior peticion solo vienen con 1X2 y unde/over 2.5
-    const fullBetPlayArray = await betplay.addAllBetOffers2(betPlayArray);
+    const fullBetPlayArray = await betplay.addAllBetOffers2(betPlayArray, (loadinData)=>{
+      cb && cb(loadinData)
+    });
     console.log("Se consiguieron todas los mercados")
+    cb && cb({loading: false})
     //Filtro los partidos para quedarme con los que tienen
     //los mercados espesificados en el archivo market.json
     //estos son los mercados mas frecuentes en los que se encuentran surebets
@@ -69,11 +74,19 @@ const testXbet = async () => {
     //Formateo los partidos de 1Xbet para que queden  se maneja la misma estructura de datos
     console.log("Buscando todos los mercados de 1XBET...");
     const result = [];
+    let count = 0;
     for (let match of matchesPairs) {
       const fullBetOffers = await xbet.getBetOfferceXbet2(match.xbet, markets);
       result.push({ ...match, xbet: fullBetOffers });
       //await utilities.delay(3500);
       console.log("YA");
+      count += 1;
+      cb && cb({
+        loading: true,
+        progress: (count*100)/matchesPairs.length,
+        message: "Analizando los partidos de 1XBet",
+        extra: match.eventName
+      })
     }
     console.log(result);
   
@@ -86,6 +99,43 @@ const testXbet = async () => {
       return [...res, ...data]
     }, []);
     
+    cb && cb({loading: false})
     console.log(allSurebets);
+    return allSurebets
   };
   
+
+
+
+// ---------------------------------------------------------- ESTA ES LA PARTE VISUAL -------------------------------------------------------
+
+
+
+  const App = (props)=>{
+
+    const [surebets, setSurebets] = useState([])
+    const [load, setLoad] = useState(0)
+
+    const handleClick = async ()=>{
+     const data = await secondMain((loadObject)=>{
+       setLoad(loadObject)
+     })
+     setSurebets(data)
+    }
+
+    return(
+      <div>
+        <NavBar onClick={handleClick}/>
+        <ProgressBar data={load} />
+        {
+          surebets.map((surebet, index)=>(
+            <SurebetCard key={index} data={surebet}/>
+          ))
+        }
+      </div>
+    )
+  }
+
+
+
+  ReactDom.render(<App/>, document.getElementById('root'))
