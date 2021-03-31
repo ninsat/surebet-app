@@ -114,10 +114,13 @@ const getBetOffersBetPlay = async (id) => {
       ...match,
       id: match.event.id,
       team1: match.event.homeName,
+      team1En: match.event.englishName.split(match.event.nameDelimiter).map(v=> v.trim())[0],
       team2: match.event.awayName ? match.event.awayName : "",
+      team2En: match.event.englishName.split(match.event.nameDelimiter).map(v=> v.trim())[1],
       eventName: match.event.name,
       date_start: new Date(match.event.start).getTime(),
-      sport: match.event.sport
+      sport: match.event.sport,
+      group: match.event.group
     }));
   };
   

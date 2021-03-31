@@ -62,10 +62,13 @@ const getEvents1Xbet = async () => {
     return data.Value.map((match) => ({
       id: match.CI,
       team1: match.O1,
+      team1En: match.O1E,
       team2: match.O2 ? match.O2 : "",
+      team2En: match.O2E ? match.O2E : "",
       eventName: match.O1 + " - " + match.O2,
       date_start: match.S * 1000,
-      sport: match.SE
+      sport: match.SE,
+      group: match.L
     }));
   };
   
