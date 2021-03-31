@@ -306,6 +306,62 @@
       "enable": true
     },
     {
+      "label": "Hándicap",
+      "id": 1001159711,
+      "betplay_id": 1001159711,
+      "name": "handicap",
+      "xbet": {
+        "marketId": "main",
+        "G": 2,
+        "home": 7,
+        "away": 8
+      },
+      "betplay":{
+        "home": "homeName",
+        "away": "awayName"
+      },
+      "type": "HANDICAP",
+      "enable": true
+    },
+    {
+      "label": "Hándicap Asiático",
+      "id": 1002275572,
+      "betplay_id": 1002275572,
+      "name": "asianHandicap",
+      "xbet": {
+        "marketId": "main",
+        "G": 2854,
+        "home": 3829,
+        "away": 3830
+      },
+      "betplay":{
+        "home": "homeName",
+        "away": "awayName"
+      },
+      "type": "HANDICAP",
+      "enable": true
+    },
+    {
+      "label": "Hándicap Asiático - Handicap",
+      "id": 1002275572,
+      "betplay_id": 1002275572,
+      "name": "asianHandicapWithHandicap",
+      "xbet": {
+        "marketId": "main",
+        "G": 2,
+        "home": 7,
+        "away": 8,
+        "market": "Hándicap"
+      },
+      "betplay":{
+        "home": "homeName",
+        "away": "awayName",
+        "market": "Hádicap Asiático"
+      },
+      "type": "HANDICAP",
+      "enable": true
+    },
+    {
       "label": "1X2",
       "id": 1001159858,
       "betplay": {
