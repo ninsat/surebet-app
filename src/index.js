@@ -85,7 +85,7 @@ const testXbet = async () => {
         loading: true,
         progress: (count*100)/matchesPairs.length,
         message: "Analizando los partidos de 1XBet",
-        extra: match.eventName
+        extra: match.xbet.eventName
       })
     }
     console.log(result);
