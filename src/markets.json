@@ -354,8 +354,8 @@
         "market": "Hándicap"
       },
       "betplay":{
-        "home": "homeName",
-        "away": "awayName",
+        "home": "team1",
+        "away": "team2",
         "market": "Hádicap Asiático"
       },
       "type": "HANDICAP",

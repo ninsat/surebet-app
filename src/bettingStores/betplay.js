@@ -209,6 +209,32 @@ const getBetOffersBetPlay = async (id) => {
           ...obj,
           [market.name]: formatOffers
         };
+      }else if(market.type === "HANDICAP"){
+          const outcomes =  betOffer.reduce((arr, option)=> [...arr, ...option.outcomes] ,[])
+          const formatOffers = outcomes.reduce((marketArr, option)=>{
+              const isTheLine = marketArr.findIndex(v => v.type === option.line/1000) !== -1
+              if(isTheLine) return marketArr
+              const lineOptions = outcomes.filter(v => v.line === option.line)
+              const homeOdds = lineOptions.find(v => v.participant === match[market.betplay.home])?.odds/1000
+              const awayOdds = lineOptions.find(v => v.participant === match[market.betplay.away])?.odds/1000
+              
+              return [...marketArr,{
+                type: option.line/1000,
+                home:{
+                  v: homeOdds
+                },
+                away:{
+                  v: awayOdds
+                }
+              }]
+
+          }, [])
+
+          return {
+            ...obj,
+            [market.name]: formatOffers
+          }
+
       }
   
       return obj;
