@@ -207,6 +207,10 @@ const getEvents1Xbet = async () => {
           ...obj,
           [market.name]: actualMarketFormated
         };
+      }else if(market.type === "HANDICAP"){
+        //aqui va el algoritmo para formatear los datos del handicap en 1Xbet
+
+        
       }
   
       return obj;
