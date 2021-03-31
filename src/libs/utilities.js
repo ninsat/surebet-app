@@ -21,11 +21,17 @@ const matchTheMatch = (match, matches = []) => {
 
   const sameDateMatcheNames = sameDateMatches.map(m => m.team1.toLocaleLowerCase())
   const {bestMatchIndex, bestMatch} =  stringSimilarity.findBestMatch(match.event.homeName.toLocaleLowerCase(), sameDateMatcheNames)
+
+  const sameDateMatcheNamesEnglish = sameDateMatches.map(m => m.team1En.toLocaleLowerCase())
+  const {bestMatchIndexEnglish, bestMatchEnglish} =  stringSimilarity.findBestMatch(match.team1En.toLocaleLowerCase(), sameDateMatcheNamesEnglish)
   
   let actualMatch = undefined
-  if(bestMatch.rating >= 0.25){
+  //primero comparo los nombres en ingles y sino encuentra coincidencia comparo los nombres en español
+  if(bestMatchEnglish.rating >= 0.25){
+    actualMatch = sameDateMatcheNamesEnglish[bestMatchIndexEnglish]
+  } else if(bestMatch.rating >= 0.25){
     actualMatch = sameDateMatches[bestMatchIndex]
-  }
+  } 
 
 
 
@@ -47,7 +53,14 @@ const matchTheMatch = (match, matches = []) => {
       actualMatch.team2.toLocaleLowerCase()
     ) >= 0.2;
 
-  if (!secontTeamEqual) {
+  const secontTeamEqualEnglish =
+    stringSimilarity.compareTwoStrings(
+      match.team1En.toLocaleLowerCase(),
+      actualMatch.team2En.toLocaleLowerCase()
+    ) >= 0.2;
+
+  if (!secontTeamEqual && !secontTeamEqualEnglish) {
+    console.log("el segundo equipo no tiene coincidencias", match, actualMatch)
     return undefined;
   }
 
