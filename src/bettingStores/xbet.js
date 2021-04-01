@@ -209,7 +209,28 @@ const getEvents1Xbet = async () => {
         };
       }else if(market.type === "HANDICAP"){
         //aqui va el algoritmo para formatear los datos del handicap en 1Xbet
+        const outcomes = actualMarket.E.reduce((arr, option)=> [...arr, ...option])
+        const actualMarketFormated = outcomes.reduce((marketObject, option)=>{
+            const isLineOption = marketObject.findIndex(v => v.type === (option.P || 0)) !== -1;
+            if(isLineOption) return marketObject
+            const actualLines = outcomes.filter(v => v.P === option.P)
+            const homeOdds = actualLines.find(v => v.T === market.xbet.home)?.C
+            const awayOdds = actualLines.find(v => v.T === market.xbet.away)?.C
+            return [...marketObject, {
+              type: (option.P || 0),
+              home: {
+                v: homeOdds
+              },
+              away: {
+                v: awayOdds
+              }
+            }]
+        },[])
 
+        return {
+          ...obj,
+          [market.name]: actualMarketFormated
+        };
         
       }
   

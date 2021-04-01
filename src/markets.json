@@ -317,8 +317,8 @@
         "away": 8
       },
       "betplay":{
-        "home": "homeName",
-        "away": "awayName"
+        "home": "team1",
+        "away": "team2"
       },
       "type": "HANDICAP",
       "enable": true
@@ -335,8 +335,8 @@
         "away": 3830
       },
       "betplay":{
-        "home": "homeName",
-        "away": "awayName"
+        "home": "team1",
+        "away": "team2"
       },
       "type": "HANDICAP",
       "enable": true
