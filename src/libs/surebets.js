@@ -8,12 +8,12 @@ const isSurebet = (c1, c2) => {
   return p1 + p2 < 1;
 };
 
-const getProfit = (c1,c2)=> {
-  const p1 = (1/c1) 
-  const p2 = (1/c2) 
+const getProfit = (c1, c2) => {
+  const p1 = (1 / c1)
+  const p2 = (1 / c2)
   const totalP = p1 + p2
 
-  return (100/totalP) - 100
+  return (100 / totalP) - 100
 }
 
 const compareFunction = (match, market, option1, option2) => {
@@ -29,11 +29,11 @@ const compareFunction = (match, market, option1, option2) => {
         const under = isSurebet(option[option1].v, actualOdds[option2].v);
         const over = isSurebet(option[option2].v, actualOdds[option1].v);
         if (under) {
-          
+
           return console.log(
             "HAY UNA FUCKING SUREBET!!!!!!!!",
           );
-        }else if(over){
+        } else if (over) {
           return console.log(
             "HAY UNA FUCKING SUREBET!!!!!!!!",
           );
@@ -147,10 +147,10 @@ const compareMatches2 = (matchGroup, markets = []) => {
               result.push({
                 profit: getProfit(marketOption.over.v, otherCompanyOption.under.v),
                 date: new Date(),
-                options:[
+                options: [
                   {
                     comapanyName: company,
-                    market: marketObject[company]?.market? marketObject[company]?.market : marketObject.label,
+                    market: marketObject[company]?.market ? marketObject[company]?.market : marketObject.label,
                     odds: marketOption.over.v,
                     type: marketOption.type,
                     oddsType: "Más de",
@@ -160,7 +160,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                   },
                   {
                     comapanyName: otherCompany,
-                    market: marketObject[otherCompany]?.market? marketObject[otherCompany]?.market : marketObject.label,
+                    market: marketObject[otherCompany]?.market ? marketObject[otherCompany]?.market : marketObject.label,
                     odds: otherCompanyOption.under.v,
                     type: otherCompanyOption.type,
                     oddsType: "Menos de",
@@ -176,15 +176,15 @@ const compareMatches2 = (matchGroup, markets = []) => {
                 mathcMarket
               );
             }
-            
-            if(op2 && !marketObject[company]?.onlyOver){
+
+            if (op2 && !marketObject[company]?.onlyOver) {
               result.push({
                 profit: getProfit(marketOption.under.v, otherCompanyOption.over.v),
                 date: new Date(),
-                options:[
+                options: [
                   {
                     comapanyName: company,
-                    market: marketObject[company]?.market? marketObject[company]?.market : marketObject.label,
+                    market: marketObject[company]?.market ? marketObject[company]?.market : marketObject.label,
                     odds: marketOption.under.v,
                     oddsType: "Menos de",
                     type: marketOption.type,
@@ -193,7 +193,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                   },
                   {
                     comapanyName: otherCompany,
-                    market: marketObject[otherCompany]?.market? marketObject[otherCompany]?.market : marketObject.label,
+                    market: marketObject[otherCompany]?.market ? marketObject[otherCompany]?.market : marketObject.label,
                     odds: otherCompanyOption.over.v,
                     type: otherCompanyOption.type,
                     oddsType: "Más de",
@@ -207,7 +207,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                 matchGroup.betplay.event.name,
                 mathcMarket
               );
-            } 
+            }
             //console.log("-- no surebet --");
             return;
           });
@@ -230,7 +230,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
               result.push({
                 profit: getProfit(odds1, odds2),
                 date: new Date(),
-                options:[
+                options: [
                   {
                     comapanyName: company,
                     market: marketObject.label,
@@ -263,11 +263,85 @@ const compareMatches2 = (matchGroup, markets = []) => {
             }
           });
         });
+      } else if (marketObject.type === "HANDICAP") {
+        //aqui va la comparacion para los mercados tipo Handicap
+        //se compara el handicap del home con el handicap del awayName
+        const marketOptions = companyMatchMarket[mathcMarket];
+        marketOptions.forEach(marketOption => {
+          companies.forEach((otherCompany) => {
+            const otherCompanyMarket = matchGroup[otherCompany].markets[mathcMarket];
+            if (!otherCompanyMarket) return;
+            const otherCompanyOption = otherCompanyMarket.find((v) => v.type === (marketOption.type*-1));
+            if (!otherCompanyOption) return;
+            const op1 = isSurebet(marketOption.home.v, otherCompanyOption.away.v);
+            const op2 = isSurebet(marketOption.away.v, otherCompanyOption.home.v);
+            if (op1) {
+              result.push({
+                profit: getProfit(marketOption.home.v, otherCompanyOption.away.v),
+                date: new Date(),
+                options: [
+                  {
+                    comapanyName: company,
+                    market: marketObject[company]?.market ? marketObject[company]?.market : marketObject.label,
+                    odds: marketOption.home.v,
+                    type: marketOption.type,
+                    oddsType: matchGroup[company].team1,
+                    eventName: matchGroup[company].eventName,
+                    sport: matchGroup[company].sport,
+                    date_start: matchGroup[company].date_start
+                  },
+                  {
+                    comapanyName: otherCompany,
+                    market: marketObject[otherCompany]?.market ? marketObject[otherCompany]?.market : marketObject.label,
+                    odds: otherCompanyOption.away.v,
+                    type: otherCompanyOption.type,
+                    oddsType: matchGroup[otherCompany].team2,
+                    eventName: matchGroup[otherCompany].eventName,
+                    sport: matchGroup[otherCompany].sport,
+                    date_start: matchGroup[otherCompany].date_start
+                  }
+                ]
+              })
+              console.log("HAY SURBET DE HANDICAP!!!!!");
+            }
+            if (op2) {
+              result.push({
+                profit: getProfit(marketOption.home.v, otherCompanyOption.away.v),
+                date: new Date(),
+                options: [
+                  {
+                    comapanyName: company,
+                    market: marketObject[company]?.market ? marketObject[company]?.market : marketObject.label,
+                    odds: marketOption.away.v,
+                    type: marketOption.type,
+                    oddsType: matchGroup[company].team2,
+                    eventName: matchGroup[company].eventName,
+                    sport: matchGroup[company].sport,
+                    date_start: matchGroup[company].date_start
+                  },
+                  {
+                    comapanyName: otherCompany,
+                    market: marketObject[otherCompany]?.market ? marketObject[otherCompany]?.market : marketObject.label,
+                    odds: otherCompanyOption.home.v,
+                    type: otherCompanyOption.type,
+                    oddsType: matchGroup[otherCompany].team1,
+                    eventName: matchGroup[otherCompany].eventName,
+                    sport: matchGroup[otherCompany].sport,
+                    date_start: matchGroup[otherCompany].date_start
+                  }
+                ]
+              })
+              console.log("HAY SURBET DE HANDICAP!!!!!");
+            }
+            if(!op1 && !op2) console.log("NO HAY SUREBET DE HANDICAP :(")
+
+          })
+        })
       }
     });
   });
 
-  if(result.length){
+  if (result.length) {
     return result;
   }
 
