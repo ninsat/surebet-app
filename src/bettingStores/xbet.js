@@ -93,7 +93,7 @@ const getEvents1Xbet = async () => {
       method: "GET",
       headers: myHeaders
     };
-    const url = encodeURIComponent(`https://1xbet.com.co/LineFeed/GetGameZip?id=${id}&lng=es&cfview=0&isSubGames=true&GroupEvents=true&allEventsGroupSubGames=true&countevents=250&marketType=1`)
+    const url = encodeURIComponent(`https://1xbet.com.co/LineFeed/GetGameZip?id=${id}&lng=es&cfview=0&isSubGames=true&GroupEvents=true&allEventsGroupSubGames=true&countevents=1000&marketType=1`)
     const response = await fetch(`https://api.allorigins.win/get?url=${url}`)
  
 	  if (!response.ok) throw new Error('Network response was not ok.')

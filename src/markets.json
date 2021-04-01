@@ -520,6 +520,50 @@
         }
       },
       "enable": true
+    },
+    {
+      "label": "Penalti Señalado",
+      "id": 1001263163,
+      "betplay": {
+        "id": 1001263163
+      },
+      "name": "penaltyKickAwarded",
+      "xbet": {
+        "marketId": "main",
+        "G": 50
+      },
+      "type": "OBJECT",
+      "options": {
+        "YES": {
+          "label": "SI",
+          "betplay": {
+            "type": "OT_YES"
+          },
+          "xbet": {
+            "T": 518
+          },
+          "opposite":{
+            "market": "Penalti Señalado",
+            "label": "NO",
+            "route": "penaltyKickAwarded.NO"
+          }
+        },
+        "NO": {
+          "label": "NO",
+          "betplay": {
+            "type": "OT_NO"
+          },
+          "xbet": {
+            "T": 519
+          },
+          "opposite":{
+            "market": "Penalti Señalado",
+            "label": "SI",
+            "route": "penaltyKickAwarded.YES"
+          }
+        }
+      },
+      "enable": true
     }
   ]
   
