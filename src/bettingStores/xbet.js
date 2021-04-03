@@ -209,7 +209,7 @@ const getEvents1Xbet = async () => {
         };
       }else if(market.type === "HANDICAP"){
         //aqui va el algoritmo para formatear los datos del handicap en 1Xbet
-        const outcomes = actualMarket.E.reduce((arr, option)=> [...arr, ...option])
+        const outcomes = actualMarket.E.reduce((arr, option)=> [...arr, ...option], [])
         const actualMarketFormated = outcomes.reduce((marketObject, option)=>{
             const isLineOption = marketObject.findIndex(v => v.type === (option.P || 0)) !== -1;
             if(isLineOption) return marketObject
@@ -232,6 +232,34 @@ const getEvents1Xbet = async () => {
           [market.name]: actualMarketFormated
         };
         
+      } else if(market.type === "OBJECT-PARTICIPANT"){
+        //aqui va el algoritmo para formatear los mercados con participantes
+        // ejemplo: Pepito Marca YES/NO
+        const outcomes = actualMarket.E.reduce((arr, option)=> [...arr, ...option], [])
+        const actualMarketFormated = outcomes.reduce((marketObject, option)=>{
+          const isLineOption = marketObject.findIndex(v => v.participant === option.PL.N) !== -1;
+          if(isLineOption) return marketObject
+          const actualParticipants = outcomes.filter(v => v.PL.N === option.PL.N)
+          const optionObject = Object.keys(market.options).reduce((mObj, marketOption)=>{
+              return{
+                ...mObj,
+                [marketOption]:{
+                  v: actualParticipants.find(v => v.T === market.option[marketOption].xbet.T)?.C
+                }
+              }
+          },{})
+
+          return [...marketObject, {
+            participant: option.PL.N,
+            ...optionObject
+          }]
+      },[])
+
+      return {
+        ...obj,
+        [market.name]: actualMarketFormated
+      };
+
       }
   
       return obj;

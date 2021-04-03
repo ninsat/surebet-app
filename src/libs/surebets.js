@@ -110,6 +110,9 @@ const compareMatches = (matchGroup) => {
   });
 };
 
+
+
+
 const compareMatches2 = (matchGroup, markets = []) => {
   const result = [];
   const companies = Object.keys(matchGroup);

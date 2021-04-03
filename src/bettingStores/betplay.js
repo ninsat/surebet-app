@@ -235,6 +235,26 @@ const getBetOffersBetPlay = async (id) => {
             [market.name]: formatOffers
           }
 
+      } else if(market.type === "OBJECT-PARTICIPANT"){
+        //aqui va el formateo para los mercados que conienen participants.
+        // un ejemplo es: Fulanito marcara YES/NO
+        const formatOffers = betOffer.map((outcomeContainer)=>{
+          const options = Object.keys(market.options);
+          const arrayObject = options.reduce((merketObj, option) => {
+            return {
+              ...merketObj,
+              [option]: {
+                v: outcomeContainer.outcomes.find(v => v.type === option.betplay.type)?.odds / 1000
+              }
+            };
+          }, {participant: outcomeContainer.outcomes[0].participant});
+          return arrayObject
+        })
+
+        return {
+          ...obj,
+          [market.name]: formatOffers
+        }
       }
   
       return obj;

@@ -564,6 +564,50 @@
         }
       },
       "enable": true
+    },
+    {
+      "label": "Marcará",
+      "id": 1001159886,
+      "betplay": {
+        "id": 1001159886
+      },
+      "name": "toScore",
+      "xbet": {
+        "marketId": "estadisticas-de-jugadores",
+        "G": 119
+      },
+      "type": "OBJECT-PARTICIPANT",
+      "options": {
+        "YES": {
+          "label": "SI",
+          "betplay": {
+            "type": "OT_YES"
+          },
+          "xbet": {
+            "T": 5869
+          },
+          "opposite":{
+            "market": "Marcará",
+            "label": "NO",
+            "route": "toScore.NO"
+          }
+        },
+        "NO": {
+          "label": "NO",
+          "betplay": {
+            "type": "OT_NO"
+          },
+          "xbet": {
+            "T": 5870
+          },
+          "opposite":{
+            "market": "Marcará",
+            "label": "SI",
+            "route": "toScore.YES"
+          }
+        }
+      },
+      "enable": true
     }
   ]
   
