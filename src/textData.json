@@ -1,0 +1,3255 @@
+[
+    {
+      "profit": 11.964285714285708,
+      "date": "2021-04-03T03:07:52.353Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de Goles Local",
+          "odds": 2.28,
+          "oddsType": "Menos de",
+          "type": 1.5,
+          "eventName": "Weston Workers - Valentine Phoenix",
+          "date_start": 1617427800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de Goles Local",
+          "odds": 2.2,
+          "type": 1.5,
+          "oddsType": "Más de",
+          "eventName": "Valentine Phoenix - Weston Workers Bears",
+          "date_start": 1617427800000
+        }
+      ]
+    },
+    {
+      "profit": 10.316742081447956,
+      "date": "2021-04-03T03:07:52.353Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de Goles Visitante",
+          "odds": 2.12,
+          "type": 1.5,
+          "oddsType": "Más de",
+          "eventName": "Weston Workers - Valentine Phoenix",
+          "sport": "FOOTBALL",
+          "date_start": 1617427800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de Goles Visitante",
+          "odds": 2.3,
+          "type": 1.5,
+          "oddsType": "Menos de",
+          "eventName": "Valentine Phoenix - Weston Workers Bears",
+          "sport": "Football",
+          "date_start": 1617427800000
+        }
+      ]
+    },
+    {
+      "profit": 16.250000000000014,
+      "date": "2021-04-03T03:07:52.353Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "1X2",
+          "odds": 3.1,
+          "oddsType": "2",
+          "type": "",
+          "eventName": "Weston Workers - Valentine Phoenix",
+          "date_start": 1617427800000,
+          "sport": "FOOTBALL"
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Doble oportunidad",
+          "odds": 1.86,
+          "type": "",
+          "oddsType": "1X",
+          "eventName": "Valentine Phoenix - Weston Workers Bears",
+          "sport": "Football",
+          "date_start": 1617427800000
+        }
+      ]
+    },
+    {
+      "profit": 11.964285714285708,
+      "date": "2021-04-03T03:07:52.354Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de Goles Local",
+          "odds": 2.2,
+          "type": 1.5,
+          "oddsType": "Más de",
+          "eventName": "Valentine Phoenix - Weston Workers Bears",
+          "sport": "Football",
+          "date_start": 1617427800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de Goles Local",
+          "odds": 2.28,
+          "type": 1.5,
+          "oddsType": "Menos de",
+          "eventName": "Weston Workers - Valentine Phoenix",
+          "sport": "FOOTBALL",
+          "date_start": 1617427800000
+        }
+      ]
+    },
+    {
+      "profit": 10.316742081447956,
+      "date": "2021-04-03T03:07:52.354Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de Goles Visitante",
+          "odds": 2.3,
+          "oddsType": "Menos de",
+          "type": 1.5,
+          "eventName": "Valentine Phoenix - Weston Workers Bears",
+          "date_start": 1617427800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de Goles Visitante",
+          "odds": 2.12,
+          "type": 1.5,
+          "oddsType": "Más de",
+          "eventName": "Weston Workers - Valentine Phoenix",
+          "date_start": 1617427800000
+        }
+      ]
+    },
+    {
+      "profit": 17.20930232558139,
+      "date": "2021-04-03T03:07:52.356Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "1X2",
+          "odds": 3.36,
+          "oddsType": "1",
+          "type": "",
+          "eventName": "Valentine Phoenix - Weston Workers Bears",
+          "date_start": 1617427800000,
+          "sport": "Football"
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Doble oportunidad",
+          "odds": 1.8,
+          "type": "",
+          "oddsType": "2X",
+          "eventName": "Weston Workers - Valentine Phoenix",
+          "sport": "FOOTBALL",
+          "date_start": 1617427800000
+        }
+      ]
+    },
+    {
+      "profit": 2.0378510378510413,
+      "date": "2021-04-03T03:07:52.626Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de Goles",
+          "odds": 1.93,
+          "oddsType": "Menos de",
+          "type": 2.5,
+          "eventName": "Lokomotiva Zagreb - Hajduk Split",
+          "date_start": 1617447300000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de Goles",
+          "odds": 2.165,
+          "type": 2.5,
+          "oddsType": "Más de",
+          "eventName": "Lokomotiv (Zagreb) - Hajduk (Split)",
+          "date_start": 1617447300000
+        }
+      ]
+    },
+    {
+      "profit": 2.737349397590364,
+      "date": "2021-04-03T03:07:52.626Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total asiático",
+          "odds": 2.28,
+          "oddsType": "Menos de",
+          "type": 2.25,
+          "eventName": "Lokomotiva Zagreb - Hajduk Split",
+          "date_start": 1617447300000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total asiático",
+          "odds": 1.87,
+          "type": 2.25,
+          "oddsType": "Más de",
+          "eventName": "Lokomotiv (Zagreb) - Hajduk (Split)",
+          "date_start": 1617447300000
+        }
+      ]
+    },
+    {
+      "profit": 0.9594706368899892,
+      "date": "2021-04-03T03:07:52.626Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total asiático",
+          "odds": 3.4,
+          "oddsType": "Menos de",
+          "type": 1.75,
+          "eventName": "Lokomotiva Zagreb - Hajduk Split",
+          "date_start": 1617447300000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total asiático",
+          "odds": 1.436,
+          "type": 1.75,
+          "oddsType": "Más de",
+          "eventName": "Lokomotiv (Zagreb) - Hajduk (Split)",
+          "date_start": 1617447300000
+        }
+      ]
+    },
+    {
+      "profit": 0.12439261418852254,
+      "date": "2021-04-03T03:07:52.626Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total asiático",
+          "odds": 1.72,
+          "oddsType": "Menos de",
+          "type": 2.75,
+          "eventName": "Lokomotiva Zagreb - Hajduk Split",
+          "date_start": 1617447300000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total asiático",
+          "odds": 2.396,
+          "type": 2.75,
+          "oddsType": "Más de",
+          "eventName": "Lokomotiv (Zagreb) - Hajduk (Split)",
+          "date_start": 1617447300000
+        }
+      ]
+    },
+    {
+      "profit": 2.0378510378510413,
+      "date": "2021-04-03T03:07:52.630Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de Goles",
+          "odds": 2.165,
+          "type": 2.5,
+          "oddsType": "Más de",
+          "eventName": "Lokomotiv (Zagreb) - Hajduk (Split)",
+          "sport": "Football",
+          "date_start": 1617447300000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de Goles",
+          "odds": 1.93,
+          "type": 2.5,
+          "oddsType": "Menos de",
+          "eventName": "Lokomotiva Zagreb - Hajduk Split",
+          "sport": "FOOTBALL",
+          "date_start": 1617447300000
+        }
+      ]
+    },
+    {
+      "profit": 0.9594706368899892,
+      "date": "2021-04-03T03:07:52.630Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total asiático",
+          "odds": 1.436,
+          "type": 1.75,
+          "oddsType": "Más de",
+          "eventName": "Lokomotiv (Zagreb) - Hajduk (Split)",
+          "sport": "Football",
+          "date_start": 1617447300000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total asiático",
+          "odds": 3.4,
+          "type": 1.75,
+          "oddsType": "Menos de",
+          "eventName": "Lokomotiva Zagreb - Hajduk Split",
+          "sport": "FOOTBALL",
+          "date_start": 1617447300000
+        }
+      ]
+    },
+    {
+      "profit": 2.737349397590364,
+      "date": "2021-04-03T03:07:52.630Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total asiático",
+          "odds": 1.87,
+          "type": 2.25,
+          "oddsType": "Más de",
+          "eventName": "Lokomotiv (Zagreb) - Hajduk (Split)",
+          "sport": "Football",
+          "date_start": 1617447300000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total asiático",
+          "odds": 2.28,
+          "type": 2.25,
+          "oddsType": "Menos de",
+          "eventName": "Lokomotiva Zagreb - Hajduk Split",
+          "sport": "FOOTBALL",
+          "date_start": 1617447300000
+        }
+      ]
+    },
+    {
+      "profit": 0.12439261418852254,
+      "date": "2021-04-03T03:07:52.630Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total asiático",
+          "odds": 2.396,
+          "type": 2.75,
+          "oddsType": "Más de",
+          "eventName": "Lokomotiv (Zagreb) - Hajduk (Split)",
+          "sport": "Football",
+          "date_start": 1617447300000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total asiático",
+          "odds": 1.72,
+          "type": 2.75,
+          "oddsType": "Menos de",
+          "eventName": "Lokomotiva Zagreb - Hajduk Split",
+          "sport": "FOOTBALL",
+          "date_start": 1617447300000
+        }
+      ]
+    },
+    {
+      "profit": 0.4784688995215305,
+      "date": "2021-04-03T03:07:52.707Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.68,
+          "oddsType": "Menos de",
+          "type": 8.5,
+          "eventName": "Mónaco - Metz",
+          "date_start": 1617447600000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.5,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "Mónaco - FC Metz",
+          "date_start": 1617447600000
+        }
+      ]
+    },
+    {
+      "profit": 0.4784688995215305,
+      "date": "2021-04-03T03:07:52.713Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.5,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "Mónaco - FC Metz",
+          "sport": "Football",
+          "date_start": 1617447600000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.68,
+          "type": 8.5,
+          "oddsType": "Menos de",
+          "eventName": "Mónaco - Metz",
+          "sport": "FOOTBALL",
+          "date_start": 1617447600000
+        }
+      ]
+    },
+    {
+      "profit": 2.857142857142847,
+      "date": "2021-04-03T03:07:52.738Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del local",
+          "odds": 1.8,
+          "type": 16.5,
+          "oddsType": "Más de",
+          "eventName": "Chelsea - West Bromwich",
+          "sport": "FOOTBALL",
+          "date_start": 1617449400000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del local",
+          "odds": 2.4,
+          "type": 16.5,
+          "oddsType": "Menos de",
+          "eventName": "Chelsea (Londres) - West Bromwich Albion (West Bromwich)",
+          "sport": "Football",
+          "date_start": 1617449400000
+        }
+      ]
+    },
+    {
+      "profit": 1.8900675024108011,
+      "date": "2021-04-03T03:07:52.738Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.8,
+          "oddsType": "Menos de",
+          "type": 6.5,
+          "eventName": "Chelsea - West Bromwich",
+          "date_start": 1617449400000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.348,
+          "type": 6.5,
+          "oddsType": "Más de",
+          "eventName": "Chelsea (Londres) - West Bromwich Albion (West Bromwich)",
+          "date_start": 1617449400000
+        }
+      ]
+    },
+    {
+      "profit": 1.2345679012345698,
+      "date": "2021-04-03T03:07:52.738Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros a puerta por parte del local",
+          "odds": 2,
+          "type": 6.5,
+          "oddsType": "Más de",
+          "eventName": "Chelsea - West Bromwich",
+          "sport": "FOOTBALL",
+          "date_start": 1617449400000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros a puerta por parte del local",
+          "odds": 2.05,
+          "type": 6.5,
+          "oddsType": "Menos de",
+          "eventName": "Chelsea (Londres) - West Bromwich Albion (West Bromwich)",
+          "sport": "Football",
+          "date_start": 1617449400000
+        }
+      ]
+    },
+    {
+      "profit": 2.857142857142847,
+      "date": "2021-04-03T03:07:52.745Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del local",
+          "odds": 2.4,
+          "oddsType": "Menos de",
+          "type": 16.5,
+          "eventName": "Chelsea (Londres) - West Bromwich Albion (West Bromwich)",
+          "date_start": 1617449400000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del local",
+          "odds": 1.8,
+          "type": 16.5,
+          "oddsType": "Más de",
+          "eventName": "Chelsea - West Bromwich",
+          "date_start": 1617449400000
+        }
+      ]
+    },
+    {
+      "profit": 1.8900675024108011,
+      "date": "2021-04-03T03:07:52.745Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.348,
+          "type": 6.5,
+          "oddsType": "Más de",
+          "eventName": "Chelsea (Londres) - West Bromwich Albion (West Bromwich)",
+          "sport": "Football",
+          "date_start": 1617449400000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.8,
+          "type": 6.5,
+          "oddsType": "Menos de",
+          "eventName": "Chelsea - West Bromwich",
+          "sport": "FOOTBALL",
+          "date_start": 1617449400000
+        }
+      ]
+    },
+    {
+      "profit": 1.2345679012345698,
+      "date": "2021-04-03T03:07:52.745Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros a puerta por parte del local",
+          "odds": 2.05,
+          "oddsType": "Menos de",
+          "type": 6.5,
+          "eventName": "Chelsea (Londres) - West Bromwich Albion (West Bromwich)",
+          "date_start": 1617449400000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros a puerta por parte del local",
+          "odds": 2,
+          "type": 6.5,
+          "oddsType": "Más de",
+          "eventName": "Chelsea - West Bromwich",
+          "date_start": 1617449400000
+        }
+      ]
+    },
+    {
+      "profit": 1.2275449101796454,
+      "date": "2021-04-03T03:07:53.052Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de Goles Visitante",
+          "odds": 2.45,
+          "oddsType": "Menos de",
+          "type": 0.5,
+          "eventName": "Renate - Olbia",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de Goles Visitante",
+          "odds": 1.725,
+          "type": 0.5,
+          "oddsType": "Más de",
+          "eventName": "Renate - Olbia Calcio",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 1.2275449101796454,
+      "date": "2021-04-03T03:07:53.053Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de Goles Visitante",
+          "odds": 1.725,
+          "type": 0.5,
+          "oddsType": "Más de",
+          "eventName": "Renate - Olbia Calcio",
+          "sport": "Football",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de Goles Visitante",
+          "odds": 2.45,
+          "type": 0.5,
+          "oddsType": "Menos de",
+          "eventName": "Renate - Olbia",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 2.9297820823244507,
+      "date": "2021-04-03T03:07:53.143Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total Tiros a puerta",
+          "odds": 1.95,
+          "oddsType": "Menos de",
+          "type": 8.5,
+          "eventName": "Benevento - Parma",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total Tiros a puerta",
+          "odds": 2.18,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "FC Benevento - FC Parma",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 2.857142857142847,
+      "date": "2021-04-03T03:07:53.143Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros a puerta por parte del local",
+          "odds": 1.8,
+          "oddsType": "Menos de",
+          "type": 4.5,
+          "eventName": "Benevento - Parma",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros a puerta por parte del local",
+          "odds": 2.4,
+          "type": 4.5,
+          "oddsType": "Más de",
+          "eventName": "FC Benevento - FC Parma",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 1.5578074619990758,
+      "date": "2021-04-03T03:07:53.143Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de fueras de juego",
+          "odds": 1.62,
+          "oddsType": "Menos de",
+          "type": 4.5,
+          "eventName": "Benevento - Parma",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de fueras de juego",
+          "odds": 2.722,
+          "type": 4.5,
+          "oddsType": "Más de",
+          "eventName": "FC Benevento - FC Parma",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 2.9297820823244507,
+      "date": "2021-04-03T03:07:53.148Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total Tiros a puerta",
+          "odds": 2.18,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "FC Benevento - FC Parma",
+          "sport": "Football",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total Tiros a puerta",
+          "odds": 1.95,
+          "type": 8.5,
+          "oddsType": "Menos de",
+          "eventName": "Benevento - Parma",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 2.857142857142847,
+      "date": "2021-04-03T03:07:53.148Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros a puerta por parte del local",
+          "odds": 2.4,
+          "type": 4.5,
+          "oddsType": "Más de",
+          "eventName": "FC Benevento - FC Parma",
+          "sport": "Football",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros a puerta por parte del local",
+          "odds": 1.8,
+          "type": 4.5,
+          "oddsType": "Menos de",
+          "eventName": "Benevento - Parma",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 1.5578074619990758,
+      "date": "2021-04-03T03:07:53.148Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de fueras de juego",
+          "odds": 2.722,
+          "type": 4.5,
+          "oddsType": "Más de",
+          "eventName": "FC Benevento - FC Parma",
+          "sport": "Football",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de fueras de juego",
+          "odds": 1.62,
+          "type": 4.5,
+          "oddsType": "Menos de",
+          "eventName": "Benevento - Parma",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 0.6396181384248223,
+      "date": "2021-04-03T03:07:53.152Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total Tiros a puerta",
+          "odds": 1.68,
+          "oddsType": "Menos de",
+          "type": 10.5,
+          "eventName": "Sassuolo - Roma",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total Tiros a puerta",
+          "odds": 2.51,
+          "type": 10.5,
+          "oddsType": "Más de",
+          "eventName": "FC Sassuolo - Roma",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 0.6396181384248223,
+      "date": "2021-04-03T03:07:53.157Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total Tiros a puerta",
+          "odds": 2.51,
+          "type": 10.5,
+          "oddsType": "Más de",
+          "eventName": "FC Sassuolo - Roma",
+          "sport": "Football",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total Tiros a puerta",
+          "odds": 1.68,
+          "type": 10.5,
+          "oddsType": "Menos de",
+          "eventName": "Sassuolo - Roma",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 5.85812356979406,
+      "date": "2021-04-03T03:07:53.162Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros",
+          "odds": 1.8,
+          "type": 24.5,
+          "oddsType": "Más de",
+          "eventName": "Nápoles - Crotone",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros",
+          "odds": 2.57,
+          "type": 24.5,
+          "oddsType": "Menos de",
+          "eventName": "Napoli (Nápoles) - Crotone",
+          "sport": "Football",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 1.1111111111111,
+      "date": "2021-04-03T03:07:53.162Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del local",
+          "odds": 1.95,
+          "type": 16.5,
+          "oddsType": "Más de",
+          "eventName": "Nápoles - Crotone",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del local",
+          "odds": 2.1,
+          "type": 16.5,
+          "oddsType": "Menos de",
+          "eventName": "Napoli (Nápoles) - Crotone",
+          "sport": "Football",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 1.2345679012345698,
+      "date": "2021-04-03T03:07:53.162Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "Nápoles - Crotone",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.05,
+          "type": 8.5,
+          "oddsType": "Menos de",
+          "eventName": "Napoli (Nápoles) - Crotone",
+          "sport": "Football",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 0.6382978723404307,
+      "date": "2021-04-03T03:07:53.162Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros a puerta por parte del visitante",
+          "odds": 2.15,
+          "oddsType": "Menos de",
+          "type": 2.5,
+          "eventName": "Nápoles - Crotone",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros a puerta por parte del visitante",
+          "odds": 1.892,
+          "type": 2.5,
+          "oddsType": "Más de",
+          "eventName": "Napoli (Nápoles) - Crotone",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 2.4848484848484844,
+      "date": "2021-04-03T03:07:53.162Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de faltas cometidas",
+          "odds": 1.9,
+          "oddsType": "Menos de",
+          "type": 26.5,
+          "eventName": "Nápoles - Crotone",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de faltas cometidas",
+          "odds": 2.225,
+          "type": 26.5,
+          "oddsType": "Más de",
+          "eventName": "Napoli (Nápoles) - Crotone",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 5.85812356979406,
+      "date": "2021-04-03T03:07:53.169Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros",
+          "odds": 2.57,
+          "oddsType": "Menos de",
+          "type": 24.5,
+          "eventName": "Napoli (Nápoles) - Crotone",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros",
+          "odds": 1.8,
+          "type": 24.5,
+          "oddsType": "Más de",
+          "eventName": "Nápoles - Crotone",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 1.1111111111111,
+      "date": "2021-04-03T03:07:53.169Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del local",
+          "odds": 2.1,
+          "oddsType": "Menos de",
+          "type": 16.5,
+          "eventName": "Napoli (Nápoles) - Crotone",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del local",
+          "odds": 1.95,
+          "type": 16.5,
+          "oddsType": "Más de",
+          "eventName": "Nápoles - Crotone",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 1.2345679012345698,
+      "date": "2021-04-03T03:07:53.169Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.05,
+          "oddsType": "Menos de",
+          "type": 8.5,
+          "eventName": "Napoli (Nápoles) - Crotone",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "Nápoles - Crotone",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 0.6382978723404307,
+      "date": "2021-04-03T03:07:53.169Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros a puerta por parte del visitante",
+          "odds": 1.892,
+          "type": 2.5,
+          "oddsType": "Más de",
+          "eventName": "Napoli (Nápoles) - Crotone",
+          "sport": "Football",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros a puerta por parte del visitante",
+          "odds": 2.15,
+          "type": 2.5,
+          "oddsType": "Menos de",
+          "eventName": "Nápoles - Crotone",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 2.4848484848484844,
+      "date": "2021-04-03T03:07:53.169Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de faltas cometidas",
+          "odds": 2.225,
+          "type": 26.5,
+          "oddsType": "Más de",
+          "eventName": "Napoli (Nápoles) - Crotone",
+          "sport": "Football",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de faltas cometidas",
+          "odds": 1.9,
+          "type": 26.5,
+          "oddsType": "Menos de",
+          "eventName": "Nápoles - Crotone",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 0.8211143695014584,
+      "date": "2021-04-03T03:07:53.178Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total Tiros a puerta",
+          "odds": 1.8,
+          "oddsType": "Menos de",
+          "type": 8.5,
+          "eventName": "Cagliari - Hellas Verona",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total Tiros a puerta",
+          "odds": 2.292,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "FC Cagliari - Hellas Verona",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 4.464285714285708,
+      "date": "2021-04-03T03:07:53.179Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del local",
+          "odds": 1.95,
+          "oddsType": "Menos de",
+          "type": 13.5,
+          "eventName": "Cagliari - Hellas Verona",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del local",
+          "odds": 2.25,
+          "type": 13.5,
+          "oddsType": "Más de",
+          "eventName": "FC Cagliari - Hellas Verona",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 0.30487804878049474,
+      "date": "2021-04-03T03:07:53.179Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros a puerta por parte del local",
+          "odds": 1.75,
+          "oddsType": "Menos de",
+          "type": 4.5,
+          "eventName": "Cagliari - Hellas Verona",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros a puerta por parte del local",
+          "odds": 2.35,
+          "type": 4.5,
+          "oddsType": "Más de",
+          "eventName": "FC Cagliari - Hellas Verona",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 1.1494252873563227,
+      "date": "2021-04-03T03:07:53.179Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros a puerta por parte del visitante",
+          "odds": 1.6,
+          "oddsType": "Menos de",
+          "type": 4.5,
+          "eventName": "Cagliari - Hellas Verona",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros a puerta por parte del visitante",
+          "odds": 2.75,
+          "type": 4.5,
+          "oddsType": "Más de",
+          "eventName": "FC Cagliari - Hellas Verona",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 5.059453032104628,
+      "date": "2021-04-03T03:07:53.179Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de faltas cometidas",
+          "odds": 2.05,
+          "oddsType": "Menos de",
+          "type": 29.5,
+          "eventName": "Cagliari - Hellas Verona",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de faltas cometidas",
+          "odds": 2.155,
+          "type": 29.5,
+          "oddsType": "Más de",
+          "eventName": "FC Cagliari - Hellas Verona",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 0.8211143695014584,
+      "date": "2021-04-03T03:07:53.184Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total Tiros a puerta",
+          "odds": 2.292,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "FC Cagliari - Hellas Verona",
+          "sport": "Football",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total Tiros a puerta",
+          "odds": 1.8,
+          "type": 8.5,
+          "oddsType": "Menos de",
+          "eventName": "Cagliari - Hellas Verona",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 4.464285714285708,
+      "date": "2021-04-03T03:07:53.184Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del local",
+          "odds": 2.25,
+          "type": 13.5,
+          "oddsType": "Más de",
+          "eventName": "FC Cagliari - Hellas Verona",
+          "sport": "Football",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del local",
+          "odds": 1.95,
+          "type": 13.5,
+          "oddsType": "Menos de",
+          "eventName": "Cagliari - Hellas Verona",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 0.30487804878049474,
+      "date": "2021-04-03T03:07:53.184Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros a puerta por parte del local",
+          "odds": 2.35,
+          "type": 4.5,
+          "oddsType": "Más de",
+          "eventName": "FC Cagliari - Hellas Verona",
+          "sport": "Football",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros a puerta por parte del local",
+          "odds": 1.75,
+          "type": 4.5,
+          "oddsType": "Menos de",
+          "eventName": "Cagliari - Hellas Verona",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 1.1494252873563227,
+      "date": "2021-04-03T03:07:53.184Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros a puerta por parte del visitante",
+          "odds": 2.75,
+          "type": 4.5,
+          "oddsType": "Más de",
+          "eventName": "FC Cagliari - Hellas Verona",
+          "sport": "Football",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros a puerta por parte del visitante",
+          "odds": 1.6,
+          "type": 4.5,
+          "oddsType": "Menos de",
+          "eventName": "Cagliari - Hellas Verona",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 5.059453032104628,
+      "date": "2021-04-03T03:07:53.184Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de faltas cometidas",
+          "odds": 2.155,
+          "type": 29.5,
+          "oddsType": "Más de",
+          "eventName": "FC Cagliari - Hellas Verona",
+          "sport": "Football",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de faltas cometidas",
+          "odds": 2.05,
+          "type": 29.5,
+          "oddsType": "Menos de",
+          "eventName": "Cagliari - Hellas Verona",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 5.058823529411768,
+      "date": "2021-04-03T03:07:53.187Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.9,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "Lazio - Spezia",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.35,
+          "type": 8.5,
+          "oddsType": "Menos de",
+          "eventName": "Lazio (Roma) - FC Spezia",
+          "sport": "Football",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 1.6062683643486793,
+      "date": "2021-04-03T03:07:53.187Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de faltas cometidas",
+          "odds": 1.9,
+          "oddsType": "Menos de",
+          "type": 28.5,
+          "eventName": "Lazio - Spezia",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de faltas cometidas",
+          "odds": 2.184,
+          "type": 28.5,
+          "oddsType": "Más de",
+          "eventName": "Lazio (Roma) - FC Spezia",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 5.058823529411768,
+      "date": "2021-04-03T03:07:53.195Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.35,
+          "oddsType": "Menos de",
+          "type": 8.5,
+          "eventName": "Lazio (Roma) - FC Spezia",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.9,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "Lazio - Spezia",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 1.6062683643486793,
+      "date": "2021-04-03T03:07:53.195Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de faltas cometidas",
+          "odds": 2.184,
+          "type": 28.5,
+          "oddsType": "Más de",
+          "eventName": "Lazio (Roma) - FC Spezia",
+          "sport": "Football",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de faltas cometidas",
+          "odds": 1.9,
+          "type": 28.5,
+          "oddsType": "Menos de",
+          "eventName": "Lazio - Spezia",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 12.149851000425727,
+      "date": "2021-04-03T03:07:53.201Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros",
+          "odds": 1.85,
+          "type": 22.5,
+          "oddsType": "Más de",
+          "eventName": "Atalanta - Udinese",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros",
+          "odds": 2.848,
+          "type": 22.5,
+          "oddsType": "Menos de",
+          "eventName": "FC Atalanta - Udinese (Udine)",
+          "sport": "Football",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 1.5243902439024453,
+      "date": "2021-04-03T03:07:53.201Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.85,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "Atalanta - Udinese",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.25,
+          "type": 8.5,
+          "oddsType": "Menos de",
+          "eventName": "FC Atalanta - Udinese (Udine)",
+          "sport": "Football",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 12.149851000425727,
+      "date": "2021-04-03T03:07:53.208Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros",
+          "odds": 2.848,
+          "oddsType": "Menos de",
+          "type": 22.5,
+          "eventName": "FC Atalanta - Udinese (Udine)",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros",
+          "odds": 1.85,
+          "type": 22.5,
+          "oddsType": "Más de",
+          "eventName": "Atalanta - Udinese",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 1.5243902439024453,
+      "date": "2021-04-03T03:07:53.208Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.25,
+          "oddsType": "Menos de",
+          "type": 8.5,
+          "eventName": "FC Atalanta - Udinese (Udine)",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.85,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "Atalanta - Udinese",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 3.01204819277109,
+      "date": "2021-04-03T03:07:53.213Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros",
+          "odds": 1.9,
+          "type": 21.5,
+          "oddsType": "Más de",
+          "eventName": "Genoa - Fiorentina",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros",
+          "odds": 2.25,
+          "type": 21.5,
+          "oddsType": "Menos de",
+          "eventName": "Génova (Genova) - Fiorentina (Florencia)",
+          "sport": "Football",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 1.6860465116279073,
+      "date": "2021-04-03T03:07:53.213Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del local",
+          "odds": 1.65,
+          "type": 9.5,
+          "oddsType": "Más de",
+          "eventName": "Genoa - Fiorentina",
+          "sport": "FOOTBALL",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del local",
+          "odds": 2.65,
+          "type": 9.5,
+          "oddsType": "Menos de",
+          "eventName": "Génova (Genova) - Fiorentina (Florencia)",
+          "sport": "Football",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 3.01204819277109,
+      "date": "2021-04-03T03:07:53.217Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros",
+          "odds": 2.25,
+          "oddsType": "Menos de",
+          "type": 21.5,
+          "eventName": "Génova (Genova) - Fiorentina (Florencia)",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros",
+          "odds": 1.9,
+          "type": 21.5,
+          "oddsType": "Más de",
+          "eventName": "Genoa - Fiorentina",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 1.6860465116279073,
+      "date": "2021-04-03T03:07:53.218Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del local",
+          "odds": 2.65,
+          "oddsType": "Menos de",
+          "type": 9.5,
+          "eventName": "Génova (Genova) - Fiorentina (Florencia)",
+          "date_start": 1617454800000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del local",
+          "odds": 1.65,
+          "type": 9.5,
+          "oddsType": "Más de",
+          "eventName": "Genoa - Fiorentina",
+          "date_start": 1617454800000
+        }
+      ]
+    },
+    {
+      "profit": 1.324503311258269,
+      "date": "2021-04-03T03:07:53.308Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total Tarjetas Visitante",
+          "odds": 3,
+          "type": 2.5,
+          "oddsType": "Más de",
+          "eventName": "Mainz 05 - Arminia Bielefeld",
+          "sport": "FOOTBALL",
+          "date_start": 1617456600000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de tarjetas Amarillas Visitante",
+          "odds": 1.53,
+          "type": 2.5,
+          "oddsType": "Menos de",
+          "eventName": "FC Mainz 05 - Arminia Вielefeld",
+          "sport": "Football",
+          "date_start": 1617456600000
+        }
+      ]
+    },
+    {
+      "profit": 1.324503311258269,
+      "date": "2021-04-03T03:07:53.313Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de tarjetas Amarillas Visitante",
+          "odds": 1.53,
+          "oddsType": "Menos de",
+          "type": 2.5,
+          "eventName": "FC Mainz 05 - Arminia Вielefeld",
+          "date_start": 1617456600000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total Tarjetas Visitante",
+          "odds": 3,
+          "type": 2.5,
+          "oddsType": "Más de",
+          "eventName": "Mainz 05 - Arminia Bielefeld",
+          "date_start": 1617456600000
+        }
+      ]
+    },
+    {
+      "profit": 1.646191646191653,
+      "date": "2021-04-03T03:07:53.318Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.1,
+          "oddsType": "Menos de",
+          "type": 14.5,
+          "eventName": "FC Augsburg - TSG Hoffenheim",
+          "date_start": 1617456600000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.97,
+          "type": 14.5,
+          "oddsType": "Más de",
+          "eventName": "FC Augsburg - Hoffenheim (Sinsheim)",
+          "date_start": 1617456600000
+        }
+      ]
+    },
+    {
+      "profit": 1.646191646191653,
+      "date": "2021-04-03T03:07:53.323Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.97,
+          "type": 14.5,
+          "oddsType": "Más de",
+          "eventName": "FC Augsburg - Hoffenheim (Sinsheim)",
+          "sport": "Football",
+          "date_start": 1617456600000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.1,
+          "type": 14.5,
+          "oddsType": "Menos de",
+          "eventName": "FC Augsburg - TSG Hoffenheim",
+          "sport": "FOOTBALL",
+          "date_start": 1617456600000
+        }
+      ]
+    },
+    {
+      "profit": 2.5301204819277103,
+      "date": "2021-04-03T03:07:53.334Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.85,
+          "oddsType": "Menos de",
+          "type": 8.5,
+          "eventName": "Bayer Leverkusen - FC Schalke 04",
+          "date_start": 1617456600000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.3,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "Bayer (Leverkusen) - Schalke 04 (Gelsenkirchen)",
+          "date_start": 1617456600000
+        }
+      ]
+    },
+    {
+      "profit": 1.2330316742081493,
+      "date": "2021-04-03T03:07:53.334Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total Tarjetas Visitante",
+          "odds": 2.85,
+          "type": 2.5,
+          "oddsType": "Más de",
+          "eventName": "Bayer Leverkusen - FC Schalke 04",
+          "sport": "FOOTBALL",
+          "date_start": 1617456600000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de tarjetas Amarillas Visitante",
+          "odds": 1.57,
+          "type": 2.5,
+          "oddsType": "Menos de",
+          "eventName": "Bayer (Leverkusen) - Schalke 04 (Gelsenkirchen)",
+          "sport": "Football",
+          "date_start": 1617456600000
+        }
+      ]
+    },
+    {
+      "profit": 2.5301204819277103,
+      "date": "2021-04-03T03:07:53.341Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.3,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "Bayer (Leverkusen) - Schalke 04 (Gelsenkirchen)",
+          "sport": "Football",
+          "date_start": 1617456600000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.85,
+          "type": 8.5,
+          "oddsType": "Menos de",
+          "eventName": "Bayer Leverkusen - FC Schalke 04",
+          "sport": "FOOTBALL",
+          "date_start": 1617456600000
+        }
+      ]
+    },
+    {
+      "profit": 1.2330316742081493,
+      "date": "2021-04-03T03:07:53.342Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de tarjetas Amarillas Visitante",
+          "odds": 1.57,
+          "oddsType": "Menos de",
+          "type": 2.5,
+          "eventName": "Bayer (Leverkusen) - Schalke 04 (Gelsenkirchen)",
+          "date_start": 1617456600000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total Tarjetas Visitante",
+          "odds": 2.85,
+          "type": 2.5,
+          "oddsType": "Más de",
+          "eventName": "Bayer Leverkusen - FC Schalke 04",
+          "date_start": 1617456600000
+        }
+      ]
+    },
+    {
+      "profit": 3.9328537170263758,
+      "date": "2021-04-03T03:07:53.350Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de tarjetas Local",
+          "odds": 1.97,
+          "oddsType": "Menos de",
+          "type": 1.5,
+          "eventName": "Borussia Dortmund - Eintracht Frankfurt",
+          "date_start": 1617456600000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de tarjetas Local",
+          "odds": 2.2,
+          "type": 1.5,
+          "oddsType": "Más de",
+          "eventName": "Borussia (Dortmund) - Eintracht Frankfurt",
+          "date_start": 1617456600000
+        }
+      ]
+    },
+    {
+      "profit": 3.9328537170263758,
+      "date": "2021-04-03T03:07:53.356Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de tarjetas Local",
+          "odds": 2.2,
+          "type": 1.5,
+          "oddsType": "Más de",
+          "eventName": "Borussia (Dortmund) - Eintracht Frankfurt",
+          "sport": "Football",
+          "date_start": 1617456600000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de tarjetas Local",
+          "odds": 1.97,
+          "type": 1.5,
+          "oddsType": "Menos de",
+          "eventName": "Borussia Dortmund - Eintracht Frankfurt",
+          "sport": "FOOTBALL",
+          "date_start": 1617456600000
+        }
+      ]
+    },
+    {
+      "profit": 14.677419354838719,
+      "date": "2021-04-03T03:07:53.573Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del local",
+          "odds": 1.8,
+          "type": 14.5,
+          "oddsType": "Más de",
+          "eventName": "Leeds United - Sheffield United",
+          "sport": "FOOTBALL",
+          "date_start": 1617458400000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del local",
+          "odds": 3.16,
+          "type": 14.5,
+          "oddsType": "Menos de",
+          "eventName": "Leeds United FC - Sheffield United FC",
+          "sport": "Football",
+          "date_start": 1617458400000
+        }
+      ]
+    },
+    {
+      "profit": 12.541436464088406,
+      "date": "2021-04-03T03:07:53.573Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.1,
+          "oddsType": "Menos de",
+          "type": 9.5,
+          "eventName": "Leeds United - Sheffield United",
+          "date_start": 1617458400000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.425,
+          "type": 9.5,
+          "oddsType": "Más de",
+          "eventName": "Leeds United FC - Sheffield United FC",
+          "date_start": 1617458400000
+        }
+      ]
+    },
+    {
+      "profit": 8.387096774193537,
+      "date": "2021-04-03T03:07:53.573Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros a puerta por parte del local",
+          "odds": 1.6,
+          "type": 4.5,
+          "oddsType": "Más de",
+          "eventName": "Leeds United - Sheffield United",
+          "sport": "FOOTBALL",
+          "date_start": 1617458400000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros a puerta por parte del local",
+          "odds": 3.36,
+          "type": 4.5,
+          "oddsType": "Menos de",
+          "eventName": "Leeds United FC - Sheffield United FC",
+          "sport": "Football",
+          "date_start": 1617458400000
+        }
+      ]
+    },
+    {
+      "profit": 0.4651162790697754,
+      "date": "2021-04-03T03:07:53.573Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros a puerta por parte del visitante",
+          "odds": 1.6,
+          "oddsType": "Menos de",
+          "type": 3.5,
+          "eventName": "Leeds United - Sheffield United",
+          "date_start": 1617458400000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros a puerta por parte del visitante",
+          "odds": 2.7,
+          "type": 3.5,
+          "oddsType": "Más de",
+          "eventName": "Leeds United FC - Sheffield United FC",
+          "date_start": 1617458400000
+        }
+      ]
+    },
+    {
+      "profit": 2.2162162162162105,
+      "date": "2021-04-03T03:07:53.573Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de tarjetas Local",
+          "odds": 3.1,
+          "oddsType": "Menos de",
+          "type": 0.5,
+          "eventName": "Leeds United - Sheffield United",
+          "date_start": 1617458400000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de tarjetas Local",
+          "odds": 1.525,
+          "type": 0.5,
+          "oddsType": "Más de",
+          "eventName": "Leeds United FC - Sheffield United FC",
+          "date_start": 1617458400000
+        }
+      ]
+    },
+    {
+      "profit": 14.677419354838719,
+      "date": "2021-04-03T03:07:53.580Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del local",
+          "odds": 3.16,
+          "oddsType": "Menos de",
+          "type": 14.5,
+          "eventName": "Leeds United FC - Sheffield United FC",
+          "date_start": 1617458400000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del local",
+          "odds": 1.8,
+          "type": 14.5,
+          "oddsType": "Más de",
+          "eventName": "Leeds United - Sheffield United",
+          "date_start": 1617458400000
+        }
+      ]
+    },
+    {
+      "profit": 12.541436464088406,
+      "date": "2021-04-03T03:07:53.580Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.425,
+          "type": 9.5,
+          "oddsType": "Más de",
+          "eventName": "Leeds United FC - Sheffield United FC",
+          "sport": "Football",
+          "date_start": 1617458400000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.1,
+          "type": 9.5,
+          "oddsType": "Menos de",
+          "eventName": "Leeds United - Sheffield United",
+          "sport": "FOOTBALL",
+          "date_start": 1617458400000
+        }
+      ]
+    },
+    {
+      "profit": 8.387096774193537,
+      "date": "2021-04-03T03:07:53.580Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros a puerta por parte del local",
+          "odds": 3.36,
+          "oddsType": "Menos de",
+          "type": 4.5,
+          "eventName": "Leeds United FC - Sheffield United FC",
+          "date_start": 1617458400000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros a puerta por parte del local",
+          "odds": 1.6,
+          "type": 4.5,
+          "oddsType": "Más de",
+          "eventName": "Leeds United - Sheffield United",
+          "date_start": 1617458400000
+        }
+      ]
+    },
+    {
+      "profit": 0.4651162790697754,
+      "date": "2021-04-03T03:07:53.580Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros a puerta por parte del visitante",
+          "odds": 2.7,
+          "type": 3.5,
+          "oddsType": "Más de",
+          "eventName": "Leeds United FC - Sheffield United FC",
+          "sport": "Football",
+          "date_start": 1617458400000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros a puerta por parte del visitante",
+          "odds": 1.6,
+          "type": 3.5,
+          "oddsType": "Menos de",
+          "eventName": "Leeds United - Sheffield United",
+          "sport": "FOOTBALL",
+          "date_start": 1617458400000
+        }
+      ]
+    },
+    {
+      "profit": 2.2162162162162105,
+      "date": "2021-04-03T03:07:53.580Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de tarjetas Local",
+          "odds": 1.525,
+          "type": 0.5,
+          "oddsType": "Más de",
+          "eventName": "Leeds United FC - Sheffield United FC",
+          "sport": "Football",
+          "date_start": 1617458400000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de tarjetas Local",
+          "odds": 3.1,
+          "type": 0.5,
+          "oddsType": "Menos de",
+          "eventName": "Leeds United - Sheffield United",
+          "sport": "FOOTBALL",
+          "date_start": 1617458400000
+        }
+      ]
+    },
+    {
+      "profit": 2.302158273381295,
+      "date": "2021-04-03T03:07:53.641Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del local",
+          "odds": 1.8,
+          "oddsType": "Menos de",
+          "type": 14.5,
+          "eventName": "Real Madrid - Eibar",
+          "date_start": 1617459300000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del local",
+          "odds": 2.37,
+          "type": 14.5,
+          "oddsType": "Más de",
+          "eventName": "Real Madrid - Eibar",
+          "date_start": 1617459300000
+        }
+      ]
+    },
+    {
+      "profit": 4.761904761904759,
+      "date": "2021-04-03T03:07:53.641Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de fueras de juego",
+          "odds": 2.2,
+          "type": 4.5,
+          "oddsType": "Más de",
+          "eventName": "Real Madrid - Eibar",
+          "sport": "FOOTBALL",
+          "date_start": 1617459300000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de fueras de juego",
+          "odds": 2,
+          "type": 4.5,
+          "oddsType": "Menos de",
+          "eventName": "Real Madrid - Eibar",
+          "sport": "Football",
+          "date_start": 1617459300000
+        }
+      ]
+    },
+    {
+      "profit": 2.562141491395792,
+      "date": "2021-04-03T03:07:53.641Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de faltas cometidas",
+          "odds": 1.8,
+          "oddsType": "Menos de",
+          "type": 24.5,
+          "eventName": "Real Madrid - Eibar",
+          "date_start": 1617459300000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de faltas cometidas",
+          "odds": 2.384,
+          "type": 24.5,
+          "oddsType": "Más de",
+          "eventName": "Real Madrid - Eibar",
+          "date_start": 1617459300000
+        }
+      ]
+    },
+    {
+      "profit": 1.477832512315274,
+      "date": "2021-04-03T03:07:53.641Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de tarjetas Local",
+          "odds": 2.06,
+          "oddsType": "Menos de",
+          "type": 1.5,
+          "eventName": "Real Madrid - Eibar",
+          "date_start": 1617459300000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de tarjetas Local",
+          "odds": 2,
+          "type": 1.5,
+          "oddsType": "Más de",
+          "eventName": "Real Madrid - Eibar",
+          "date_start": 1617459300000
+        }
+      ]
+    },
+    {
+      "profit": 0.047984644913626084,
+      "date": "2021-04-03T03:07:53.641Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de tarjetas Visitante",
+          "odds": 2.5,
+          "oddsType": "Menos de",
+          "type": 1.5,
+          "eventName": "Real Madrid - Eibar",
+          "date_start": 1617459300000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de tarjetas Visitante",
+          "odds": 1.668,
+          "type": 1.5,
+          "oddsType": "Más de",
+          "eventName": "Real Madrid - Eibar",
+          "date_start": 1617459300000
+        }
+      ]
+    },
+    {
+      "profit": 2.302158273381295,
+      "date": "2021-04-03T03:07:53.647Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del local",
+          "odds": 2.37,
+          "type": 14.5,
+          "oddsType": "Más de",
+          "eventName": "Real Madrid - Eibar",
+          "sport": "Football",
+          "date_start": 1617459300000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del local",
+          "odds": 1.8,
+          "type": 14.5,
+          "oddsType": "Menos de",
+          "eventName": "Real Madrid - Eibar",
+          "sport": "FOOTBALL",
+          "date_start": 1617459300000
+        }
+      ]
+    },
+    {
+      "profit": 4.761904761904759,
+      "date": "2021-04-03T03:07:53.647Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de fueras de juego",
+          "odds": 2,
+          "oddsType": "Menos de",
+          "type": 4.5,
+          "eventName": "Real Madrid - Eibar",
+          "date_start": 1617459300000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de fueras de juego",
+          "odds": 2.2,
+          "type": 4.5,
+          "oddsType": "Más de",
+          "eventName": "Real Madrid - Eibar",
+          "date_start": 1617459300000
+        }
+      ]
+    },
+    {
+      "profit": 2.562141491395792,
+      "date": "2021-04-03T03:07:53.647Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de faltas cometidas",
+          "odds": 2.384,
+          "type": 24.5,
+          "oddsType": "Más de",
+          "eventName": "Real Madrid - Eibar",
+          "sport": "Football",
+          "date_start": 1617459300000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de faltas cometidas",
+          "odds": 1.8,
+          "type": 24.5,
+          "oddsType": "Menos de",
+          "eventName": "Real Madrid - Eibar",
+          "sport": "FOOTBALL",
+          "date_start": 1617459300000
+        }
+      ]
+    },
+    {
+      "profit": 1.477832512315274,
+      "date": "2021-04-03T03:07:53.647Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de tarjetas Local",
+          "odds": 2,
+          "type": 1.5,
+          "oddsType": "Más de",
+          "eventName": "Real Madrid - Eibar",
+          "sport": "Football",
+          "date_start": 1617459300000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de tarjetas Local",
+          "odds": 2.06,
+          "type": 1.5,
+          "oddsType": "Menos de",
+          "eventName": "Real Madrid - Eibar",
+          "sport": "FOOTBALL",
+          "date_start": 1617459300000
+        }
+      ]
+    },
+    {
+      "profit": 0.047984644913626084,
+      "date": "2021-04-03T03:07:53.647Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de tarjetas Visitante",
+          "odds": 1.668,
+          "type": 1.5,
+          "oddsType": "Más de",
+          "eventName": "Real Madrid - Eibar",
+          "sport": "Football",
+          "date_start": 1617459300000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de tarjetas Visitante",
+          "odds": 2.5,
+          "type": 1.5,
+          "oddsType": "Menos de",
+          "eventName": "Real Madrid - Eibar",
+          "sport": "FOOTBALL",
+          "date_start": 1617459300000
+        }
+      ]
+    },
+    {
+      "profit": 0.3844350679793678,
+      "date": "2021-04-03T03:07:53.778Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de tarjetas Local",
+          "odds": 2.65,
+          "type": 2.5,
+          "oddsType": "Más de",
+          "eventName": "Paris SG - Lille",
+          "sport": "FOOTBALL",
+          "date_start": 1617462000000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de tarjetas Local",
+          "odds": 1.616,
+          "type": 2.5,
+          "oddsType": "Menos de",
+          "eventName": "PSG (Paris) - FC Lille",
+          "sport": "Football",
+          "date_start": 1617462000000
+        }
+      ]
+    },
+    {
+      "profit": 0.3844350679793678,
+      "date": "2021-04-03T03:07:53.783Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de tarjetas Local",
+          "odds": 1.616,
+          "oddsType": "Menos de",
+          "type": 2.5,
+          "eventName": "PSG (Paris) - FC Lille",
+          "date_start": 1617462000000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de tarjetas Local",
+          "odds": 2.65,
+          "type": 2.5,
+          "oddsType": "Más de",
+          "eventName": "Paris SG - Lille",
+          "date_start": 1617462000000
+        }
+      ]
+    },
+    {
+      "profit": 3.064985451018444,
+      "date": "2021-04-03T03:07:53.881Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del local",
+          "odds": 2.1,
+          "oddsType": "Menos de",
+          "type": 10.5,
+          "eventName": "Torino - Juventus",
+          "date_start": 1617465600000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del local",
+          "odds": 2.024,
+          "type": 10.5,
+          "oddsType": "Más de",
+          "eventName": "Torino (Turín) - Juventus (Turín)",
+          "date_start": 1617465600000
+        }
+      ]
+    },
+    {
+      "profit": 1.6715830875123032,
+      "date": "2021-04-03T03:07:53.881Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de faltas cometidas",
+          "odds": 2,
+          "type": 26.5,
+          "oddsType": "Más de",
+          "eventName": "Torino - Juventus",
+          "sport": "FOOTBALL",
+          "date_start": 1617465600000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de faltas cometidas",
+          "odds": 2.068,
+          "type": 26.5,
+          "oddsType": "Menos de",
+          "eventName": "Torino (Turín) - Juventus (Turín)",
+          "sport": "Football",
+          "date_start": 1617465600000
+        }
+      ]
+    },
+    {
+      "profit": 3.064985451018444,
+      "date": "2021-04-03T03:07:53.887Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del local",
+          "odds": 2.024,
+          "type": 10.5,
+          "oddsType": "Más de",
+          "eventName": "Torino (Turín) - Juventus (Turín)",
+          "sport": "Football",
+          "date_start": 1617465600000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del local",
+          "odds": 2.1,
+          "type": 10.5,
+          "oddsType": "Menos de",
+          "eventName": "Torino - Juventus",
+          "sport": "FOOTBALL",
+          "date_start": 1617465600000
+        }
+      ]
+    },
+    {
+      "profit": 1.6715830875123032,
+      "date": "2021-04-03T03:07:53.887Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de faltas cometidas",
+          "odds": 2.068,
+          "oddsType": "Menos de",
+          "type": 26.5,
+          "eventName": "Torino (Turín) - Juventus (Turín)",
+          "date_start": 1617465600000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de faltas cometidas",
+          "odds": 2,
+          "type": 26.5,
+          "oddsType": "Más de",
+          "eventName": "Torino - Juventus",
+          "date_start": 1617465600000
+        }
+      ]
+    },
+    {
+      "profit": 2.3786407766990436,
+      "date": "2021-04-03T03:07:54.004Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.9,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "Osasuna - Getafe",
+          "sport": "FOOTBALL",
+          "date_start": 1617467400000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.22,
+          "type": 8.5,
+          "oddsType": "Menos de",
+          "eventName": "Osasuna (Pamplona) - Getafe",
+          "sport": "Football",
+          "date_start": 1617467400000
+        }
+      ]
+    },
+    {
+      "profit": 2.3786407766990436,
+      "date": "2021-04-03T03:07:54.008Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.22,
+          "oddsType": "Menos de",
+          "type": 8.5,
+          "eventName": "Osasuna (Pamplona) - Getafe",
+          "date_start": 1617467400000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.9,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "Osasuna - Getafe",
+          "date_start": 1617467400000
+        }
+      ]
+    },
+    {
+      "profit": 5.276073619631887,
+      "date": "2021-04-03T03:07:54.267Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.95,
+          "oddsType": "Menos de",
+          "type": 10.5,
+          "eventName": "Borussia Mönchengladbach - SC Freiburg",
+          "date_start": 1617474600000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.288,
+          "type": 10.5,
+          "oddsType": "Más de",
+          "eventName": "Borussia Monchengladbach - FC Freiburg",
+          "date_start": 1617474600000
+        }
+      ]
+    },
+    {
+      "profit": 3.1103286384976485,
+      "date": "2021-04-03T03:07:54.267Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total de fueras de juego",
+          "odds": 1.75,
+          "oddsType": "Menos de",
+          "type": 3.5,
+          "eventName": "Borussia Mönchengladbach - SC Freiburg",
+          "date_start": 1617474600000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total de fueras de juego",
+          "odds": 2.51,
+          "type": 3.5,
+          "oddsType": "Más de",
+          "eventName": "Borussia Monchengladbach - FC Freiburg",
+          "date_start": 1617474600000
+        }
+      ]
+    },
+    {
+      "profit": 5.276073619631887,
+      "date": "2021-04-03T03:07:54.274Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.288,
+          "type": 10.5,
+          "oddsType": "Más de",
+          "eventName": "Borussia Monchengladbach - FC Freiburg",
+          "sport": "Football",
+          "date_start": 1617474600000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.95,
+          "type": 10.5,
+          "oddsType": "Menos de",
+          "eventName": "Borussia Mönchengladbach - SC Freiburg",
+          "sport": "FOOTBALL",
+          "date_start": 1617474600000
+        }
+      ]
+    },
+    {
+      "profit": 3.1103286384976485,
+      "date": "2021-04-03T03:07:54.274Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total de fueras de juego",
+          "odds": 2.51,
+          "type": 3.5,
+          "oddsType": "Más de",
+          "eventName": "Borussia Monchengladbach - FC Freiburg",
+          "sport": "Football",
+          "date_start": 1617474600000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total de fueras de juego",
+          "odds": 1.75,
+          "type": 3.5,
+          "oddsType": "Menos de",
+          "eventName": "Borussia Mönchengladbach - SC Freiburg",
+          "sport": "FOOTBALL",
+          "date_start": 1617474600000
+        }
+      ]
+    },
+    {
+      "profit": 0.7196029776674777,
+      "date": "2021-04-03T03:07:54.305Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total asiático",
+          "odds": 2.05,
+          "type": 2.25,
+          "oddsType": "Más de",
+          "eventName": "Club Atlético Fénix (ARG) - Colegiales",
+          "sport": "FOOTBALL",
+          "date_start": 1617474600000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total asiático",
+          "odds": 1.98,
+          "type": 2.25,
+          "oddsType": "Menos de",
+          "eventName": "Club Atlético Ituzaingó - Club Atletico Victoriano Arenas",
+          "sport": "Football",
+          "date_start": 1617474600000
+        }
+      ]
+    },
+    {
+      "profit": 0.7196029776674777,
+      "date": "2021-04-03T03:07:54.308Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total asiático",
+          "odds": 1.98,
+          "oddsType": "Menos de",
+          "type": 2.25,
+          "eventName": "Club Atlético Ituzaingó - Club Atletico Victoriano Arenas",
+          "date_start": 1617474600000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total asiático",
+          "odds": 2.05,
+          "type": 2.25,
+          "oddsType": "Más de",
+          "eventName": "Club Atlético Fénix (ARG) - Colegiales",
+          "date_start": 1617474600000
+        }
+      ]
+    },
+    {
+      "profit": 2.716627634660412,
+      "date": "2021-04-03T03:07:54.384Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del local",
+          "odds": 1.72,
+          "oddsType": "Menos de",
+          "type": 10.5,
+          "eventName": "Arsenal - Liverpool",
+          "date_start": 1617476400000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del local",
+          "odds": 2.55,
+          "type": 10.5,
+          "oddsType": "Más de",
+          "eventName": "Arsenal - Liverpool FC",
+          "date_start": 1617476400000
+        }
+      ]
+    },
+    {
+      "profit": 4.3020594965674945,
+      "date": "2021-04-03T03:07:54.384Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.72,
+          "type": 12.5,
+          "oddsType": "Más de",
+          "eventName": "Arsenal - Liverpool",
+          "sport": "FOOTBALL",
+          "date_start": 1617476400000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.65,
+          "type": 12.5,
+          "oddsType": "Menos de",
+          "eventName": "Arsenal - Liverpool FC",
+          "sport": "Football",
+          "date_start": 1617476400000
+        }
+      ]
+    },
+    {
+      "profit": 0.721951219512178,
+      "date": "2021-04-03T03:07:54.384Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total Cornes Visitante",
+          "odds": 2.32,
+          "type": 5.5,
+          "oddsType": "Más de",
+          "eventName": "Arsenal - Liverpool",
+          "sport": "FOOTBALL",
+          "date_start": 1617476400000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total Cornes Visitante",
+          "odds": 1.78,
+          "type": 5.5,
+          "oddsType": "Menos de",
+          "eventName": "Arsenal - Liverpool FC",
+          "sport": "Football",
+          "date_start": 1617476400000
+        }
+      ]
+    },
+    {
+      "profit": 0.1785714285714164,
+      "date": "2021-04-03T03:07:54.385Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total Cornes Visitante",
+          "odds": 1.65,
+          "type": 4.5,
+          "oddsType": "Más de",
+          "eventName": "Arsenal - Liverpool",
+          "sport": "FOOTBALL",
+          "date_start": 1617476400000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total Cornes Visitante",
+          "odds": 2.55,
+          "type": 4.5,
+          "oddsType": "Menos de",
+          "eventName": "Arsenal - Liverpool FC",
+          "sport": "Football",
+          "date_start": 1617476400000
+        }
+      ]
+    },
+    {
+      "profit": 2.716627634660412,
+      "date": "2021-04-03T03:07:54.389Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del local",
+          "odds": 2.55,
+          "type": 10.5,
+          "oddsType": "Más de",
+          "eventName": "Arsenal - Liverpool FC",
+          "sport": "Football",
+          "date_start": 1617476400000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del local",
+          "odds": 1.72,
+          "type": 10.5,
+          "oddsType": "Menos de",
+          "eventName": "Arsenal - Liverpool",
+          "sport": "FOOTBALL",
+          "date_start": 1617476400000
+        }
+      ]
+    },
+    {
+      "profit": 4.3020594965674945,
+      "date": "2021-04-03T03:07:54.389Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 2.65,
+          "oddsType": "Menos de",
+          "type": 12.5,
+          "eventName": "Arsenal - Liverpool FC",
+          "date_start": 1617476400000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros por parte del visitante",
+          "odds": 1.72,
+          "type": 12.5,
+          "oddsType": "Más de",
+          "eventName": "Arsenal - Liverpool",
+          "date_start": 1617476400000
+        }
+      ]
+    },
+    {
+      "profit": 0.1785714285714164,
+      "date": "2021-04-03T03:07:54.389Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total Cornes Visitante",
+          "odds": 2.55,
+          "oddsType": "Menos de",
+          "type": 4.5,
+          "eventName": "Arsenal - Liverpool FC",
+          "date_start": 1617476400000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total Cornes Visitante",
+          "odds": 1.65,
+          "type": 4.5,
+          "oddsType": "Más de",
+          "eventName": "Arsenal - Liverpool",
+          "date_start": 1617476400000
+        }
+      ]
+    },
+    {
+      "profit": 0.721951219512178,
+      "date": "2021-04-03T03:07:54.389Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total Cornes Visitante",
+          "odds": 1.78,
+          "oddsType": "Menos de",
+          "type": 5.5,
+          "eventName": "Arsenal - Liverpool FC",
+          "date_start": 1617476400000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total Cornes Visitante",
+          "odds": 2.32,
+          "type": 5.5,
+          "oddsType": "Más de",
+          "eventName": "Arsenal - Liverpool",
+          "date_start": 1617476400000
+        }
+      ]
+    },
+    {
+      "profit": 0.7444168734491257,
+      "date": "2021-04-03T03:07:54.399Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total Tiros a puerta",
+          "odds": 2,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "Lens - Lyon",
+          "sport": "FOOTBALL",
+          "date_start": 1617476400000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total Tiros a puerta",
+          "odds": 2.03,
+          "type": 8.5,
+          "oddsType": "Menos de",
+          "eventName": "FC Lens - Lyon",
+          "sport": "Football",
+          "date_start": 1617476400000
+        }
+      ]
+    },
+    {
+      "profit": 1.951219512195138,
+      "date": "2021-04-03T03:07:54.399Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros a puerta por parte del visitante",
+          "odds": 1.9,
+          "type": 4.5,
+          "oddsType": "Más de",
+          "eventName": "Lens - Lyon",
+          "sport": "FOOTBALL",
+          "date_start": 1617476400000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros a puerta por parte del visitante",
+          "odds": 2.2,
+          "type": 4.5,
+          "oddsType": "Menos de",
+          "eventName": "FC Lens - Lyon",
+          "sport": "Football",
+          "date_start": 1617476400000
+        }
+      ]
+    },
+    {
+      "profit": 0.7444168734491257,
+      "date": "2021-04-03T03:07:54.404Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total Tiros a puerta",
+          "odds": 2.03,
+          "oddsType": "Menos de",
+          "type": 8.5,
+          "eventName": "FC Lens - Lyon",
+          "date_start": 1617476400000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total Tiros a puerta",
+          "odds": 2,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "Lens - Lyon",
+          "date_start": 1617476400000
+        }
+      ]
+    },
+    {
+      "profit": 1.951219512195138,
+      "date": "2021-04-03T03:07:54.404Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Número total de tiros a puerta por parte del visitante",
+          "odds": 2.2,
+          "oddsType": "Menos de",
+          "type": 4.5,
+          "eventName": "FC Lens - Lyon",
+          "date_start": 1617476400000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Número total de tiros a puerta por parte del visitante",
+          "odds": 1.9,
+          "type": 4.5,
+          "oddsType": "Más de",
+          "eventName": "Lens - Lyon",
+          "date_start": 1617476400000
+        }
+      ]
+    },
+    {
+      "profit": 1.612339930151336,
+      "date": "2021-04-03T03:07:54.439Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total Cornes",
+          "odds": 1.65,
+          "oddsType": "Menos de",
+          "type": 10.5,
+          "eventName": "FC Porto - Santa Clara",
+          "date_start": 1617478200000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total Cornes",
+          "odds": 2.645,
+          "type": 10.5,
+          "oddsType": "Más de",
+          "eventName": "Porto - Santa Clara",
+          "date_start": 1617478200000
+        }
+      ]
+    },
+    {
+      "profit": 2.7338129496402956,
+      "date": "2021-04-03T03:07:54.439Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total Cornes",
+          "odds": 4.2,
+          "oddsType": "Menos de",
+          "type": 7.5,
+          "eventName": "FC Porto - Santa Clara",
+          "date_start": 1617478200000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total Cornes",
+          "odds": 1.36,
+          "type": 7.5,
+          "oddsType": "Más de",
+          "eventName": "Porto - Santa Clara",
+          "date_start": 1617478200000
+        }
+      ]
+    },
+    {
+      "profit": 2.8626974483596683,
+      "date": "2021-04-03T03:07:54.439Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total Cornes",
+          "odds": 2.08,
+          "oddsType": "Menos de",
+          "type": 9.5,
+          "eventName": "FC Porto - Santa Clara",
+          "date_start": 1617478200000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total Cornes",
+          "odds": 2.035,
+          "type": 9.5,
+          "oddsType": "Más de",
+          "eventName": "Porto - Santa Clara",
+          "date_start": 1617478200000
+        }
+      ]
+    },
+    {
+      "profit": 3.288590604026851,
+      "date": "2021-04-03T03:07:54.439Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total Cornes",
+          "odds": 2.85,
+          "oddsType": "Menos de",
+          "type": 8.5,
+          "eventName": "FC Porto - Santa Clara",
+          "date_start": 1617478200000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total Cornes",
+          "odds": 1.62,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "Porto - Santa Clara",
+          "date_start": 1617478200000
+        }
+      ]
+    },
+    {
+      "profit": 2.7338129496402956,
+      "date": "2021-04-03T03:07:54.446Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total Cornes",
+          "odds": 1.36,
+          "type": 7.5,
+          "oddsType": "Más de",
+          "eventName": "Porto - Santa Clara",
+          "sport": "Football",
+          "date_start": 1617478200000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total Cornes",
+          "odds": 4.2,
+          "type": 7.5,
+          "oddsType": "Menos de",
+          "eventName": "FC Porto - Santa Clara",
+          "sport": "FOOTBALL",
+          "date_start": 1617478200000
+        }
+      ]
+    },
+    {
+      "profit": 3.288590604026851,
+      "date": "2021-04-03T03:07:54.446Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total Cornes",
+          "odds": 1.62,
+          "type": 8.5,
+          "oddsType": "Más de",
+          "eventName": "Porto - Santa Clara",
+          "sport": "Football",
+          "date_start": 1617478200000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total Cornes",
+          "odds": 2.85,
+          "type": 8.5,
+          "oddsType": "Menos de",
+          "eventName": "FC Porto - Santa Clara",
+          "sport": "FOOTBALL",
+          "date_start": 1617478200000
+        }
+      ]
+    },
+    {
+      "profit": 2.8626974483596683,
+      "date": "2021-04-03T03:07:54.446Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total Cornes",
+          "odds": 2.035,
+          "type": 9.5,
+          "oddsType": "Más de",
+          "eventName": "Porto - Santa Clara",
+          "sport": "Football",
+          "date_start": 1617478200000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total Cornes",
+          "odds": 2.08,
+          "type": 9.5,
+          "oddsType": "Menos de",
+          "eventName": "FC Porto - Santa Clara",
+          "sport": "FOOTBALL",
+          "date_start": 1617478200000
+        }
+      ]
+    },
+    {
+      "profit": 1.612339930151336,
+      "date": "2021-04-03T03:07:54.446Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total Cornes",
+          "odds": 2.645,
+          "type": 10.5,
+          "oddsType": "Más de",
+          "eventName": "Porto - Santa Clara",
+          "sport": "Football",
+          "date_start": 1617478200000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total Cornes",
+          "odds": 1.65,
+          "type": 10.5,
+          "oddsType": "Menos de",
+          "eventName": "FC Porto - Santa Clara",
+          "sport": "FOOTBALL",
+          "date_start": 1617478200000
+        }
+      ]
+    },
+    {
+      "profit": 1.083743842364541,
+      "date": "2021-04-03T03:07:54.588Z",
+      "options": [
+        {
+          "comapanyName": "betplay",
+          "market": "Total Cornes",
+          "odds": 2.16,
+          "type": 9.5,
+          "oddsType": "Más de",
+          "eventName": "Club América - Club Necaxa",
+          "sport": "FOOTBALL",
+          "date_start": 1617498000000
+        },
+        {
+          "comapanyName": "xbet",
+          "market": "Total Cornes",
+          "odds": 1.9,
+          "type": 9.5,
+          "oddsType": "Menos de",
+          "eventName": "Club América (México) - Necaxa",
+          "sport": "Football",
+          "date_start": 1617498000000
+        }
+      ]
+    },
+    {
+      "profit": 1.083743842364541,
+      "date": "2021-04-03T03:07:54.592Z",
+      "options": [
+        {
+          "comapanyName": "xbet",
+          "market": "Total Cornes",
+          "odds": 1.9,
+          "oddsType": "Menos de",
+          "type": 9.5,
+          "eventName": "Club América (México) - Necaxa",
+          "date_start": 1617498000000
+        },
+        {
+          "comapanyName": "betplay",
+          "market": "Total Cornes",
+          "odds": 2.16,
+          "type": 9.5,
+          "oddsType": "Más de",
+          "eventName": "Club América - Club Necaxa",
+          "date_start": 1617498000000
+        }
+      ]
+    }
+  ]
+  

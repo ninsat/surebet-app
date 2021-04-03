@@ -5,12 +5,16 @@ import ReactDom from 'react-dom';
 import SurebetCard from './components/SurebetCard'
 import NavBar from './components/NavBar'
 import ProgressBar from './components/ProgressBar'
+import Calculator from './components/Calculator'
 
 import utilities from './libs/utilities.js'
 import surebets from './libs/surebets.js'
 import betplay from './bettingStores/betplay.js'
 import xbet from './bettingStores/xbet.js'
 import markets from './markets.json'
+
+
+import textData from './textData.json'
 
 
 import _ from 'lodash'

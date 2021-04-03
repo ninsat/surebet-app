@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, Fragment} from 'react';
 import clsx from 'clsx'
 import { createUseStyles } from "react-jss";
 
@@ -31,6 +31,19 @@ const useStyles = createUseStyles({
         "& span": {
             color: "#FFF",
             fontWeight: 900,
+        }
+    },
+    inversion:{
+        width:150,
+        display: "flex",
+        alignItems: "center",
+        padding: "2px 0px",
+    },
+    profitValue:{
+        display: "flex",
+        alignItems: "center",
+        margin: {
+            right: 10
         }
     },
     time: {
@@ -85,29 +98,83 @@ const useStyles = createUseStyles({
         padding: "5px 10px",
         fontSize: 15,
         fontWeight: 700
+    },
+    value:{
+        flex: 1,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "5px 10px"
     }
 })
 
 const SurebetCard = ({data}) => {
 
     const classes = useStyles()
+    const [calculator, setCalculator] = useState(false)
+    const [inversion, setInversion] = useState("0")
+    const [value, setValue] = useState(Array(data.options.length).fill(0))
+
+    const handleChangeCalculator = ()=>{
+        setCalculator(v=> !v)
+    }
+    const handleChangeInversion = (e)=>{
+        const inputValue = numeral(e.target.value).format("0,0")
+        const totalInversion = numeral(e.target.value).value()
+        const percentList = data.options.map(v => (1/v.odds)*100)
+        const totalPercent = percentList.reduce((total, p)=> total + p, 0)
+        const valueList = percentList.map( p => (totalInversion*p)/totalPercent)
+        if(totalPercent){
+            setValue(valueList)
+        }else{
+            setValue(v => v.map(_ => 0))
+        }
+        setInversion(inputValue)
+    }
 
     return (
         <div className={classes.card}>
-            <div className={classes.headers}>
+            <div className={clsx(classes.headers, "has-background-info")}>
                 <div className={clsx(classes.profit, "has-background-success")}>
                     <span>{numeral(data.profit/100).format("%0.00")}</span>
                 </div>
                 <div className={clsx(classes.sport, "has-background-info has-text-weight-medium")}>
                     <span>Futbol</span>
                 </div>
-                <div className={clsx(classes.time, "has-background-info")}>
-                    <span className="icon-text">
-                        <span className="icon">
-                            <i className="far fa-clock"></i>
+
+                {
+                    calculator?
+                    <Fragment>
+                        <div className={classes.profitValue}>
+                            <span className="title is-5 has-text-white">( {numeral(numeral(inversion).value() * (data.profit/100)).format("$0,0")} )</span>
+                        </div>
+                        <div className={clsx(classes.inversion)}>
+                            <div className={clsx("field")}>
+                                <p className="control has-icons-left has-icons-right">
+                                    <input onChange={handleChangeInversion} value={inversion} className="input" type="text" placeholder="Inversion"/>
+                                    <span className="icon is-small is-left">
+                                        <i className="fas fa-dollar-sign"/>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </Fragment>
+                    :
+                    <div className={clsx(classes.time, "has-background-info")}>
+                        <span className="icon-text">
+                            <span className="icon">
+                                <i className="far fa-clock"></i>
+                            </span>
+                            <span>2 min</span>
                         </span>
-                        <span>2 min</span>
+                    </div>
+                }
+                <div>
+                <button onClick={handleChangeCalculator} className="button is-ghost has-text-white">
+                    <span className="icon is-small">
+                        <i className="fas fa-calculator"></i>
                     </span>
+                </button>
                 </div>
             </div>
             <div className="content">
@@ -127,6 +194,12 @@ const SurebetCard = ({data}) => {
                             <div className={clsx(classes.odds, "has-text-info")}>
                                 {option.odds}
                             </div>
+                            {
+                                calculator && 
+                                <div className={classes.value}>
+                                    <span className="subtitle is-6">{numeral(value[index]).format("$0,0")}</span>
+                                </div>
+                            }
                         </div>
                     ))
                 }
