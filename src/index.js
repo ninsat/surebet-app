@@ -13,6 +13,8 @@ import xbet from './bettingStores/xbet.js'
 import markets from './markets.json'
 
 
+import _ from 'lodash'
+
 
 
 
@@ -101,7 +103,12 @@ const testXbet = async () => {
     
     cb && cb({loading: false})
     console.log(allSurebets);
-    return allSurebets
+
+    return allSurebets.reduce((arr, surebet)=>{
+      const isInTeArray = arr.findIndex(v => _.isEqual(v, surebet)) !== -1;
+      if(isInTeArray) return arr;
+      return [...arr, surebet]
+    },[])
   };
   
 

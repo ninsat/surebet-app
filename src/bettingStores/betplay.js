@@ -62,7 +62,7 @@ const getBetOffersBetPlay = async (id) => {
     const resultArray = [];
     let count = 0;
     for (let match of matches) {
-      await delay(500);
+      await delay(300);
       const data = await getBetOffersBetPlay(match.event.id);
       resultArray.push({ ...match, betOffers: data });
       console.log("YA");
