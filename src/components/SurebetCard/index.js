@@ -189,7 +189,7 @@ const SurebetCard = ({data}) => {
                                 <span className={clsx(classes.date)}>{moment(option.date_start).format("DD/MM/YYYY, h:mm a")}</span>
                             </div>
                             <div className={clsx(classes.market)}>
-                                {option.market} - {option.oddsType} {option.type? `(${option.type})` : ""}
+                                {option.market} - {option.oddsType} {option.type !== null? `(${option.type})` : ""}
                             </div>
                             <div className={clsx(classes.odds, "has-text-info")}>
                                 {option.odds}

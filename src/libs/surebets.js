@@ -236,7 +236,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                     market: marketObject.label,
                     odds: odds1,
                     oddsType: marketObject.options[marketOption].label,
-                    type: "",
+                    type: null,
                     eventName: matchGroup[company].eventName,
                     date_start: matchGroup[company].date_start,
                     sport: matchGroup[company].sport,
@@ -245,7 +245,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                     comapanyName: otherCompany,
                     market: marketObject.options[marketOption].opposite.market,
                     odds: odds2,
-                    type: "",
+                    type: null,
                     oddsType: marketObject.options[marketOption].opposite.label,
                     eventName: matchGroup[otherCompany].eventName,
                     sport: matchGroup[otherCompany].sport,
@@ -258,8 +258,6 @@ const compareMatches2 = (matchGroup, markets = []) => {
                 matchGroup,
                 marketObject.label
               );
-            } else {
-              console.log("-- no surebet --");
             }
           });
         });
@@ -302,11 +300,10 @@ const compareMatches2 = (matchGroup, markets = []) => {
                   }
                 ]
               })
-              console.log("HAY SURBET DE HANDICAP!!!!!");
             }
             if (op2) {
               result.push({
-                profit: getProfit(marketOption.home.v, otherCompanyOption.away.v),
+                profit: getProfit(marketOption.away.v, otherCompanyOption.home.v),
                 date: new Date(),
                 options: [
                   {
@@ -331,9 +328,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                   }
                 ]
               })
-              console.log("HAY SURBET DE HANDICAP!!!!!");
             }
-            if(!op1 && !op2) console.log("NO HAY SUREBET DE HANDICAP :(")
 
           })
         })
