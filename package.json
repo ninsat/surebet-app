@@ -2,7 +2,7 @@
   "name": "surebets-app",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.js",
+  "main": "index.html",
   "scripts": {
     "start": "parcel serve index.html",
     "build": "parcel build  index.html --dist-dir ./dist"
