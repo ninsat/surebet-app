@@ -566,6 +566,138 @@
       "enable": true
     },
     {
+      "label": "Tarjeta Roja mostrada",
+      "id": 1001263164,
+      "betplay": {
+        "id": 1001263164
+      },
+      "name": "redCardGiven",
+      "xbet": {
+        "marketId": "main",
+        "G": 10064
+      },
+      "type": "OBJECT",
+      "options": {
+        "YES": {
+          "label": "SI",
+          "betplay": {
+            "type": "OT_YES"
+          },
+          "xbet": {
+            "T": 2772
+          },
+          "opposite":{
+            "market": "Tarjeta Roja mostrada",
+            "label": "NO",
+            "route": "redCardGiven.NO"
+          }
+        },
+        "NO": {
+          "label": "NO",
+          "betplay": {
+            "type": "OT_NO"
+          },
+          "xbet": {
+            "T": 2773
+          },
+          "opposite":{
+            "market": "Tarjeta Roja mostrada",
+            "label": "SI",
+            "route": "redCardGiven.YES"
+          }
+        }
+      },
+      "enable": true
+    },
+    {
+      "label": "Local gana en las dos partes",
+      "id": 1001657417,
+      "betplay": {
+        "id": 1001657417
+      },
+      "name": "homeToWinBothHalves",
+      "xbet": {
+        "marketId": "main",
+        "G": 10046
+      },
+      "type": "OBJECT",
+      "options": {
+        "YES": {
+          "label": "SI",
+          "betplay": {
+            "type": "OT_YES"
+          },
+          "xbet": {
+            "T": 508
+          },
+          "opposite":{
+            "market": "Local gana en las dos partes",
+            "label": "NO",
+            "route": "homeToWinBothHalves.NO"
+          }
+        },
+        "NO": {
+          "label": "NO",
+          "betplay": {
+            "type": "OT_NO"
+          },
+          "xbet": {
+            "T": 509
+          },
+          "opposite":{
+            "market": "Local gana en las dos partes",
+            "label": "SI",
+            "route": "homeToWinBothHalves.YES"
+          }
+        }
+      },
+      "enable": true
+    },
+    {
+      "label": "Visitante gana en las dos partes",
+      "id": 1001657418,
+      "betplay": {
+        "id": 1001657418
+      },
+      "name": "awayToWinBothHalves",
+      "xbet": {
+        "marketId": "main",
+        "G": 10047
+      },
+      "type": "OBJECT",
+      "options": {
+        "YES": {
+          "label": "SI",
+          "betplay": {
+            "type": "OT_YES"
+          },
+          "xbet": {
+            "T": 510
+          },
+          "opposite":{
+            "market": "Visitante gana en las dos partes",
+            "label": "NO",
+            "route": "awayToWinBothHalves.NO"
+          }
+        },
+        "NO": {
+          "label": "NO",
+          "betplay": {
+            "type": "OT_NO"
+          },
+          "xbet": {
+            "T": 511
+          },
+          "opposite":{
+            "market": "Visitante gana en las dos partes",
+            "label": "SI",
+            "route": "awayToWinBothHalves.YES"
+          }
+        }
+      },
+      "enable": true
+    },
+    {
       "label": "Marcará",
       "id": 1001159886,
       "betplay": {
@@ -604,6 +736,50 @@
             "market": "Marcará",
             "label": "SI",
             "route": "toScore.YES"
+          }
+        }
+      },
+      "enable": true
+    },
+    {
+      "label": "Dará una asistencia",
+      "id": 1001264082,
+      "betplay": {
+        "id": 1001264082
+      },
+      "name": "toGiveAnAssist",
+      "xbet": {
+        "marketId": "estadisticas-de-jugadores",
+        "G": 2732
+      },
+      "type": "OBJECT-PARTICIPANT",
+      "options": {
+        "YES": {
+          "label": "SI",
+          "betplay": {
+            "type": "OT_YES"
+          },
+          "xbet": {
+            "T": 3545
+          },
+          "opposite":{
+            "market": "Dará una asistencia",
+            "label": "NO",
+            "route": "toGiveAnAssist.NO"
+          }
+        },
+        "NO": {
+          "label": "NO",
+          "betplay": {
+            "type": "OT_NO"
+          },
+          "xbet": {
+            "T": 3546
+          },
+          "opposite":{
+            "market": "Dará una asistencia",
+            "label": "SI",
+            "route": "toGiveAnAssist.YES"
           }
         }
       },

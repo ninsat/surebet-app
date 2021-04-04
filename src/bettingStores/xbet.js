@@ -47,7 +47,7 @@ const getEvents1Xbet = async () => {
     };
 
 
-    const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://1xbet.com.co/LineFeed/Get1x2_VZip?sports=1&count=1000&lng=es&tf=2200000&tz=-5&mode=4&country=1&getEmpty=true')}`)
+    const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://1xbet.com.co/LineFeed/Get1x2_VZip?sports=1&count=1500&lng=es&tf=2200000&tz=-5&mode=4&country=1&getEmpty=true')}`)
     if(!response.ok) throw new Error('Network response was not ok.')
 
     const responseData = await response.json()
@@ -244,7 +244,7 @@ const getEvents1Xbet = async () => {
               return{
                 ...mObj,
                 [marketOption]:{
-                  v: actualParticipants.find(v => v.T === market.option[marketOption].xbet.T)?.C
+                  v: actualParticipants.find(v => v.T === market.options[marketOption].xbet.T)?.C
                 }
               }
           },{})

@@ -244,7 +244,7 @@ const getBetOffersBetPlay = async (id) => {
             return {
               ...merketObj,
               [option]: {
-                v: outcomeContainer.outcomes.find(v => v.type === option.betplay.type)?.odds / 1000
+                v: outcomeContainer.outcomes.find(v => v.type === market.options[option].betplay.type)?.odds / 1000
               }
             };
           }, {participant: outcomeContainer.outcomes[0].participant});
