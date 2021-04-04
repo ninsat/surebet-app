@@ -721,7 +721,7 @@
           "opposite":{
             "market": "Marcará",
             "label": "NO",
-            "route": "toScore.NO"
+            "route": "NO"
           }
         },
         "NO": {
@@ -735,7 +735,7 @@
           "opposite":{
             "market": "Marcará",
             "label": "SI",
-            "route": "toScore.YES"
+            "route": "YES"
           }
         }
       },
@@ -765,7 +765,7 @@
           "opposite":{
             "market": "Dará una asistencia",
             "label": "NO",
-            "route": "toGiveAnAssist.NO"
+            "route": "NO"
           }
         },
         "NO": {
@@ -779,7 +779,7 @@
           "opposite":{
             "market": "Dará una asistencia",
             "label": "SI",
-            "route": "toGiveAnAssist.YES"
+            "route": "YES"
           }
         }
       },

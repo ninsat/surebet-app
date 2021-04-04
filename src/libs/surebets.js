@@ -1,4 +1,5 @@
 import utilities from "./utilities";
+import stringSimilarity from "string-similarity";
 
 const isSurebet = (c1, c2) => {
   if (c1 === 0 || c2 === 0) return false;
@@ -272,7 +273,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
           companies.forEach((otherCompany) => {
             const otherCompanyMarket = matchGroup[otherCompany].markets[mathcMarket];
             if (!otherCompanyMarket) return;
-            const otherCompanyOption = otherCompanyMarket.find((v) => v.type === (marketOption.type*-1));
+            const otherCompanyOption = otherCompanyMarket.find((v) => v.type === (marketOption.type * -1));
             if (!otherCompanyOption) return;
             const op1 = isSurebet(marketOption.home.v, otherCompanyOption.away.v);
             const op2 = isSurebet(marketOption.away.v, otherCompanyOption.home.v);
@@ -333,6 +334,49 @@ const compareMatches2 = (matchGroup, markets = []) => {
               })
             }
 
+          })
+        })
+      } else if (marketObject.type === "OBJECT-PARTICIPANT") {
+        const marketOptions = companyMatchMarket[mathcMarket];
+        marketOptions.forEach((marketOption) => {
+          companies.forEach((otherCompany) => {
+            const otherCompanyMarket = matchGroup[otherCompany].markets[mathcMarket];
+            if (!otherCompanyMarket) return;
+            const otherCompanyParticipantNames = otherCompanyMarket.map(v=> v.participant)
+            const {bestMatchIndex, bestMatch} = stringSimilarity.findBestMatch(marketOption.participant, otherCompanyParticipantNames)
+            if(bestMatch.rating < 0.5) return
+            const otherCompanyOption = otherCompanyMarket[bestMatchIndex]
+            Object.keys(marketObject.options).forEach(option =>{
+              const op = isSurebet(marketOption[option].v, otherCompanyOption[marketObject.options[option].opposite.route].v);
+              if(op){
+                result.push({
+                  profit: getProfit(marketOption[option].v, otherCompanyOption[marketObject.options[option].opposite.route].v),
+                  date: new Date(),
+                  options: [
+                    {
+                      comapanyName: company,
+                      market: marketObject[company]?.market ? marketObject[company]?.market : marketObject.label,
+                      odds: marketOption[option].v,
+                      type: marketObject.options[option].label,
+                      oddsType: marketOption.participant,
+                      eventName: matchGroup[company].eventName,
+                      sport: matchGroup[company].sport,
+                      date_start: matchGroup[company].date_start
+                    },
+                    {
+                      comapanyName: otherCompany,
+                      market: marketObject[otherCompany]?.market ? marketObject[otherCompany]?.market : marketObject.label,
+                      odds: otherCompanyOption[marketObject.options[option].opposite.route].v,
+                      type: marketObject.options[option].opposite.label,
+                      oddsType: otherCompanyOption.participant,
+                      eventName: matchGroup[otherCompany].eventName,
+                      sport: matchGroup[otherCompany].sport,
+                      date_start: matchGroup[otherCompany].date_start
+                    }
+                  ]
+                })
+              }
+            })
           })
         })
       }
