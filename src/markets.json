@@ -784,6 +784,50 @@
         }
       },
       "enable": true
+    },
+    {
+      "label": "Recibirá una tarjeta",
+      "id": 1001159667,
+      "betplay": {
+        "id": 1001159667
+      },
+      "name": "toGetACard",
+      "xbet": {
+        "marketId": "estadisticas-de-jugadores",
+        "G": 3291
+      },
+      "type": "OBJECT-PARTICIPANT",
+      "options": {
+        "YES": {
+          "label": "SI",
+          "betplay": {
+            "type": "OT_YES"
+          },
+          "xbet": {
+            "T": 9268
+          },
+          "opposite":{
+            "market": "Recibirá una tarjeta",
+            "label": "NO",
+            "route": "NO"
+          }
+        },
+        "NO": {
+          "label": "NO",
+          "betplay": {
+            "type": "OT_NO"
+          },
+          "xbet": {
+            "T": 9269
+          },
+          "opposite":{
+            "market": "Recibirá una tarjeta",
+            "label": "SI",
+            "route": "YES"
+          }
+        }
+      },
+      "enable": true
     }
   ]
   
