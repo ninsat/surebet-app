@@ -654,6 +654,94 @@
       "enable": true
     },
     {
+      "label": "Victoria del local dejando la portería a cero",
+      "id": 1001642866,
+      "betplay": {
+        "id": 1001642866
+      },
+      "name": "homeToWinToNil",
+      "xbet": {
+        "marketId": "main",
+        "G": 2866
+      },
+      "type": "OBJECT",
+      "options": {
+        "YES": {
+          "label": "SI",
+          "betplay": {
+            "type": "OT_YES"
+          },
+          "xbet": {
+            "T": 200
+          },
+          "opposite":{
+            "market": "Victoria del local dejando la portería a cero",
+            "label": "NO",
+            "route": "homeToWinToNil.NO"
+          }
+        },
+        "NO": {
+          "label": "NO",
+          "betplay": {
+            "type": "OT_NO"
+          },
+          "xbet": {
+            "T": 205
+          },
+          "opposite":{
+            "market": "Victoria del local dejando la portería a cero",
+            "label": "SI",
+            "route": "homeToWinToNil.YES"
+          }
+        }
+      },
+      "enable": true
+    },
+    {
+      "label": "Victoria del visitante dejando la portería a cero",
+      "id": 1001642867,
+      "betplay": {
+        "id": 1001642867
+      },
+      "name": "awayToWinToNil",
+      "xbet": {
+        "marketId": "main",
+        "G": 2867
+      },
+      "type": "OBJECT",
+      "options": {
+        "YES": {
+          "label": "SI",
+          "betplay": {
+            "type": "OT_YES"
+          },
+          "xbet": {
+            "T": 195
+          },
+          "opposite":{
+            "market": "Victoria del visitante dejando la portería a cero",
+            "label": "NO",
+            "route": "awayToWinToNil.NO"
+          }
+        },
+        "NO": {
+          "label": "NO",
+          "betplay": {
+            "type": "OT_NO"
+          },
+          "xbet": {
+            "T": 210
+          },
+          "opposite":{
+            "market": "Victoria del visitante dejando la portería a cero",
+            "label": "SI",
+            "route": "awayToWinToNil.YES"
+          }
+        }
+      },
+      "enable": true
+    },
+    {
       "label": "Visitante gana en las dos partes",
       "id": 1001657418,
       "betplay": {
