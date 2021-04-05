@@ -237,9 +237,10 @@ const getEvents1Xbet = async () => {
         // ejemplo: Pepito Marca YES/NO
         const outcomes = actualMarket.E.reduce((arr, option)=> [...arr, ...option], [])
         const actualMarketFormated = outcomes.reduce((marketObject, option)=>{
+          if(!option.PL) return marketObject
           const isLineOption = marketObject.findIndex(v => v.participant === option.PL.N) !== -1;
           if(isLineOption) return marketObject
-          const actualParticipants = outcomes.filter(v => v.PL.N === option.PL.N)
+          const actualParticipants = outcomes.filter(v => v.PL?.N === option.PL.N)
           const optionObject = Object.keys(market.options).reduce((mObj, marketOption)=>{
               return{
                 ...mObj,
@@ -250,7 +251,7 @@ const getEvents1Xbet = async () => {
           },{})
 
           return [...marketObject, {
-            participant: option.PL.N,
+            participant: option.PL?.N,
             ...optionObject
           }]
       },[])

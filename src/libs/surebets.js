@@ -344,7 +344,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
             if (!otherCompanyMarket) return;
             const otherCompanyParticipantNames = otherCompanyMarket.map(v=> v.participant)
             const {bestMatchIndex, bestMatch} = stringSimilarity.findBestMatch(marketOption.participant, otherCompanyParticipantNames)
-            if(bestMatch.rating < 0.5) return
+            if(bestMatch.rating < 0.55) return
             const otherCompanyOption = otherCompanyMarket[bestMatchIndex]
             Object.keys(marketObject.options).forEach(option =>{
               const op = isSurebet(marketOption[option].v, otherCompanyOption[marketObject.options[option].opposite.route].v);
