@@ -161,7 +161,50 @@ const getCountryMatches = async (country = "france") => {
 
   const res = await fetch(`https://us1-api.aws.kambicdn.com/offering/v2018/betplay/listView/football/${country}/all.json?lang=es_ES&market=CO&client_id=2&channel_id=1&ncid=${new Date().getTime()}&useCombined=true`, requestOptions)
   const data = await res.json()
-  return data
+  return data.events.map(match => ({
+    ...match,
+    id: match.event.id,
+    team1: match.event.homeName,
+    team1En: match.event.englishName.split(" " + match.event.nameDelimiter + " ").map(v => v.trim())[0],
+    team2: match.event.awayName ? match.event.awayName : "",
+    team2En: match.event.englishName.split(" " + match.event.nameDelimiter + " ").map(v => v.trim())[1],
+    eventName: match.event.name,
+    date_start: new Date(match.event.start).getTime(),
+    sport: match.event.sport,
+    group: match.event.group
+  }));
+
+}
+
+
+const getAllEventsFull = async () =>{
+  const countries = [
+    "colombia",
+    "copa_sudamericana",
+    "england",
+    "copa_libertadores",
+    "spain",
+    "france",
+    "italy",
+    "germany",
+    "argentina",
+    "champions_league",
+    "europa_league"
+  ]
+
+  const countriesPromises = countries.map(country => getCountryMatches(country))
+  const countriesData = await Promise.all(countriesPromises)
+  const firsData = countriesData.reduce((arr, option)=> [...arr, ...option], [])
+  const secondData = await getEventsBetPlay()
+
+  firsData.forEach(match => {
+    const cloneIndex = secondData.findIndex(v => v.id === match.id)
+    if(cloneIndex === -1) return
+    secondData.splice(cloneIndex,1)
+  })
+
+  return [...firsData, secondData]
+
 }
 
 const formatBetOffer = (match, market) => {
