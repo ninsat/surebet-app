@@ -63,6 +63,7 @@ const addAllBetOffers2 = async (matches = [], cb) => {
   let count = 0;
   for (let match of matches) {
     await delay(300);
+    if(!match.event?.id) continue
     const data = await getBetOffersBetPlay(match.event.id);
     resultArray.push({ ...match, betOffers: data });
     console.log("YA");
@@ -203,7 +204,7 @@ const getAllEventsFull = async () =>{
     secondData.splice(cloneIndex,1)
   })
 
-  return [...firsData, secondData]
+  return [...firsData, ...secondData]
 
 }
 
@@ -380,5 +381,6 @@ export default {
   formatBetOffer2,
   addAllBetOffers2,
   formatBetOffer3,
-  getCountryMatches
+  getCountryMatches,
+  getAllEventsFull
 };

@@ -33,7 +33,7 @@ const testXbet = async () => {
 // Segundo intento de conseguir los matches
 const secondMain = async (cb) => {
   //Obtengo todos los partidos de BetPlay
-  const betPlayArray = await betplay.getEventsBetPlay();
+  const betPlayArray = await betplay.getAllEventsFull();
   console.log(betPlayArray.length);
 
   //Agrego todas las ofertas de mercados a cada partido

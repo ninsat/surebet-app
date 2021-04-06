@@ -342,7 +342,8 @@ const compareMatches2 = (matchGroup, markets = []) => {
           companies.forEach((otherCompany) => {
             const otherCompanyMarket = matchGroup[otherCompany].markets[mathcMarket];
             if (!otherCompanyMarket) return;
-            const otherCompanyParticipantNames = otherCompanyMarket.map(v=> v.participant)
+            const otherCompanyParticipantNames = otherCompanyMarket.map(v=> typeof(v.participant) === "string" ? v.participant : "" )
+            if(!otherCompanyParticipantNames.length) return console.log("NO HAY PARTICIPANTES!!!");
             const {bestMatchIndex, bestMatch} = stringSimilarity.findBestMatch(marketOption.participant, otherCompanyParticipantNames)
             if(bestMatch.rating < 0.55) return
             const otherCompanyOption = otherCompanyMarket[bestMatchIndex]
