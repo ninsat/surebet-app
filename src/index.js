@@ -129,10 +129,16 @@ const testMatch = async () => {
     const yajuegoData = await  yajuego.getAllEvents()
 
     //Muestro la cantidad de partidos que tiene cada casa de epuestas por consola
-    console.log("betplay => ", betplayData.length)
-    console.log("1xbet => ", xbetData.length)
-    console.log("yajuego => ", yajuegoData.length)
+    console.log("Partidos betplay => ", betplayData.length)
+    console.log("Partidos 1xbet => ", xbetData.length)
+    console.log("Partidos yajuego => ", yajuegoData.length)
 
+
+
+    //crear un estandar para todas las casas en el que tengas las mismas funciones para
+    //conseguir todos los partidos y para conseguir cada partido con los mercados formateados
+    //de forma que todo se pueda hacer de forma mas programatica
+    
 
     //matcheo los partios para hacer el match Group 
     const matchGroups = utilities.matchAllMatches({
@@ -142,6 +148,20 @@ const testMatch = async () => {
     })
 
     console.log("Partidos con match => ", matchGroups)
+
+
+    //consigo y formateo los mercados de cada partido
+    for(let matchGroup of matchGroups){
+      if(matchGroups.betplay){
+
+      }
+      if(matchGroups.xbet){
+
+      }
+      if(matchGroups.yajuego){
+
+      }
+    }
     
 }
 
