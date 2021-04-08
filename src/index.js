@@ -5,12 +5,10 @@ import ReactDom from 'react-dom';
 import SurebetCard from './components/SurebetCard'
 import NavBar from './components/NavBar'
 import ProgressBar from './components/ProgressBar'
-import Calculator from './components/Calculator'
+
 
 import utilities from './libs/utilities.js'
 import surebets from './libs/surebets.js'
-import betplay from './bettingStores/betplay.js'
-import xbet from './bettingStores/xbet.js'
 import markets from './markets.json'
 
 
@@ -18,6 +16,9 @@ import markets from './markets.json'
 
 
 import _ from 'lodash'
+import betplay from './bettingStores/betplay.js';
+import xbet from './bettingStores/xbet.js';
+import yajuego from './bettingStores/yajuego.js';
 
 
 
@@ -120,6 +121,31 @@ const secondMain = async (cb) => {
 
 
 
+const testMatch = async () => {
+
+    //consigo los partidos de cada casa de apuestas
+    const betplayData = await betplay.getAllEventsFull()
+    const xbetData = await xbet.getEvents1Xbet2()
+    const yajuegoData = await  yajuego.getAllEvents()
+
+    //Muestro la cantidad de partidos que tiene cada casa de epuestas por consola
+    console.log("betplay => ", betplayData.length)
+    console.log("1xbet => ", xbetData.length)
+    console.log("yajuego => ", yajuegoData.length)
+
+
+    //matcheo los partios para hacer el match Group 
+    const matchGroups = utilities.matchAllMatches({
+      betplay: betplayData,
+      xbet: xbetData,
+      yajuego: yajuegoData
+    })
+
+    console.log("Partidos con match => ", matchGroups)
+    
+}
+
+
 // ---------------------------------------------------------- ESTA ES LA PARTE VISUAL -------------------------------------------------------
 
 
@@ -130,10 +156,13 @@ const App = (props) => {
   const [load, setLoad] = useState(0)
 
   const handleClick = async () => {
+    await testMatch()
+    /*
     const data = await secondMain((loadObject) => {
       setLoad(loadObject)
     })
     setSurebets(data)
+    */
   }
 
   return (
