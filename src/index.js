@@ -121,48 +121,68 @@ const secondMain = async (cb) => {
 
 
 
-const testMatch = async () => {
+const testMatch = async (cb) => {
 
+    const bookMarkets = {
+      betplay:{
+        getAll: betplay.getAllEventsFull,
+        getMatch: betplay.getMatch,
+        list:[]
+      },
+      xbet:{
+        getAll: xbet.getEvents1Xbet2,
+        getMatch: xbet.getMatch,
+        list: []
+      },
+      yajuego:{
+        getAll: yajuego.getAllEvents,
+        getMatch: yajuego.getMatch,
+        list: []
+      }
+    }
+
+
+    
     //consigo los partidos de cada casa de apuestas
-    const betplayData = await betplay.getAllEventsFull()
-    const xbetData = await xbet.getEvents1Xbet2()
-    const yajuegoData = await  yajuego.getAllEvents()
+    const bookMarketsData = {}
+    for(let bookMarket of Object.keys(bookMarkets)){
+      const data = await bookMarkets[bookMarket].getAll()
+      bookMarketsData[bookMarket] = data
+      console.log(`Partidos de ${bookMarket} ==> ${data.length}`)
+    }
 
-    //Muestro la cantidad de partidos que tiene cada casa de epuestas por consola
-    console.log("Partidos betplay => ", betplayData.length)
-    console.log("Partidos 1xbet => ", xbetData.length)
-    console.log("Partidos yajuego => ", yajuegoData.length)
-
-
-
+    
     //crear un estandar para todas las casas en el que tengas las mismas funciones para
     //conseguir todos los partidos y para conseguir cada partido con los mercados formateados
     //de forma que todo se pueda hacer de forma mas programatica
     
 
     //matcheo los partios para hacer el match Group 
-    const matchGroups = utilities.matchAllMatches({
-      betplay: betplayData,
-      xbet: xbetData,
-      yajuego: yajuegoData
-    })
+    const matchGroups = utilities.matchAllMatches(bookMarketsData)
 
     console.log("Partidos con match => ", matchGroups)
 
 
     //consigo y formateo los mercados de cada partido
+    const bookMarketObjectsList = []
     for(let matchGroup of matchGroups){
-      if(matchGroups.betplay){
-
-      }
-      if(matchGroups.xbet){
-
-      }
-      if(matchGroups.yajuego){
-
-      }
+      const bookMarketsNames = Object.keys(matchGroup)
+      const promises = bookMarketsNames.map(bookMarket=> bookMarkets[bookMarket].getMatch(matchGroup[bookMarket], markets))
+      const data = await Promise.all(promises)
+      const bookMarketObject = bookMarketsNames.reduce((obj, bookMarket, index) => {
+        return {
+          ...obj,
+          [bookMarket]: data[index]
+        }
+      },{})
+      bookMarketObjectsList.push(bookMarketObject)
+      const surebetsData = surebets.compareMatches2(bookMarketObject, markets)
+      console.log("YA")
+      if(!surebetsData) continue
+      cb(v => [...surebetsData, ...v])
     }
-    
+
+
 }
 
 
@@ -176,7 +196,7 @@ const App = (props) => {
   const [load, setLoad] = useState(0)
 
   const handleClick = async () => {
-    await testMatch()
+    await testMatch(setSurebets)
     /*
     const data = await secondMain((loadObject) => {
       setLoad(loadObject)

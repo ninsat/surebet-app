@@ -373,6 +373,14 @@ const formatBetsMarkets = (array = []) => {
   });
 };
 
+
+const getMatch = async(match, markets) => {
+  const betOffers = await getBetOffersBetPlay(match.id);
+  const matchData = { ...match, betOffers }
+  const marketsData = formatBetOffer3(matchData, markets)
+  return {...matchData, markets: marketsData }
+}
+
 export default {
   addAllBetOffers,
   formatBetsMarkets,
@@ -382,5 +390,6 @@ export default {
   addAllBetOffers2,
   formatBetOffer3,
   getCountryMatches,
-  getAllEventsFull
+  getAllEventsFull,
+  getMatch
 };

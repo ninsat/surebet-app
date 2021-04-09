@@ -272,11 +272,18 @@ const getEvents1Xbet = async () => {
     };
   };
   
+
+  const getMatch = async(match, markets) => {
+    const data = await getBetOfferceXbet2(match, markets)
+    return data
+  }
+
   export default {
     getEvents1Xbet,
     getBetOfferceXbet,
     getEvents1Xbet2,
     getBetOfferceXbet2,
-    getmarket
+    getmarket,
+    getMatch
   };
   

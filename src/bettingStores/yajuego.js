@@ -294,6 +294,14 @@ const formatAllBetOfers = (matches=[], markets)=>{
     })
 }
 
+const getMatch = async (match, markets) => {
+    const matchData = await getMatchData(match.id)
+    const formatMarket = formatBetOffer(matchData, markets)
+    return {
+        ...match,
+        markets: formatMarket
+    }
+}
 
 
 export default {
@@ -301,5 +309,6 @@ export default {
     getMatchData,
     formatBetOffer,
     formatAllBetOfers,
-    getBetOfferceYajuego
+    getBetOfferceYajuego,
+    getMatch
 }

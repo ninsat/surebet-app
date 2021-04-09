@@ -174,7 +174,6 @@ const getRoute = (object, route) =>
 
 
   const matchAllMatches = (bookMarkets) => {
-    console.log(bookMarkets);
     const bookMarketsNames = Object.keys(bookMarkets);
     const bookMarketsNamesCopy = bookMarketsNames.slice();
     const matchesData = [];
