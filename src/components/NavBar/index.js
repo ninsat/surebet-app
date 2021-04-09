@@ -26,7 +26,7 @@ const useStyles = createUseStyles({
 })
 
 
-const NavBar = (props)=>{
+const NavBar = ({disabledActions,...props})=>{
     const classes = useStyles()
     return (
         <nav className={clsx(classes.root, "box")}>
@@ -36,7 +36,7 @@ const NavBar = (props)=>{
             <div className={classes.divider}>
             </div>
             <div className={classes.actions}>
-                <button onClick={props.onClick} className="button is-primary">
+                <button disabled={disabledActions} onClick={props.onClick} className="button is-primary">
                     Buscar Surebets
                 </button>
             </div>

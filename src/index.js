@@ -213,11 +213,14 @@ const App = (props) => {
 
   const [surebets, setSurebets] = useState([])
   const [load, setLoad] = useState(0)
+  const [disabledActions, setDisabledActions] = useState(false)
 
   const handleClick = async () => {
+    setDisabledActions(true)
     await testMatch(setSurebets, (loadObject) => {
       setLoad(loadObject)
     })
+    setDisabledActions(false)
     /*
     const data = await secondMain((loadObject) => {
       setLoad(loadObject)
@@ -228,7 +231,7 @@ const App = (props) => {
 
   return (
     <div>
-      <NavBar onClick={handleClick} />
+      <NavBar disabledActions={disabledActions} onClick={handleClick} />
       <ProgressBar data={load} />
       {
         surebets.map((surebet, index) => (
