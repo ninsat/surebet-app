@@ -121,31 +121,35 @@ const secondMain = async (cb) => {
 
 
 
-const testMatch = async (cb) => {
+const testMatch = async (cb, loadCb) => {
 
     const bookMarkets = {
       betplay:{
         getAll: betplay.getAllEventsFull,
         getMatch: betplay.getMatch,
-        list:[]
+        list:[],
+        active: true
       },
       xbet:{
         getAll: xbet.getEvents1Xbet2,
         getMatch: xbet.getMatch,
-        list: []
+        list: [],
+        active: true
       },
       yajuego:{
         getAll: yajuego.getAllEvents,
         getMatch: yajuego.getMatch,
-        list: []
+        list: [],
+        active: false
       }
     }
 
-
+    
     
     //consigo los partidos de cada casa de apuestas
     const bookMarketsData = {}
-    for(let bookMarket of Object.keys(bookMarkets)){
+    const activeBookMarkets = Object.keys(bookMarkets).filter(bookMarket => bookMarkets[bookMarket].active)
+    for(let bookMarket of activeBookMarkets){
       const data = await bookMarkets[bookMarket].getAll()
       bookMarketsData[bookMarket] = data
       console.log(`Partidos de ${bookMarket} ==> ${data.length}`)
@@ -164,6 +168,7 @@ const testMatch = async (cb) => {
 
 
     //consigo y formateo los mercados de cada partido
+    let count = 0;
     const bookMarketObjectsList = []
     for(let matchGroup of matchGroups){
       const bookMarketsNames = Object.keys(matchGroup)
@@ -176,8 +181,22 @@ const testMatch = async (cb) => {
         }
       },{})
       bookMarketObjectsList.push(bookMarketObject)
+
+
       const surebetsData = surebets.compareMatches2(bookMarketObject, markets)
       console.log("YA")
+
+      
+    
+      count += 1;
+      loadCb && loadCb({
+        loading: true,
+        progress: (count * 100) / matchGroups.length,
+        message: "Analizando los partidos",
+        extra: matchGroup[bookMarketsNames[0]].eventName
+      })
+
+
       if(!surebetsData) continue
       cb(v => [...surebetsData, ...v])
     }
@@ -196,7 +215,9 @@ const App = (props) => {
   const [load, setLoad] = useState(0)
 
   const handleClick = async () => {
-    await testMatch(setSurebets)
+    await testMatch(setSurebets, (loadObject) => {
+      setLoad(loadObject)
+    })
     /*
     const data = await secondMain((loadObject) => {
       setLoad(loadObject)

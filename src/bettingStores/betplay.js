@@ -253,6 +253,9 @@ const formatBetOffer2 = (match, markets) => {
 
 const formatBetOffer3 = (match, markets) => {
   return markets.reduce((obj, market) => {
+
+    if(!match.betOffers) return obj
+
     const betOffer = match.betOffers.filter(
       (v) => v.criterion.id === market.id
     );

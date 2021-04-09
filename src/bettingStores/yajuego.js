@@ -9,6 +9,10 @@ const getMatchData = async (id) => {
     const data = await response.json();
 
     const matchData = JSON.parse(data.contents).D;
+
+    if(!matchData.MK) return {...matchData, originalMarket:{}}
+
+    
     const originalMarket = matchData.MK.reduce((obj, { MARKETID, DS, ID }) => {
         return {
             ...obj,
