@@ -174,11 +174,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                   }
                 ]
               })
-              console.log(
-                "HAY SURBET",
-                matchGroup.betplay.event.name,
-                mathcMarket
-              );
+        
             }
 
             if (op2 && !marketObject[company]?.onlyOver) {
@@ -206,11 +202,6 @@ const compareMatches2 = (matchGroup, markets = []) => {
                   }
                 ]
               })
-              console.log(
-                "HAY SURBET",
-                matchGroup.betplay.event.name,
-                mathcMarket
-              );
             }
             //console.log("-- no surebet --");
             return;

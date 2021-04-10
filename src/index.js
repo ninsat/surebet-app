@@ -4,7 +4,8 @@ import ReactDom from 'react-dom';
 
 import SurebetCard from './components/SurebetCard'
 import NavBar from './components/NavBar'
-import ProgressBar from './components/ProgressBar'
+import Configuration from './components/Configuration'
+import SurbetContainer from './components/SurebetCard/surbetContainer.js'
 
 
 import utilities from './libs/utilities.js'
@@ -121,7 +122,7 @@ const secondMain = async (cb) => {
 
 
 
-const testMatch = async (cb, loadCb) => {
+const testMatch = async (options, cb, loadCb) => {
 
     const bookMarkets = {
       betplay:{
@@ -144,6 +145,10 @@ const testMatch = async (cb, loadCb) => {
       }
     }
 
+
+    Object.keys(options).forEach(bookMarket=>{
+      bookMarkets[bookMarket].active = options[bookMarket].active
+    })
     
     
     //consigo los partidos de cada casa de apuestas
@@ -191,6 +196,8 @@ const testMatch = async (cb, loadCb) => {
       count += 1;
       loadCb && loadCb({
         loading: true,
+        total: matchGroups.length,
+        count: count,
         progress: (count * 100) / matchGroups.length,
         message: "Analizando los partidos",
         extra: matchGroup[bookMarketsNames[0]].eventName
@@ -200,7 +207,7 @@ const testMatch = async (cb, loadCb) => {
       if(!surebetsData) continue
       cb(v => [...surebetsData, ...v])
     }
-
+    loadCb && loadCb({ loading: false })
 
 }
 
@@ -214,30 +221,62 @@ const App = (props) => {
   const [surebets, setSurebets] = useState([])
   const [load, setLoad] = useState(0)
   const [disabledActions, setDisabledActions] = useState(false)
+  const [bookMarkets, setBookMarkets] = useState({
+    betplay:{
+      active: true,
+      name: "BetPlay"
+    },
+    xbet:{
+      name: "1xBet",
+      active: true
+    },
+    yajuego:{
+      name: "Yajuego",
+      active: false
+    }
+  })
 
   const handleClick = async () => {
     setDisabledActions(true)
-    await testMatch(setSurebets, (loadObject) => {
+    await testMatch(bookMarkets, setSurebets, (loadObject) => {
       setLoad(loadObject)
     })
     setDisabledActions(false)
-    /*
-    const data = await secondMain((loadObject) => {
-      setLoad(loadObject)
-    })
-    setSurebets(data)
-    */
+  }
+
+
+  const handleChangeBookMarketOption = (bookMarket)=>(e)=>{
+    setBookMarkets(bm=>({
+      ...bm,
+      [bookMarket]:{
+        ...bm[bookMarket],
+        active: e.target.checked
+      }
+    }))
   }
 
   return (
     <div>
       <NavBar disabledActions={disabledActions} onClick={handleClick} />
-      <ProgressBar data={load} />
-      {
-        surebets.map((surebet, index) => (
-          <SurebetCard key={index} data={surebet} />
-        ))
-      }
+      <div className="columns">
+        <div className="column is-3">
+          <Configuration
+            onChangeBookMarkets={handleChangeBookMarketOption} 
+            bookMarkets={bookMarkets} 
+            loadData={load}/>
+        </div>
+        <div className="column">
+          <SurbetContainer>
+            {
+              surebets.map((surebet, index) => (
+                <SurebetCard key={index} data={surebet} />
+              ))
+            }
+          </SurbetContainer>
+        </div>
+        
+
+      </div>
     </div>
   )
 }
