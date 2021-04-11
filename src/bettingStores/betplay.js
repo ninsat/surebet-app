@@ -80,20 +80,6 @@ const addAllBetOffers2 = async (matches = [], cb) => {
 
 const getEventsBetPlay = async () => {
 
-  const countries = [
-    "colombia",
-    "copa_sudamericana",
-    "england",
-    "copa_libertadores",
-    "spain",
-    "france",
-    "italy",
-    "germany",
-    "argentina",
-    "champions_league",
-    "europa_league"
-  ]
-
   const myHeaders = new Headers();
   myHeaders.append("Connection", "keep-alive");
   myHeaders.append(
@@ -121,6 +107,57 @@ const getEventsBetPlay = async () => {
 
   const res = await fetch(
     `https://us1-api.aws.kambicdn.com/offering/v2018/betplay/listView/football.json?lang=es_ES&market=CO&client_id=2&channel_id=1&ncid=${new Date().getTime()}&useCombined=true`,
+    requestOptions
+  );
+
+  const data = await res.json();
+
+  return data.events.map(match => ({
+    ...match,
+    id: match.event.id,
+    team1: match.event.homeName,
+    team1En: match.event.englishName.split(" " + match.event.nameDelimiter + " ").map(v => v.trim())[0],
+    team2: match.event.awayName ? match.event.awayName : "",
+    team2En: match.event.englishName.split(" " + match.event.nameDelimiter + " ").map(v => v.trim())[1],
+    eventName: match.event.name,
+    date_start: new Date(match.event.start).getTime(),
+    sport: match.event.sport,
+    group: match.event.group
+  }));
+};
+
+
+
+
+const getBasketballEventsBetPlay = async () => {
+
+  const myHeaders = new Headers();
+  myHeaders.append("Connection", "keep-alive");
+  myHeaders.append(
+    "sec-ch-ua",
+    '"Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"'
+  );
+  myHeaders.append("Accept", "application/json, text/javascript, */*; q=0.01");
+  myHeaders.append("sec-ch-ua-mobile", "?0");
+  myHeaders.append(
+    "User-Agent",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36"
+  );
+  myHeaders.append("Origin", "https://betplay.com.co");
+  myHeaders.append("Sec-Fetch-Site", "cross-site");
+  myHeaders.append("Sec-Fetch-Mode", "cors");
+  myHeaders.append("Sec-Fetch-Dest", "empty");
+  myHeaders.append("Referer", "https://betplay.com.co/");
+  myHeaders.append("Accept-Language", "es-419,es;q=0.9,en;q=0.8");
+
+  const requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow"
+  };
+
+  const res = await fetch(
+    `https://us1-api.aws.kambicdn.com/offering/v2018/betplay/listView/basketball.json?lang=es_ES&market=CO&client_id=2&channel_id=1&ncid=${new Date().getTime()}&useCombined=true`,
     requestOptions
   );
 
@@ -394,5 +431,6 @@ export default {
   formatBetOffer3,
   getCountryMatches,
   getAllEventsFull,
-  getMatch
+  getMatch,
+  getBasketballEventsBetPlay
 };

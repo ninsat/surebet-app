@@ -18,6 +18,8 @@ const getEvents1Xbet = async () => {
     const data = await res.json();
     return data;
   };
+
+
   
   const getBetOfferceXbet = async (id) => {
     const myHeaders = new Headers();
@@ -71,6 +73,41 @@ const getEvents1Xbet = async () => {
       group: match.L
     }));
   };
+
+
+
+  const getBasketballEvents1Xbet = async () => {
+    var requestOptions = {
+      method: "GET"
+    };
+
+
+    const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://1xbet.com.co/LineFeed/Get1x2_VZip?sports=3&count=1500&lng=es&tf=2200000&tz=-5&mode=4&country=1&getEmpty=true')}`)
+    if(!response.ok) throw new Error('Network response was not ok.')
+
+    const responseData = await response.json()
+
+    /*
+    const res = await fetch(
+      "https://cors-anywhere.herokuapp.com/https://1xbet.com.co/LineFeed/Get1x2_VZip?sports=1&count=1000&lng=es&tf=2200000&tz=-5&mode=4&country=1&getEmpty=true",
+      requestOptions
+    );
+    */
+    const data = JSON.parse(responseData.contents);
+    return data.Value.map((match) => ({
+      id: match.CI,
+      team1: match.O1,
+      team1En: match.O1E,
+      team2: match.O2 ? match.O2 : "",
+      team2En: match.O2E ? match.O2E : "",
+      eventName: match.O1 + " - " + match.O2,
+      date_start: match.S * 1000,
+      sport: match.SE,
+      group: match.L
+    }));
+  };
+  
+
   
   const getmarket = async (id) => {
     const myHeaders = new Headers();
@@ -144,7 +181,7 @@ const getEvents1Xbet = async () => {
   
     //filtro solo los mercados que me interesan que estan en el archivo markets.json
     const filterMarkets = allMarkets.filter(
-      (m) => markets.findIndex((v) => v.xbet.marketId === m.textId) >= 0
+      (m) => markets.findIndex((v) => v.xbet?.marketId === m.textId) >= 0
     );
     
     //creo las promesas para traerme todos los mercados
@@ -167,7 +204,7 @@ const getEvents1Xbet = async () => {
   
     //formatear los datos con los mercados que se especifican en market.json
     const formatedMarkets = markets.reduce((obj, market) => {
-      const marketObject = readyToFormat[market.xbet.marketId];
+      const marketObject = readyToFormat[market.xbet?.marketId];
       if (!marketObject) return obj;
       const actualMarket = marketObject.find((v) => v.G === market.xbet.G);
   
@@ -284,6 +321,7 @@ const getEvents1Xbet = async () => {
     getEvents1Xbet2,
     getBetOfferceXbet2,
     getmarket,
-    getMatch
+    getMatch,
+    getBasketballEvents1Xbet
   };
   

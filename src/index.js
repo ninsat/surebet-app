@@ -10,8 +10,12 @@ import SurbetContainer from './components/SurebetCard/surbetContainer.js'
 
 import utilities from './libs/utilities.js'
 import surebets from './libs/surebets.js'
-import markets from './markets.json'
 
+
+
+
+import markets from './markets.json'
+import basketBallMarkets from './markets/markets-basketball.json'
 
 //import textData from './textData.json'
 
@@ -27,10 +31,11 @@ import yajuego from './bettingStores/yajuego.js';
 const testXbet = async () => {
   console.log("Empezo esto!");
   //const data = await xbet.getEvents1Xbet2({ id: 89864715 }, markets);
-  const data = await betplay.getCountryMatches("colombia")
+  const data = await betplay.getMatch({id: 1006777878}, basketBallMarkets)
   console.log(data);
 };
 
+//testXbet()
 
 // Segundo intento de conseguir los matches
 const secondMain = async (cb) => {
@@ -128,23 +133,69 @@ const testMatch = async (options, cb, loadCb) => {
       betplay:{
         getAll: betplay.getAllEventsFull,
         getMatch: betplay.getMatch,
-        list:[],
+        sports: {
+          football:{
+            getAll: betplay.getAllEventsFull,
+            getMatch: betplay.getMatch,
+            active: true,
+          },
+          basketball:{
+            getAll: betplay.getBasketballEventsBetPlay,
+            getMatch: betplay.getMatch,
+            active: true,
+          }
+        },
         active: true
       },
       xbet:{
         getAll: xbet.getEvents1Xbet2,
         getMatch: xbet.getMatch,
-        list: [],
+        sports: {
+          football:{
+            getAll: xbet.getEvents1Xbet2,
+            getMatch: xbet.getMatch,
+            active: true,
+          },
+          basketball:{
+            getAll: xbet.getBasketballEvents1Xbet,
+            getMatch: xbet.getMatch,
+            active: true,
+          }
+        },
         active: true
       },
       yajuego:{
         getAll: yajuego.getAllEvents,
         getMatch: yajuego.getMatch,
-        list: [],
+        sports: {
+          football:{
+            getAll: yajuego.getAllEvents,
+            getMatch: yajuego.getMatch,
+            active: true,
+          },
+          basketball:{
+            getAll: yajuego.getAllBasketballEvents,
+            getMatch: yajuego.getMatch,
+            active: true,
+          }
+        },
         active: false
       }
     }
 
+    const sports = {
+      football:{
+        active: false,
+        market: markets,
+        name: "Futbol"
+      },
+      basketball:{
+        active: true,
+        market: basketBallMarkets,
+        name: "Baloncesto"
+      }
+    }
+    
 
     Object.keys(options).forEach(bookMarket=>{
       bookMarkets[bookMarket].active = options[bookMarket].active
@@ -152,14 +203,29 @@ const testMatch = async (options, cb, loadCb) => {
     
     
     //consigo los partidos de cada casa de apuestas
-    const bookMarketsData = {}
+    let sportsData = {}
     const activeBookMarkets = Object.keys(bookMarkets).filter(bookMarket => bookMarkets[bookMarket].active)
-    for(let bookMarket of activeBookMarkets){
-      const data = await bookMarkets[bookMarket].getAll()
-      bookMarketsData[bookMarket] = data
-      console.log(`Partidos de ${bookMarket} ==> ${data.length}`)
+    const activeSports = Object.keys(sports).filter(sport=> sports[sport].active)
+
+    for(let sport of activeSports){
+      for(let bookMarket of activeBookMarkets){
+        const data = await bookMarkets[bookMarket].sports[sport].getAll()
+        if(sportsData[sport]){
+          sportsData[sport][bookMarket] = data
+        }else{
+          sportsData = {
+            ...sportsData,
+            [sport]:{
+              [bookMarket]:data
+            }
+          }
+        }
+        console.log(`Partidos de ${sport} en ${bookMarket} ==> ${data.length}`)
+      }
     }
 
+
+    console.log(sportsData)
     
     //crear un estandar para todas las casas en el que tengas las mismas funciones para
     //conseguir todos los partidos y para conseguir cada partido con los mercados formateados
@@ -167,46 +233,59 @@ const testMatch = async (options, cb, loadCb) => {
     
 
     //matcheo los partios para hacer el match Group 
-    const matchGroups = utilities.matchAllMatches(bookMarketsData)
+    const sportsMatches = {}
+    for(let sportName of Object.keys(sportsData)){
+      const bookMarketsData = sportsData[sportName]
+      const matchGroups = utilities.matchAllMatches(bookMarketsData)
+      sportsMatches[sportName] = matchGroups
+    }
+    
+ 
 
-    console.log("Partidos con match => ", matchGroups)
+    console.log("Partidos con match => ", sportsMatches)
 
+
+    
+    let count = 0;
+    const totalEvents = Object.keys(sportsMatches).reduce((count, sportName)=> sportsMatches[sportName].length + count ,0)
 
     //consigo y formateo los mercados de cada partido
-    let count = 0;
-    const bookMarketObjectsList = []
-    for(let matchGroup of matchGroups){
-      const bookMarketsNames = Object.keys(matchGroup)
-      const promises = bookMarketsNames.map(bookMarket=> bookMarkets[bookMarket].getMatch(matchGroup[bookMarket], markets))
-      const data = await Promise.all(promises)
-      const bookMarketObject = bookMarketsNames.reduce((obj, bookMarket, index) => {
-        return {
-          ...obj,
-          [bookMarket]: data[index]
-        }
-      },{})
-      bookMarketObjectsList.push(bookMarketObject)
-
-
-      const surebetsData = surebets.compareMatches2(bookMarketObject, markets)
-      console.log("YA")
-
+    for(sportName of Object.keys(sportsMatches)){
+      const matchGroups = sportsMatches[sportName]
+      for(let matchGroup of matchGroups){
+        const bookMarketsNames = Object.keys(matchGroup)
+        const promises = bookMarketsNames.map(bookMarket=> bookMarkets[bookMarket].getMatch(matchGroup[bookMarket], sports[sportName].market))
+        const data = await Promise.all(promises)
+        const bookMarketObject = bookMarketsNames.reduce((obj, bookMarket, index) => {
+          return {
+            ...obj,
+            [bookMarket]: data[index]
+          }
+        },{})
+       
+  
+        const surebetsData = surebets.compareMatches2(bookMarketObject, sports[sportName].market)
+        console.log("YA")
+  
+        
       
-    
-      count += 1;
-      loadCb && loadCb({
-        loading: true,
-        total: matchGroups.length,
-        count: count,
-        progress: (count * 100) / matchGroups.length,
-        message: "Analizando los partidos",
-        extra: matchGroup[bookMarketsNames[0]].eventName
-      })
-
-
-      if(!surebetsData) continue
-      cb(v => [...surebetsData, ...v])
+        count += 1;
+        loadCb && loadCb({
+          loading: true,
+          total: totalEvents,
+          count: count,
+          progress: (count * 100) / totalEvents,
+          message: `Analizando los partidos ${sports[sportName].name}`,
+          extra: matchGroup[bookMarketsNames[0]].eventName
+        })
+  
+  
+        if(!surebetsData) continue
+        cb(v => [...surebetsData, ...v])
+      }
     }
+    
+    //Se terminaron todas las comparaciones
     loadCb && loadCb({ loading: false })
 
 }
@@ -236,6 +315,17 @@ const App = (props) => {
     }
   })
 
+  const [sports, setSports] = useState({
+    football:{
+      name: "Futbol",
+      active: true,
+    },
+    basketball:{
+      name: "Baloncesto",
+      active: false
+    }
+  })
+
   const handleClick = async () => {
     setDisabledActions(true)
     await testMatch(bookMarkets, setSurebets, (loadObject) => {
@@ -245,8 +335,8 @@ const App = (props) => {
   }
 
 
-  const handleChangeBookMarketOption = (bookMarket)=>(e)=>{
-    setBookMarkets(bm=>({
+  const handleChangeOption = (stateFunction) => (bookMarket)=>(e)=>{
+    stateFunction(bm=>({
       ...bm,
       [bookMarket]:{
         ...bm[bookMarket],
@@ -261,8 +351,10 @@ const App = (props) => {
       <div className="columns">
         <div className="column is-3">
           <Configuration
-            onChangeBookMarkets={handleChangeBookMarketOption} 
+            onChangeBookMarkets={handleChangeOption(setBookMarkets)}
+            onChangeSports={handleChangeOption(setSports)} 
             bookMarkets={bookMarkets} 
+            sports={sports}
             loadData={load}/>
         </div>
         <div className="column">

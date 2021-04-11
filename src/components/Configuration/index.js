@@ -22,7 +22,7 @@ const useStyles = createUseStyles({
 
 
 
-const Configuration = ({loadData, bookMarkets, onChangeBookMarkets,...props}) => {
+const Configuration = ({loadData, bookMarkets, onChangeBookMarkets,onChangeSports, sports, ...props}) => {
 
     const classes = useStyles()
 
@@ -33,7 +33,12 @@ const Configuration = ({loadData, bookMarkets, onChangeBookMarkets,...props}) =>
                 onChangeOption={onChangeBookMarkets} 
                 options={bookMarkets} 
                 title="Casas De Apuestas"/>
-            
+            <hr/>
+            <OptionSelection
+                onChangeOption={onChangeSports} 
+                options={sports} 
+                title="Deportes"/>
+            <hr/>
             <div className="content">
                 <blockquote>No Se emocionen todavia, los deportes no estan funcionando, solo busca surebets en futbol ;) </blockquote>
             </div>

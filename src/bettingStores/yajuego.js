@@ -25,7 +25,6 @@ const getMatchData = async (id) => {
 
         }
     }, {})
-
     return {
         ...matchData,
         originalMarket
@@ -165,7 +164,7 @@ const formatMarketData = (maketId, match) => {
 };
 
 
-const getGroupsIds = async () => {
+const getGroupsIds = async (sport) => {
     const url = encodeURIComponent(
         `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetSports?DISP=0&v_cache_version=1.156.4.915`
     );
@@ -176,7 +175,7 @@ const getGroupsIds = async () => {
     const data = await response.json();
 
     const allSports = JSON.parse(data.contents).D.PAL;
-    const soccerId = Object.keys(allSports).find(v => allSports[v].S_DESC === "Soccer")
+    const soccerId = Object.keys(allSports).find(v => allSports[v].S_DESC === sport)
     const soccer = allSports[soccerId].SG
     const allleagues = Object.keys(soccer).map(key => soccer[key]).reduce((arr, country) => {
         return [...arr, ...Object.keys(country.G)]
@@ -197,13 +196,49 @@ const getLeagueMatches = async (leagueId) => {
     const data = await response.json();
     return JSON.parse(data.contents).D.E
 }
+const getBasketballLeagueMatches = async (leagueId) => {
+    const url = encodeURIComponent(
+        `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEventsInGroupV2?GROUPID=${leagueId}&DISP=0&GROUPMARKETID=12&v_cache_version=1.156.4.915`
+    );
+    const response = await fetch(`https://api.allorigins.win/get?url=${url}`);
+
+    if (!response.ok) throw new Error("Network response was not ok.");
+
+    const data = await response.json();
+    return JSON.parse(data.contents).D.E
+}
 
 
 const getAllEvents = async () => {
-    const ids = await getGroupsIds()
+    const ids = await getGroupsIds("Soccer")
     const result = [];
     for (id of ids) {
         const data = await getLeagueMatches(id)
+        result.push(data)
+        console.log("YA!!")
+    }
+    return result.reduce((arr, v) => [...arr, ...v], []).map(match => {
+        const [team1, team2] = match.DS.split("||v||").map(v => v.replace("|", ""))
+        return {
+            ...match,
+            id: match.ID,
+            team1,
+            team1En: team1,
+            team2,
+            team2En: team2,
+            eventName: `${team1} - ${team2}`,
+            date_start: new Date(match.STARTDATE).getTime(),
+            sport: "FUTBOLL",
+            group: match.GN
+        }
+    })
+}
+
+const getAllBasketballEvents = async () => {
+    const ids = await getGroupsIds("Basketball")
+    const result = [];
+    for (id of ids) {
+        const data = await getBasketballLeagueMatches(id)
         result.push(data)
         console.log("YA!!")
     }
@@ -314,5 +349,6 @@ export default {
     formatBetOffer,
     formatAllBetOfers,
     getBetOfferceYajuego,
-    getMatch
+    getMatch,
+    getAllBasketballEvents
 }

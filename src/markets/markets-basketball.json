@@ -1,0 +1,464 @@
+[
+    {
+      "label": "Total de puntos - Prórroga incluida",
+      "id": 1001159509,
+      "betplay_id": 1001159509,
+      "name": "totalPointsIncludingOvertime",
+      "xbet": {
+        "marketId": "main",
+        "G": 17
+      },
+      "yajuego":{
+        "id": "141"
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de puntos del Local - Incluyendo prórroga",
+      "id": 1001159855,
+      "betplay_id": 1001159855,
+      "name": "totalPointsHomeIncludingOvertime",
+      "xbet": {
+        "marketId": "main",
+        "G": 15
+      },
+      "yajuego":{
+        "id": "158"
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de puntos del Visitante - Incluyendo prórroga",
+      "id": 1001159837,
+      "betplay_id": 1001159837,
+      "name": "totalPointsAwayIncludingOvertime",
+      "xbet": {
+        "marketId": "main",
+        "G": 62
+      },
+      "yajuego":{
+        "id": "157"
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de puntos - 1.ª parte",
+      "id": 1001159947,
+      "betplay_id": 1001159947,
+      "name": "totalPoints1stHalf",
+      "xbet": {
+        "marketId": "1-mitad",
+        "G": 17
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de puntos - Cuarto 1",
+      "id": 1001159802,
+      "betplay_id": 1001159802,
+      "name": "totalPointsQuarter1",
+      "xbet": {
+        "marketId": "1-cuarto",
+        "G": 17
+      },
+      "yajuego":{
+        "id": "167"
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de puntos - Cuarto 2",
+      "id": 1001906821,
+      "betplay_id": 1001906821,
+      "name": "totalPointsQuarter2",
+      "xbet": {
+        "marketId": "2-cuarto",
+        "G": 17
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de puntos - Cuarto 3",
+      "id": 1001906822,
+      "betplay_id": 1001906822,
+      "name": "totalPointsQuarter3",
+      "xbet": {
+        "marketId": "3-cuarto",
+        "G": 17
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de puntos - Cuarto 4",
+      "id": 1001906823,
+      "betplay_id": 1001906823,
+      "name": "totalPointsQuarter4",
+      "xbet": {
+        "marketId": "4-cuarto",
+        "G": 17
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de puntos - 2.ª parte",
+      "id": 1001906832,
+      "betplay_id": 1001906832,
+      "name": "totalPoints2stHalf",
+      "xbet": {
+        "marketId": "2-mitad",
+        "G": 17
+      },
+      "yajuego":{
+        "id": "153",
+        "market": "2a mitad - Totales"
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Puntos totales del Local - 1ª Parte",
+      "id": 1001159567,
+      "betplay_id": 1001159567,
+      "name": "totalPointsHome1stHalf",
+      "xbet": {
+        "marketId": "1-mitad",
+        "G": 15
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Puntos totales Local - Primer cuarto",
+      "id": 1002167437,
+      "betplay_id": 1002167437,
+      "name": "TotalPointsHomeQuarter1",
+      "xbet": {
+        "marketId": "1-cuarto",
+        "G": 15
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Puntos totales Visitante - Primer cuarto",
+      "id": 1002167438,
+      "betplay_id": 1002167438,
+      "name": "TotalPointsHomeQuarter1",
+      "xbet": {
+        "marketId": "1-cuarto",
+        "G": 62
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Puntos totales del Visitante - 1ª Parte",
+      "id": 1001159579,
+      "betplay_id": 1001159579,
+      "name": "totalPointsAway1stHalf",
+      "xbet": {
+        "marketId": "1-mitad",
+        "G": 62
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Hándicap - Prórroga incluida",
+      "id": 1001159512,
+      "betplay_id": 1001159512,
+      "name": "handicapIncludingOvertime",
+      "xbet": {
+        "marketId": "main",
+        "G": 2,
+        "home": 7,
+        "away": 8
+      },
+      "betplay":{
+        "home": "team1",
+        "away": "team2"
+      },
+      "yajuego":{
+        "id": "140",
+        "market": "Spreads de puntos"
+      },
+      "type": "HANDICAP",
+      "enable": true
+    },
+    {
+      "label": "Hándicap - 1.ª parte",
+      "id": 1001159940,
+      "betplay_id": 1001159940,
+      "name": "handicap1stHalf",
+      "xbet": {
+        "marketId": "1-mitad",
+        "G": 2,
+        "home": 7,
+        "away": 8
+      },
+      "betplay":{
+        "home": "team1",
+        "away": "team2"
+      },
+      "yajuego":{
+        "id": "142",
+        "market": "1a mitad - Spreads de puntos"
+      },
+      "type": "HANDICAP",
+      "enable": true
+    },
+    {
+      "label": "Hándicap - 2.ª parte",
+      "id": 1001906831,
+      "betplay_id": 1001906831,
+      "name": "handicap2stHalf",
+      "xbet": {
+        "marketId": "2-mitad",
+        "G": 2,
+        "home": 7,
+        "away": 8
+      },
+      "betplay":{
+        "home": "team1",
+        "away": "team2"
+      },
+      "type": "HANDICAP",
+      "enable": true
+    },
+    {
+      "label": "Hándicap - Cuarto 1",
+      "id": 1001159576,
+      "betplay_id": 1001159576,
+      "name": "handicapQuarter1",
+      "xbet": {
+        "marketId": "1-cuarto",
+        "G": 2,
+        "home": 7,
+        "away": 8
+      },
+      "betplay":{
+        "home": "team1",
+        "away": "team2"
+      },
+      "yajuego":{
+        "id": "171",
+        "market": "1er Cuarto - Spreads de puntos"
+      },
+      "type": "HANDICAP",
+      "enable": true
+    },
+    {
+      "label": "Hándicap - Cuarto 2",
+      "id": 1001906818,
+      "betplay_id": 1001906818,
+      "name": "handicapQuarter2",
+      "xbet": {
+        "marketId": "2-cuarto",
+        "G": 2,
+        "home": 7,
+        "away": 8
+      },
+      "betplay":{
+        "home": "team1",
+        "away": "team2"
+      },
+      "type": "HANDICAP",
+      "enable": true
+    },
+    {
+      "label": "Hándicap - Cuarto 3",
+      "id": 1001906819,
+      "betplay_id": 1001906819,
+      "name": "handicapQuarter3",
+      "xbet": {
+        "marketId": "3-cuarto",
+        "G": 2,
+        "home": 7,
+        "away": 8
+      },
+      "betplay":{
+        "home": "team1",
+        "away": "team2"
+      },
+      "type": "HANDICAP",
+      "enable": true
+    },
+    {
+      "label": "Hándicap - Cuarto 4",
+      "id": 1001906820,
+      "betplay_id": 1001906820,
+      "name": "handicapQuarter4",
+      "xbet": {
+        "marketId": "4-cuarto",
+        "G": 2,
+        "home": 7,
+        "away": 8
+      },
+      "betplay":{
+        "home": "team1",
+        "away": "team2"
+      },
+      "type": "HANDICAP",
+      "enable": true
+    },
+    {
+      "label": "Prórroga incluida",
+      "id": 1001159732,
+      "betplay": {
+        "id": 1001159732
+      },
+      "name": "includingOvertime",
+      "xbet": {
+        "marketId": "main",
+        "G": 101
+      },
+      "yajuego":{
+        "id": "318"
+      },
+      "type": "OBJECT",
+      "options": {
+        "OT_1": {
+          "label": "1",
+          "betplay": {
+            "type": "OT_ONE"
+          },
+          "xbet": {
+            "T": 401
+          },
+          "yajuego":{
+            "name": "1"
+          },
+          "opposite":{
+            "market": "Prórroga incluida",
+            "label": "2",
+            "route": "includingOvertime.OT_2"
+          }
+        },
+        "OT_2": {
+          "label": "2",
+          "betplay": {
+            "type": "OT_TWO"
+          },
+          "xbet": {
+            "T": 402
+          },
+          "yajuego":{
+            "name": "2"
+          },
+          "opposite":{
+            "market": "Prórroga incluida",
+            "label": "1",
+            "route": "includingOvertime.OT_1"
+          }
+        }
+      },
+      "enable": true
+    },
+    {
+      "label": "Apuesta sin empate - 1.ª parte",
+      "id": 1001159815,
+      "betplay": {
+        "id": 1001159815
+      },
+      "name": "DrawNoBet1stHalf",
+      "yajuego":{
+        "id": "154"
+      },
+      "type": "OBJECT",
+      "options": {
+        "OT_1": {
+          "label": "1",
+          "betplay": {
+            "type": "OT_ONE"
+          },
+          "xbet": {
+            "T": 0
+          },
+          "yajuego":{
+            "name": "1"
+          },
+          "opposite":{
+            "market": "Apuesta sin empate - 1.ª parte",
+            "label": "2",
+            "route": "DrawNoBet1stHalf.OT_2"
+          }
+        },
+        "OT_2": {
+          "label": "2",
+          "betplay": {
+            "type": "OT_TWO"
+          },
+          "xbet": {
+            "T": 0
+          },
+          "yajuego":{
+            "name": "2"
+          },
+          "opposite":{
+            "market": "Apuesta sin empate - 1.ª parte",
+            "label": "1",
+            "route": "DrawNoBet1stHalf.OT_1"
+          }
+        }
+      },
+      "enable": true
+    },
+    {
+      "label": "Apuesta sin empate - 2.ª parte",
+      "id": 1001906830,
+      "betplay": {
+        "id": 1001906830
+      },
+      "name": "DrawNoBet2stHalf",
+      "yajuego":{
+        "id": "156"
+      },
+      "type": "OBJECT",
+      "options": {
+        "OT_1": {
+          "label": "1",
+          "betplay": {
+            "type": "OT_ONE"
+          },
+          "xbet": {
+            "T": 0
+          },
+          "yajuego":{
+            "name": "1"
+          },
+          "opposite":{
+            "market": "Apuesta sin empate - 2.ª parte",
+            "label": "2",
+            "route": "DrawNoBet2stHalf.OT_2"
+          }
+        },
+        "OT_2": {
+          "label": "2",
+          "betplay": {
+            "type": "OT_TWO"
+          },
+          "xbet": {
+            "T": 0
+          },
+          "yajuego":{
+            "name": "2"
+          },
+          "opposite":{
+            "market": "Apuesta sin empate - 2.ª parte",
+            "label": "1",
+            "route": "DrawNoBet2stHalf.OT_1"
+          }
+        }
+      },
+      "enable": true
+    }
+  ]
+  
