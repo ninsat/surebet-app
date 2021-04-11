@@ -108,7 +108,7 @@ const useStyles = createUseStyles({
     }
 })
 
-const SurebetCard = ({data}) => {
+const SurebetCard = ({data, sports}) => {
 
     const classes = useStyles()
     const [calculator, setCalculator] = useState(false)
@@ -138,8 +138,8 @@ const SurebetCard = ({data}) => {
                 <div className={clsx(classes.profit, "has-background-success")}>
                     <span>{numeral(data.profit/100).format("%0.00")}</span>
                 </div>
-                <div className={clsx(classes.sport, "has-background-info has-text-weight-medium")}>
-                    <span>Futbol</span>
+                <div className={clsx(classes.sport, `has-background-info has-text-weight-medium`)}>
+                    <span>{sports[data.sport].name}</span>
                 </div>
 
                 {
@@ -185,7 +185,9 @@ const SurebetCard = ({data}) => {
                                 {option.comapanyName}
                             </div>
                             <div className={clsx(classes.event)}>
-                                <span className={clsx(classes.name)}>{option.eventName}</span>
+                                <a target="_blank" href={option.url}>
+                                    <span className={clsx(classes.name, "has-text-black	")}>{option.eventName}</span>
+                                </a>
                                 <span className={clsx(classes.date)}>{moment(option.date_start).format("DD/MM/YYYY, h:mm a")}</span>
                             </div>
                             <div className={clsx(classes.market)}>

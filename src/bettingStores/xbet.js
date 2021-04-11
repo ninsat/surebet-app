@@ -1,3 +1,12 @@
+const normalizeText = text => {
+  return text.trim()
+  .replaceAll(" ", "-")
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")
+  .replace(".", "")
+}
+
+
 const getEvents1Xbet = async () => {
     const myHeaders = new Headers();
     myHeaders.append(
@@ -70,7 +79,8 @@ const getEvents1Xbet = async () => {
       eventName: match.O1 + " - " + match.O2,
       date_start: match.S * 1000,
       sport: match.SE,
-      group: match.L
+      group: match.L,
+      url: `https://1xbet.com.co/es/line/${match.SE}/${(match.LI)}-${normalizeText(match.LE)}/${match.CI}-${normalizeText(match.O1E)}-${normalizeText(match.O2E || "")}/` 
     }));
   };
 
@@ -103,7 +113,8 @@ const getEvents1Xbet = async () => {
       eventName: match.O1 + " - " + match.O2,
       date_start: match.S * 1000,
       sport: match.SE,
-      group: match.L
+      group: match.L,
+      url: `https://1xbet.com.co/es/line/${match.SE}/${(match.LI)}-${normalizeText(match.LE)}/${match.CI}-${normalizeText(match.O1E)}-${normalizeText(match.O2E || "")}/` 
     }));
   };
   

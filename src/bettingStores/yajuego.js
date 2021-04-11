@@ -229,7 +229,8 @@ const getAllEvents = async () => {
             eventName: `${team1} - ${team2}`,
             date_start: new Date(match.STARTDATE).getTime(),
             sport: "FUTBOLL",
-            group: match.GN
+            group: match.GN,
+            url: `https://sports.yajuego.co/event/${match.ID}`
         }
     })
 }
@@ -254,7 +255,8 @@ const getAllBasketballEvents = async () => {
             eventName: `${team1} - ${team2}`,
             date_start: new Date(match.STARTDATE).getTime(),
             sport: "FUTBOLL",
-            group: match.GN
+            group: match.GN,
+            url: `https://sports.yajuego.co/event/${match.ID}`
         }
     })
 }

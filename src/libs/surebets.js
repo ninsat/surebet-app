@@ -114,7 +114,7 @@ const compareMatches = (matchGroup) => {
 
 
 
-const compareMatches2 = (matchGroup, markets = []) => {
+const compareMatches2 = (matchGroup, markets = [], sportName) => {
   const result = [];
   const companies = Object.keys(matchGroup);
   companies.forEach((company) => {
@@ -159,6 +159,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                     type: marketOption.type,
                     oddsType: "Más de",
                     eventName: matchGroup[company].eventName,
+                    url: matchGroup[company].url,
                     sport: matchGroup[company].sport,
                     date_start: matchGroup[company].date_start
                   },
@@ -169,6 +170,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                     type: otherCompanyOption.type,
                     oddsType: "Menos de",
                     eventName: matchGroup[otherCompany].eventName,
+                    url: matchGroup[otherCompany].url,
                     sport: matchGroup[otherCompany].sport,
                     date_start: matchGroup[otherCompany].date_start
                   }
@@ -189,6 +191,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                     oddsType: "Menos de",
                     type: marketOption.type,
                     eventName: matchGroup[company].eventName,
+                    url: matchGroup[company].url,
                     date_start: matchGroup[company].date_start
                   },
                   {
@@ -198,6 +201,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                     type: otherCompanyOption.type,
                     oddsType: "Más de",
                     eventName: matchGroup[otherCompany].eventName,
+                    url: matchGroup[otherCompany].url,
                     date_start: matchGroup[otherCompany].date_start
                   }
                 ]
@@ -233,6 +237,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                     oddsType: marketObject.options[marketOption].label,
                     type: null,
                     eventName: matchGroup[company].eventName,
+                    url: matchGroup[company].url,
                     date_start: matchGroup[company].date_start,
                     sport: matchGroup[company].sport,
                   },
@@ -243,6 +248,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                     type: null,
                     oddsType: marketObject.options[marketOption].opposite.label,
                     eventName: matchGroup[otherCompany].eventName,
+                    url: matchGroup[otherCompany].url,
                     sport: matchGroup[otherCompany].sport,
                     date_start: matchGroup[otherCompany].date_start
                   }
@@ -280,6 +286,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                     type: marketOption.type,
                     oddsType: matchGroup[company].team1,
                     eventName: matchGroup[company].eventName,
+                    url: matchGroup[company].url,
                     sport: matchGroup[company].sport,
                     date_start: matchGroup[company].date_start
                   },
@@ -290,6 +297,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                     type: otherCompanyOption.type,
                     oddsType: matchGroup[otherCompany].team2,
                     eventName: matchGroup[otherCompany].eventName,
+                    url: matchGroup[otherCompany].url,
                     sport: matchGroup[otherCompany].sport,
                     date_start: matchGroup[otherCompany].date_start
                   }
@@ -308,6 +316,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                     type: marketOption.type,
                     oddsType: matchGroup[company].team2,
                     eventName: matchGroup[company].eventName,
+                    url: matchGroup[company].url,
                     sport: matchGroup[company].sport,
                     date_start: matchGroup[company].date_start
                   },
@@ -318,6 +327,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                     type: otherCompanyOption.type,
                     oddsType: matchGroup[otherCompany].team1,
                     eventName: matchGroup[otherCompany].eventName,
+                    url: matchGroup[otherCompany].url,
                     sport: matchGroup[otherCompany].sport,
                     date_start: matchGroup[otherCompany].date_start
                   }
@@ -352,6 +362,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                       type: marketObject.options[option].label,
                       oddsType: marketOption.participant,
                       eventName: matchGroup[company].eventName,
+                      url: matchGroup[company].url,
                       sport: matchGroup[company].sport,
                       date_start: matchGroup[company].date_start
                     },
@@ -362,6 +373,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
                       type: marketObject.options[option].opposite.label,
                       oddsType: otherCompanyOption.participant,
                       eventName: matchGroup[otherCompany].eventName,
+                      url: matchGroup[otherCompany].url,
                       sport: matchGroup[otherCompany].sport,
                       date_start: matchGroup[otherCompany].date_start
                     }
@@ -376,7 +388,7 @@ const compareMatches2 = (matchGroup, markets = []) => {
   });
 
   if (result.length) {
-    return result;
+    return result.map(v => ({...v, sport: sportName}));
   }
 
   return null;

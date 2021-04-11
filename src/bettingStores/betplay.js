@@ -122,7 +122,8 @@ const getEventsBetPlay = async () => {
     eventName: match.event.name,
     date_start: new Date(match.event.start).getTime(),
     sport: match.event.sport,
-    group: match.event.group
+    group: match.event.group,
+    url: `https://www.rushbet.co/?page=sportsbook#event/${match.event.id}` 
   }));
 };
 
@@ -173,7 +174,8 @@ const getBasketballEventsBetPlay = async () => {
     eventName: match.event.name,
     date_start: new Date(match.event.start).getTime(),
     sport: match.event.sport,
-    group: match.event.group
+    group: match.event.group,
+    url: `https://www.rushbet.co/?page=sportsbook#event/${match.event.id}` 
   }));
 };
 
@@ -209,7 +211,8 @@ const getCountryMatches = async (country = "france") => {
     eventName: match.event.name,
     date_start: new Date(match.event.start).getTime(),
     sport: match.event.sport,
-    group: match.event.group
+    group: match.event.group,
+    url: `https://www.rushbet.co/?page=sportsbook#event/${match.event.id}` 
   }));
 
 }

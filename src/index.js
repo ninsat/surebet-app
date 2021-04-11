@@ -266,7 +266,7 @@ const testMatch = async (options, sportsOptions, cb, loadCb) => {
         },{})
        
   
-        const surebetsData = surebets.compareMatches2(bookMarketObject, sports[sportName].market)
+        const surebetsData = surebets.compareMatches2(bookMarketObject, sports[sportName].market, sportName)
         console.log("YA")
   
         
@@ -324,7 +324,7 @@ const App = (props) => {
     },
     basketball:{
       name: "Baloncesto",
-      active: false
+      active: false,
     }
   })
 
@@ -363,7 +363,7 @@ const App = (props) => {
           <SurbetContainer>
             {
               surebets.map((surebet, index) => (
-                <SurebetCard key={index} data={surebet} />
+                <SurebetCard sports={sports} key={index} data={surebet} />
               ))
             }
           </SurbetContainer>
