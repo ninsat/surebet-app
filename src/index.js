@@ -127,7 +127,7 @@ const secondMain = async (cb) => {
 
 
 
-const testMatch = async (options, cb, loadCb) => {
+const testMatch = async (options, sportsOptions, cb, loadCb) => {
 
     const bookMarkets = {
       betplay:{
@@ -185,12 +185,12 @@ const testMatch = async (options, cb, loadCb) => {
 
     const sports = {
       football:{
-        active: false,
+        active: true,
         market: markets,
         name: "Futbol"
       },
       basketball:{
-        active: true,
+        active: false,
         market: basketBallMarkets,
         name: "Baloncesto"
       }
@@ -200,7 +200,9 @@ const testMatch = async (options, cb, loadCb) => {
     Object.keys(options).forEach(bookMarket=>{
       bookMarkets[bookMarket].active = options[bookMarket].active
     })
-    
+    Object.keys(sportsOptions).forEach(sportName => {
+      sports[sportName].active = sportsOptions[sportName].active
+    })
     
     //consigo los partidos de cada casa de apuestas
     let sportsData = {}
@@ -328,7 +330,7 @@ const App = (props) => {
 
   const handleClick = async () => {
     setDisabledActions(true)
-    await testMatch(bookMarkets, setSurebets, (loadObject) => {
+    await testMatch(bookMarkets,sports, setSurebets, (loadObject) => {
       setLoad(loadObject)
     })
     setDisabledActions(false)
