@@ -1,0 +1,303 @@
+[
+    {
+        "label": "Total de juegos",
+        "id": 1001159891,
+        "betplay_id": 1001159891,
+        "name": "totalGames",
+        "xbet": {
+            "marketId": "main",
+            "G": 17
+        },
+        "yajuego": {
+            "id": "235"
+        },
+        "type": "OVER/UNDER",
+        "enable": true
+    },
+    {
+        "label": "Total de juegos - Set 1",
+        "id": 1001159979,
+        "betplay_id": 1001159979,
+        "name": "totalGamesSet1",
+        "xbet": {
+            "marketId": "1-set",
+            "G": 17
+        },
+        "yajuego": {
+            "id": "2992"
+        },
+        "type": "OVER/UNDER",
+        "enable": true
+    },
+    {
+        "label": "Total Sets",
+        "id": 1001159758,
+        "betplay_id": 1001159758,
+        "name": "totalSets",
+        "xbet": {
+            "marketId": "main",
+            "G": 182
+        },
+        "yajuego": {
+            "id": "235"
+        },
+        "type": "OVER/UNDER",
+        "enable": true
+    },
+    {
+        "label": "Hándicap de sets",
+        "id": 1001419385,
+        "betplay_id": 1001419385,
+        "name": "setHandicap",
+        "xbet": {
+            "marketId": "main",
+            "G": 109,
+            "home": 732,
+            "away": 733
+        },
+        "betplay": {
+            "home": "team1",
+            "away": "team2"
+        },
+        "yajuego": {
+            "id": "2998",
+            "market": "Hándicap de sets"
+        },
+        "type": "HANDICAP",
+        "enable": true
+    },
+    {
+        "label": "Hándicap de juegos",
+        "id": 1001427539,
+        "betplay_id": 1001427539,
+        "name": "gameHandicap",
+        "xbet": {
+            "marketId": "main",
+            "G": 2,
+            "home": 7,
+            "away": 8
+        },
+        "betplay": {
+            "home": "team1",
+            "away": "team2"
+        },
+        "yajuego": {
+            "id": "3000",
+            "market": "Hándicap de juegos"
+        },
+        "type": "HANDICAP",
+        "enable": true
+    },
+    {
+        "label": "Cuotas del partido",
+        "id": 1001159551,
+        "betplay": {
+            "id": 1001159551
+        },
+        "name": "matchOdds",
+        "xbet": {
+            "marketId": "main",
+            "G": 1
+        },
+        "yajuego": {
+            "id": "360"
+        },
+        "type": "OBJECT",
+        "options": {
+            "OT_1": {
+                "label": "1",
+                "betplay": {
+                    "type": "OT_ONE"
+                },
+                "xbet": {
+                    "T": 1
+                },
+                "yajuego": {
+                    "name": "1"
+                },
+                "opposite": {
+                    "market": "Cuotas del partido",
+                    "label": "2",
+                    "route": "matchOdds.OT_2"
+                }
+            },
+            "OT_2": {
+                "label": "2",
+                "betplay": {
+                    "type": "OT_TWO"
+                },
+                "xbet": {
+                    "T": 3
+                },
+                "yajuego": {
+                    "name": "2"
+                },
+                "opposite": {
+                    "market": "Cuotas del partido",
+                    "label": "1",
+                    "route": "matchOdds.OT_1"
+                }
+            }
+        },
+        "enable": true
+    },
+    {
+        "label": "Set 1",
+        "id": 1001159846,
+        "betplay": {
+            "id": 1001159846
+        },
+        "name": "set1",
+        "xbet": {
+            "marketId": "1-set",
+            "G": 1
+        },
+        "yajuego": {
+            "id": "233"
+        },
+        "type": "OBJECT",
+        "options": {
+            "OT_1": {
+                "label": "1",
+                "betplay": {
+                    "type": "OT_ONE"
+                },
+                "xbet": {
+                    "T": 1
+                },
+                "yajuego": {
+                    "name": "1"
+                },
+                "opposite": {
+                    "market": "Set 1",
+                    "label": "2",
+                    "route": "set1.OT_2"
+                }
+            },
+            "OT_2": {
+                "label": "2",
+                "betplay": {
+                    "type": "OT_TWO"
+                },
+                "xbet": {
+                    "T": 3
+                },
+                "yajuego": {
+                    "name": "2"
+                },
+                "opposite": {
+                    "market": "Set 1",
+                    "label": "1",
+                    "route": "set1.OT_1"
+                }
+            }
+        },
+        "enable": true
+    },
+    {
+        "label": "Set 2",
+        "id": 1001159846,
+        "betplay": {
+            "id": 1001159846
+        },
+        "name": "set2",
+        "xbet": {
+            "marketId": "2-set",
+            "G": 1
+        },
+        "yajuego": {
+            "id": "236"
+        },
+        "type": "OBJECT",
+        "options": {
+            "OT_1": {
+                "label": "1",
+                "betplay": {
+                    "type": "OT_ONE"
+                },
+                "xbet": {
+                    "T": 1
+                },
+                "yajuego": {
+                    "name": "1"
+                },
+                "opposite": {
+                    "market": "Set 2",
+                    "label": "2",
+                    "route": "set2.OT_2"
+                }
+            },
+            "OT_2": {
+                "label": "2",
+                "betplay": {
+                    "type": "OT_TWO"
+                },
+                "xbet": {
+                    "T": 3
+                },
+                "yajuego": {
+                    "name": "2"
+                },
+                "opposite": {
+                    "market": "Set 2",
+                    "label": "1",
+                    "route": "set2.OT_1"
+                }
+            }
+        },
+        "enable": true
+    },
+    {
+        "label": "Tie-break Partido",
+        "id": 1001229618,
+        "betplay": {
+            "id": 1001229618
+        },
+        "name": "totalNumberOfTiebreaks",
+        "xbet": {
+            "marketId": "main",
+            "G": 58
+        },
+        "yajuego": {
+            "id": "2996"
+        },
+        "type": "OBJECT",
+        "options": {
+            "YES": {
+                "label": "1",
+                "betplay": {
+                    "type": "OT_OVER"
+                },
+                "xbet": {
+                    "T": 540
+                },
+                "yajuego": {
+                    "name": "Yes"
+                },
+                "opposite": {
+                    "market": "Tie-break Partido",
+                    "label": "NO",
+                    "route": "totalNumberOfTiebreaks.NO"
+                }
+            },
+            "NO": {
+                "label": "2",
+                "betplay": {
+                    "type": "OT_UNDER"
+                },
+                "xbet": {
+                    "T": 541
+                },
+                "yajuego": {
+                    "name": "No"
+                },
+                "opposite": {
+                    "market": "Tie-break Partido",
+                    "label": "SI",
+                    "route": "totalNumberOfTiebreaks.YES"
+                }
+            }
+        },
+        "enable": true
+    }
+]
