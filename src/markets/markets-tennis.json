@@ -45,6 +45,38 @@
         "enable": true
     },
     {
+        "label": "Total Juegos Local",
+        "id": null,
+        "betplay_id": null,
+        "name": "totalGamesHome",
+        "xbet": {
+            "marketId": "main",
+            "G": 15
+        },
+        "yajuego": {
+            "id": "2994",
+            "market": "Más / Menos 1er jugador" 
+        },
+        "type": "OVER/UNDER",
+        "enable": true
+    },
+    {
+        "label": "Total Juegos Visitante",
+        "id": null,
+        "betplay_id": null,
+        "name": "totalGamesAway",
+        "xbet": {
+            "marketId": "main",
+            "G": 62
+        },
+        "yajuego": {
+            "id": "2993",
+            "market": "Más / Menos 2o jugador" 
+        },
+        "type": "OVER/UNDER",
+        "enable": true
+    },
+    {
         "label": "Hándicap de sets",
         "id": 1001419385,
         "betplay_id": 1001419385,
@@ -295,6 +327,59 @@
                     "market": "Tie-break Partido",
                     "label": "SI",
                     "route": "totalNumberOfTiebreaks.YES"
+                }
+            }
+        },
+        "enable": true
+    },
+    {
+        "label": "Total de Sets",
+        "id": 1001159758,
+        "betplay": {
+            "id": 1001159758
+        },
+        "name": "totalSetsObject",
+        "xbet": {
+            "marketId": "main",
+            "G": 182
+        },
+        "yajuego": {
+            "id": "234"
+        },
+        "type": "OBJECT",
+        "options": {
+            "OT_2S": {
+                "label": "1",
+                "betplay": {
+                    "type": "OT_UNDER"
+                },
+                "xbet": {
+                    "T": 972
+                },
+                "yajuego": {
+                    "name": "2 sets"
+                },
+                "opposite": {
+                    "market": "Total de Sets",
+                    "label": "3 Sets",
+                    "route": "totalSetsObject.OT_3S"
+                }
+            },
+            "OT_3S": {
+                "label": "2",
+                "betplay": {
+                    "type": "OT_OVER"
+                },
+                "xbet": {
+                    "T": 971
+                },
+                "yajuego": {
+                    "name": "3 sets"
+                },
+                "opposite": {
+                    "market": "Total de Sets",
+                    "label": "2 Sets",
+                    "route": "totalSetsObject.OT_2S"
                 }
             }
         },
