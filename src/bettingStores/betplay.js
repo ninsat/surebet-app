@@ -179,7 +179,7 @@ const getBasketballEventsBetPlay = async () => {
   }));
 };
 
-const getCountryMatches = async (country = "france") => {
+const getCountryMatches = async (country = "france", sport="football") => {
   const myHeaders = new Headers();
   myHeaders.append("Connection", "keep-alive");
   myHeaders.append("sec-ch-ua", "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"");
@@ -199,7 +199,7 @@ const getCountryMatches = async (country = "france") => {
     redirect: 'follow'
   };
 
-  const res = await fetch(`https://us1-api.aws.kambicdn.com/offering/v2018/betplay/listView/football/${country}/all.json?lang=es_ES&market=CO&client_id=2&channel_id=1&ncid=${new Date().getTime()}&useCombined=true`, requestOptions)
+  const res = await fetch(`https://us1-api.aws.kambicdn.com/offering/v2018/betplay/listView/${sport}/${country}/all.json?lang=es_ES&market=CO&client_id=2&channel_id=1&ncid=${new Date().getTime()}&useCombined=true`, requestOptions)
   const data = await res.json()
   return data.events.map(match => ({
     ...match,
@@ -230,7 +230,22 @@ const getAllEventsFull = async () =>{
     "germany",
     "argentina",
     "champions_league",
-    "europa_league"
+    "europa_league",
+    "portugal",
+    "netherlands",
+    "brazil",
+    "mexico",
+    "usa",
+    "international_friendly_matches__w_",
+    "saudi_arabia",
+    "australia",
+    "austria",
+    "bolivia",
+    "bulgaria",
+    "belgium",
+    "uefa_championship_u21",
+    "concacaf_champions_league",
+    "copa_america"
   ]
 
   const countriesPromises = countries.map(country => getCountryMatches(country))
@@ -238,6 +253,44 @@ const getAllEventsFull = async () =>{
   const firsData = countriesData.reduce((arr, option)=> [...arr, ...option], [])
   const secondData = await getEventsBetPlay()
 
+  firsData.forEach(match => {
+    const cloneIndex = secondData.findIndex(v => v.id === match.id)
+    if(cloneIndex === -1) return
+    secondData.splice(cloneIndex,1)
+  })
+
+  return [...firsData, ...secondData]
+
+}
+
+
+
+const getAllEventsBasketBallFull = async () =>{
+  const countries = [
+    "nba",
+    "euroleague",
+    "eurocup",
+    "spain",
+    "germany",
+    "australia",
+    "belgium",
+    "denmark",
+    "estonia",
+    "finland",
+    "france",
+    "israel",
+    "ncaab",
+    "poland",
+    "romania",
+    "turkey",
+    "vtb_united_league",
+    "wnba"
+  ]
+
+  const countriesPromises = countries.map(country => getCountryMatches(country, "basketball"))
+  const countriesData = await Promise.all(countriesPromises)
+  const firsData = countriesData.reduce((arr, option)=> [...arr, ...option], [])
+  const secondData = await getBasketballEventsBetPlay()
   firsData.forEach(match => {
     const cloneIndex = secondData.findIndex(v => v.id === match.id)
     if(cloneIndex === -1) return
@@ -435,5 +488,6 @@ export default {
   getCountryMatches,
   getAllEventsFull,
   getMatch,
-  getBasketballEventsBetPlay
+  getBasketballEventsBetPlay,
+  getAllEventsBasketBallFull
 };

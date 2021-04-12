@@ -140,7 +140,7 @@ const testMatch = async (options, sportsOptions, cb, loadCb) => {
             active: true,
           },
           basketball:{
-            getAll: betplay.getBasketballEventsBetPlay,
+            getAll: betplay.getAllEventsBasketBallFull,
             getMatch: betplay.getMatch,
             active: true,
           }
