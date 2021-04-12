@@ -16,6 +16,7 @@ import surebets from './libs/surebets.js'
 
 import markets from './markets.json'
 import basketBallMarkets from './markets/markets-basketball.json'
+import tennis_markets from './markets/markets-tennis.json'
 
 //import textData from './textData.json'
 
@@ -31,11 +32,11 @@ import yajuego from './bettingStores/yajuego.js';
 const testXbet = async () => {
   console.log("Empezo esto!");
   //const data = await xbet.getEvents1Xbet2({ id: 89864715 }, markets);
-  const data = await yajuego.getMatchData("4101239")
+  const data = await yajuego.getMatch({id: "4101239"}, tennis_markets)
   console.log(data);
 };
 
-testXbet()
+//testXbet()
 
 // Segundo intento de conseguir los matches
 const secondMain = async (cb) => {
