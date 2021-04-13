@@ -239,7 +239,7 @@ const getEvents1Xbet = async () => {
       (obj, market) => {
         return {
           ...obj,
-          [market.textId]: fullMarkets.find((v) => v.CI === market.id).GE
+          [market.textId]: fullMarkets.find((v) => v?.CI === market.id).GE
         };
       },
       { main: mainMarket.GE }
