@@ -296,7 +296,7 @@
         "type": "OBJECT",
         "options": {
             "YES": {
-                "label": "1",
+                "label": "SI",
                 "betplay": {
                     "type": "OT_OVER"
                 },

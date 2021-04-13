@@ -179,6 +179,56 @@ const getBasketballEventsBetPlay = async () => {
   }));
 };
 
+
+const getTennisEventsBetPlay = async () => {
+
+  const myHeaders = new Headers();
+  myHeaders.append("Connection", "keep-alive");
+  myHeaders.append(
+    "sec-ch-ua",
+    '"Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"'
+  );
+  myHeaders.append("Accept", "application/json, text/javascript, */*; q=0.01");
+  myHeaders.append("sec-ch-ua-mobile", "?0");
+  myHeaders.append(
+    "User-Agent",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36"
+  );
+  myHeaders.append("Origin", "https://betplay.com.co");
+  myHeaders.append("Sec-Fetch-Site", "cross-site");
+  myHeaders.append("Sec-Fetch-Mode", "cors");
+  myHeaders.append("Sec-Fetch-Dest", "empty");
+  myHeaders.append("Referer", "https://betplay.com.co/");
+  myHeaders.append("Accept-Language", "es-419,es;q=0.9,en;q=0.8");
+
+  const requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow"
+  };
+
+  const res = await fetch(
+    `https://us1-api.aws.kambicdn.com/offering/v2018/betplay/listView/tennis.json?lang=es_ES&market=CO&client_id=2&channel_id=1&ncid=${new Date().getTime()}&useCombined=true`,
+    requestOptions
+  );
+
+  const data = await res.json();
+
+  return data.events.map(match => ({
+    ...match,
+    id: match.event.id,
+    team1: match.event.homeName,
+    team1En: match.event.englishName.split(" " + match.event.nameDelimiter + " ").map(v => v.trim())[0],
+    team2: match.event.awayName ? match.event.awayName : "",
+    team2En: match.event.englishName.split(" " + match.event.nameDelimiter + " ").map(v => v.trim())[1],
+    eventName: match.event.name,
+    date_start: new Date(match.event.start).getTime(),
+    sport: match.event.sport,
+    group: match.event.group,
+    url: `https://www.rushbet.co/?page=sportsbook#event/${match.event.id}` 
+  }));
+};
+
 const getCountryMatches = async (country = "france", sport="football") => {
   const myHeaders = new Headers();
   myHeaders.append("Connection", "keep-alive");
@@ -291,6 +341,33 @@ const getAllEventsBasketBallFull = async () =>{
   const countriesData = await Promise.all(countriesPromises)
   const firsData = countriesData.reduce((arr, option)=> [...arr, ...option], [])
   const secondData = await getBasketballEventsBetPlay()
+  firsData.forEach(match => {
+    const cloneIndex = secondData.findIndex(v => v.id === match.id)
+    if(cloneIndex === -1) return
+    secondData.splice(cloneIndex,1)
+  })
+
+  return [...firsData, ...secondData]
+
+}
+
+
+const getAllEventsTennisFull = async () =>{
+  const countries = [
+    "grand_slam",
+    "atp",
+    "wta",
+    "atp_doubles",
+    "wta_doubles",
+    "challenger",
+    "itf_men",
+    "itf_women"
+  ]
+
+  const countriesPromises = countries.map(country => getCountryMatches(country, "tennis"))
+  const countriesData = await Promise.all(countriesPromises)
+  const firsData = countriesData.reduce((arr, option)=> [...arr, ...option], [])
+  const secondData = await getTennisEventsBetPlay()
   firsData.forEach(match => {
     const cloneIndex = secondData.findIndex(v => v.id === match.id)
     if(cloneIndex === -1) return
@@ -489,5 +566,6 @@ export default {
   getAllEventsFull,
   getMatch,
   getBasketballEventsBetPlay,
-  getAllEventsBasketBallFull
+  getAllEventsBasketBallFull,
+  getAllEventsTennisFull
 };

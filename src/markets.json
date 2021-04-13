@@ -84,6 +84,30 @@
       "enable": true
     },
     {
+      "label": "Total de fueras de juego del equipo local",
+      "id": 1002153726,
+      "betplay_id": 1002153726,
+      "name": "totalOffsidesbyHomeTeam",
+      "xbet": {
+        "marketId": "fueras-de-juego",
+        "G": 15
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de fueras de juego del equipo Visitante",
+      "id": 1002153727,
+      "betplay_id": 1002153727,
+      "name": "totalOffsidesbyAwayTeam",
+      "xbet": {
+        "marketId": "fueras-de-juego",
+        "G": 62
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
       "label": "Total de faltas cometidas",
       "id": 1001159913,
       "betplay_id": 1001159913,
@@ -91,6 +115,30 @@
       "xbet": {
         "marketId": "faltas",
         "G": 17
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de faltas cometidas por Equipo Local",
+      "id": 1002153719,
+      "betplay_id": 1002153719,
+      "name": "totalFoulscommittedbyHomeTeam",
+      "xbet": {
+        "marketId": "faltas",
+        "G": 15
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total de faltas cometidas por Equipo Visitante",
+      "id": 1002153720,
+      "betplay_id": 1002153720,
+      "name": "totalFoulscommittedbyAwayTeam",
+      "xbet": {
+        "marketId": "faltas",
+        "G": 62
       },
       "type": "OVER/UNDER",
       "enable": true

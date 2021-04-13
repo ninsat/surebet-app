@@ -32,7 +32,7 @@ import yajuego from './bettingStores/yajuego.js';
 const testXbet = async () => {
   console.log("Empezo esto!");
   //const data = await xbet.getEvents1Xbet2({ id: 89864715 }, markets);
-  const data = await yajuego.getMatch({id: "4101239"}, tennis_markets)
+  const data = await xbet.getTennisEvents1Xbet({id: "4101239"}, tennis_markets)
   console.log(data);
 };
 
@@ -144,6 +144,11 @@ const testMatch = async (options, sportsOptions, cb, loadCb) => {
             getAll: betplay.getAllEventsBasketBallFull,
             getMatch: betplay.getMatch,
             active: true,
+          },
+          tennis:{
+            getAll: betplay.getAllEventsTennisFull,
+            getMatch: betplay.getMatch,
+            active: true,
           }
         },
         active: true
@@ -159,6 +164,11 @@ const testMatch = async (options, sportsOptions, cb, loadCb) => {
           },
           basketball:{
             getAll: xbet.getBasketballEvents1Xbet,
+            getMatch: xbet.getMatch,
+            active: true,
+          },
+          tennis:{
+            getAll: xbet.getTennisEvents1Xbet,
             getMatch: xbet.getMatch,
             active: true,
           }
@@ -178,6 +188,11 @@ const testMatch = async (options, sportsOptions, cb, loadCb) => {
             getAll: yajuego.getAllBasketballEvents,
             getMatch: yajuego.getMatch,
             active: true,
+          },
+          tennis:{
+            getAll: yajuego.getAllTennisEvents,
+            getMatch: yajuego.getMatch,
+            active: true,
           }
         },
         active: false
@@ -194,6 +209,11 @@ const testMatch = async (options, sportsOptions, cb, loadCb) => {
         active: false,
         market: basketBallMarkets,
         name: "Baloncesto"
+      },
+      tennis:{
+        active: false,
+        market: tennis_markets,
+        name: "Tenis"
       }
     }
     
@@ -326,6 +346,10 @@ const App = (props) => {
     basketball:{
       name: "Baloncesto",
       active: false,
+    },
+    tennis:{
+      name: "Tenis",
+      active: false
     }
   })
 
