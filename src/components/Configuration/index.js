@@ -5,6 +5,7 @@ import clsx from "clsx"
 
 import ProgressBar from "../ProgressBar"
 import OptionSelection from "./OptionSelection"
+import FilterSelector from './FilterSelector'
 
 const useStyles = createUseStyles({
     root:{
@@ -29,6 +30,8 @@ const Configuration = ({loadData, bookMarkets, onChangeBookMarkets,onChangeSport
     return(
         <div className={clsx("box", classes.root)}>
             <ProgressBar data={loadData}/>
+            <FilterSelector />
+            <hr></hr>
             <OptionSelection
                 onChangeOption={onChangeBookMarkets} 
                 options={bookMarkets} 
