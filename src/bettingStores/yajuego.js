@@ -60,13 +60,13 @@ const formatMarketData = (maketId, match) => {
     const typeOverUder = options.reduce((type, option) => {
         return type && /@-?[0-9]+(\.[0-9]+)?/g.test(option);
     }, true);
-    let typeHandicap = options.reduce((type, option) => {
+    const typeHandicap = options.reduce((type, option) => {
         return type && /@-?[0-9]+(\.[0-9]+)?.*H$/g.test(option);
     }, true);
 
-    typeHandicap = handicapsMarketsIds.reduce((result, option)=> result || (option === marketObject.ID), false)
+    const typeHandicapExeptions = handicapsMarketsIds.reduce((result, option)=> result || (option === marketObject.ID), false)
 
-    if (typeHandicap) {
+    if (typeHandicap || typeHandicapExeptions) {
         const formatOptions = options.map((v) => {
             const [type, variant] = v.replace(marketObject.ID + "@", "").split("_");
             let formatType = parseFloat(type);
@@ -308,7 +308,6 @@ const getAllTennisEvents = async () => {
 
 
 const formatBetOffer = (match, markets) => {
-    console.log(markets)
     return markets.reduce((obj, market) => {
 
         const betOffer = match.originalMarket[market.yajuego?.id]

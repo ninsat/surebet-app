@@ -37,7 +37,7 @@ const testXbet = async () => {
   console.log(data2);
 };
 
-testXbet()
+//testXbet()
 
 // Segundo intento de conseguir los matches
 const secondMain = async (cb) => {
