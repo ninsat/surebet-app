@@ -24,6 +24,30 @@
       "enable": true
     },
     {
+      "label": "Número total de disparos - prórroga incluida",
+      "id": 1004673890,
+      "betplay_id": 1004673890,
+      "name": "totalShotsIncludingExtraTime",
+      "xbet": {
+        "marketId": "tiros",
+        "G": 17
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Total Tiros a puerta - Incluyendo prórroga",
+      "id": 1002153705,
+      "betplay_id": 1002153705,
+      "name": "TotalShotsOnTargetIncludingExtraTime",
+      "xbet": {
+        "marketId": "tiros-entre-los-tres-palos",
+        "G": 17
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
       "label": "Número total de tiros por parte del local",
       "id": 1004544390,
       "betplay_id": 1004544390,
@@ -36,12 +60,60 @@
       "enable": true
     },
     {
+      "label": "Número total de tiros por parte de Local - Prórroga incluida",
+      "id": 1004673891,
+      "betplay_id": 1004673891,
+      "name": "totalShotsByHomeIncludingExtraTime",
+      "xbet": {
+        "marketId": "tiros",
+        "G": 15
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Número total de tiros a puerta por parte de Local - Prórroga incluida",
+      "id": 1002153708,
+      "betplay_id": 1002153708,
+      "name": "totalShotsOnTargetByHomeIncludingExtraTime",
+      "xbet": {
+        "marketId": "tiros-entre-los-tres-palos",
+        "G": 15
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
       "label": "Número total de tiros por parte del visitante",
       "id": 1004544391,
       "betplay_id": 1004544391,
       "name": "totalShotsAway",
       "xbet": {
         "marketId": "tiros",
+        "G": 62
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Número total de tiros por parte de Visitante - Prórroga incluida",
+      "id": 1004673892,
+      "betplay_id": 1004673892,
+      "name": "totalShotsByAwayIncludingExtraTime",
+      "xbet": {
+        "marketId": "tiros",
+        "G": 62
+      },
+      "type": "OVER/UNDER",
+      "enable": true
+    },
+    {
+      "label": "Número total de tiros a puerta por parte de Visitante - Prórroga incluida",
+      "id": 1002153709,
+      "betplay_id": 1002153709,
+      "name": "TotalShotsOnTargetByAwayIncludingExtraTime",
+      "xbet": {
+        "marketId": "tiros-entre-los-tres-palos",
         "G": 62
       },
       "type": "OVER/UNDER",
