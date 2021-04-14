@@ -41,6 +41,7 @@ const getBetOfferceYajuego = async (match, markets = []) => {
 }
 
 const formatMarketData = (maketId, match) => {
+    const handicapsMarketsIds = ["T_HND"]
     const markets = match.MK;
     const marketObject = markets.find((v) => v.MARKETID === maketId);
 
@@ -59,9 +60,11 @@ const formatMarketData = (maketId, match) => {
     const typeOverUder = options.reduce((type, option) => {
         return type && /@-?[0-9]+(\.[0-9]+)?/g.test(option);
     }, true);
-    const typeHandicap = options.reduce((type, option) => {
+    let typeHandicap = options.reduce((type, option) => {
         return type && /@-?[0-9]+(\.[0-9]+)?.*H$/g.test(option);
     }, true);
+
+    typeHandicap = handicapsMarketsIds.reduce((result, option)=> result || (option === marketObject.ID), false)
 
     if (typeHandicap) {
         const formatOptions = options.map((v) => {
@@ -75,6 +78,7 @@ const formatMarketData = (maketId, match) => {
                 odds: parseFloat(match.O[v])
             };
         });
+
 
 
         const formatMarket = formatOptions.reduce((arrMarket, option) => {
@@ -304,6 +308,7 @@ const getAllTennisEvents = async () => {
 
 
 const formatBetOffer = (match, markets) => {
+    console.log(markets)
     return markets.reduce((obj, market) => {
 
         const betOffer = match.originalMarket[market.yajuego?.id]

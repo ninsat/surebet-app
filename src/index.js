@@ -32,11 +32,12 @@ import yajuego from './bettingStores/yajuego.js';
 const testXbet = async () => {
   console.log("Empezo esto!");
   //const data = await xbet.getEvents1Xbet2({ id: 89864715 }, markets);
-  const data = await xbet.getTennisEvents1Xbet({id: "4101239"}, tennis_markets)
-  console.log(data);
+  const data = await yajuego.getMatchData("4112524")
+  const data2 = await yajuego.getMatch({id: "4112524"}, tennis_markets)
+  console.log(data2);
 };
 
-//testXbet()
+testXbet()
 
 // Segundo intento de conseguir los matches
 const secondMain = async (cb) => {

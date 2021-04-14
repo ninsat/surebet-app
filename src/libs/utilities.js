@@ -104,7 +104,7 @@ const matchTheMatchFull = (match, matches = [], name1, name2) => {
   if (actualMatch === undefined) {
     const eventListNames = sameDateMatches.map(m => m.eventName.toLocaleLowerCase())
     const matchObject = stringSimilarity.findBestMatch(match.eventName.toLocaleLowerCase(), eventListNames)
-    if(matchObject.bestMatch.rating >= 0.5){
+    if(matchObject.bestMatch.rating >= 0.7){
       return {
         [name1]: match,
         [name2]: sameDateMatches[matchObject.bestMatchIndex]
