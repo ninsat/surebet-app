@@ -32,12 +32,7 @@ import yajuego from './bettingStores/yajuego.js';
 const testXbet = async () => {
   console.log("Empezo esto!");
   //const data = await xbet.getEvents1Xbet2({ id: 89864715 }, markets);
-  const data = await yajuego.getSpecialMatch({
-    "EVENT_NAME": "|Augsburg||v||Arminia Bielefeld|",
-    "id": "143059",
-    "SCORER": true,
-    "CARDS": true
-})
+  const data = await yajuego.getMatch({id: "4076168"}, markets)
   console.log(data);
 };
 

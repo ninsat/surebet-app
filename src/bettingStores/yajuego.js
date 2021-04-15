@@ -19,7 +19,6 @@ const getSpecialData = async () => {
                             .reduce((arr, op)=> [...arr, ...op], [])
                             .map(data => Object.keys(data.E).map(v=> ({EVENT_NAME: data.E[v].G_DESC, id: v})))
                             .reduce((arr, op)=> [...arr, ...op], [])
-        console.log(option)
         const indexs = temp.map(v => arr.findIndex(op => op.id === v.id))
         const copyArray = arr.slice()
         const isNoInArray = []
@@ -524,12 +523,30 @@ const formatAllBetOfers = (matches=[], markets)=>{
     })
 }
 
-const getMatch = async (match, markets) => {
+const getMatch = async (match, markets=[]) => {
     const matchData = await getMatchData(match.id)
-    const formatMarket = formatBetOffer(matchData, markets)
+    
+    const specialEvets = await getSpecialData()
+    const specialData = specialEvets.find(v => v.EVENT_NAME === matchData.DS)
+    let participants = []
+    if(specialData){
+        participants = await getSpecialMatch(specialData)
+    }
+    const newMatchData = {
+        ...matchData,
+        originalMarket:{
+            ...matchData.originalMarket,
+            participants
+        }
+    }
+    console.log(newMatchData)
+    const formatMarket = formatBetOffer(newMatchData, markets)
     return {
         ...match,
-        markets: formatMarket
+        markets: {
+            ...formatMarket,
+            participants
+        },
     }
 }
 

@@ -933,6 +933,9 @@
         "marketId": "estadisticas-de-jugadores",
         "G": 119
       },
+      "yajuego":{
+        "marketId": "S_ANYSCORER"
+      },
       "type": "OBJECT-PARTICIPANT",
       "options": {
         "YES": {
@@ -942,6 +945,9 @@
           },
           "xbet": {
             "T": 5869
+          },
+          "yajuego":{
+            "name": "Yes"
           },
           "opposite":{
             "market": "Marcará",
@@ -956,6 +962,9 @@
           },
           "xbet": {
             "T": 5870
+          },
+          "yajuego":{
+            "name": "No"
           },
           "opposite":{
             "market": "Marcará",
@@ -1021,6 +1030,9 @@
         "marketId": "estadisticas-de-jugadores",
         "G": 3291
       },
+      "yajuego":{
+        "marketId": "S_ANYSCORERYCARD"
+      },
       "type": "OBJECT-PARTICIPANT",
       "options": {
         "YES": {
@@ -1030,6 +1042,9 @@
           },
           "xbet": {
             "T": 9268
+          },
+          "yajuego":{
+            "name": "Yes"
           },
           "opposite":{
             "market": "Recibirá una tarjeta",
@@ -1044,6 +1059,9 @@
           },
           "xbet": {
             "T": 9269
+          },
+          "yajuego":{
+            "name": "No"
           },
           "opposite":{
             "market": "Recibirá una tarjeta",
