@@ -506,6 +506,24 @@ const formatBetOffer = (match, markets) => {
                 ...obj,
                 [market.name]: formatOffers
             };
+        }else if(market.type === "OBJECT-PARTICIPANT"){
+            const formatOffers = betOffer.map(option => {
+                const marketOptions = Object.keys(market.options)
+                const marketOptionsObject = {}
+                marketOptions.forEach(op=>{
+                    marketOptionsObject[op] = {
+                        v: option.originalMarket[market.yajuego.marketId]?.options[market.options[op].yajuego.name].v
+                    }
+                })
+                return {
+                    participant: option.participant,
+                    ...marketOptionsObject
+                }
+            })
+            return {
+                ...obj,
+                [market.name]: formatOffers
+            };
         }
 
         return obj;
@@ -525,8 +543,10 @@ const formatAllBetOfers = (matches=[], markets)=>{
 
 const getMatch = async (match, markets=[]) => {
     const matchData = await getMatchData(match.id)
-    
-    const specialEvets = await getSpecialData()
+    let specialEvets = []
+    if(matchData.S === "Soccer"){
+        specialEvets = await getSpecialData()
+    }
     const specialData = specialEvets.find(v => v.EVENT_NAME === matchData.DS)
     let participants = []
     if(specialData){
