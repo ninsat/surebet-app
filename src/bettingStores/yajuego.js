@@ -1,3 +1,108 @@
+const getSpecialData = async () => {
+    const url = encodeURIComponent(
+        `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetPlayers?SID=2000001&v_cache_version=1.156.4.921`
+    );
+    const response = await fetch(`https://api.allorigins.win/get?url=${url}`);
+
+    if (!response.ok) throw new Error("Network response was not ok.");
+
+    const data = await response.json();
+
+    const matchData = JSON.parse(data.contents).D
+    const specialOptions = matchData.PLY
+
+    const matchIds = specialOptions.reduce((arr, option)=>{
+        const temp = Object.keys(option.SG)
+                            .map(v=> option.SG[v].G)
+                            .map(v => Object.keys(v)
+                            .map(j=> v[j]))
+                            .reduce((arr, op)=> [...arr, ...op], [])
+                            .map(data => Object.keys(data.E).map(v=> ({EVENT_NAME: data.E[v].G_DESC, id: v})))
+                            .reduce((arr, op)=> [...arr, ...op], [])
+        console.log(option)
+        const indexs = temp.map(v => arr.findIndex(op => op.id === v.id))
+        const copyArray = arr.slice()
+        const isNoInArray = []
+        indexs.forEach((index, tempIdx) => {
+            if(index === -1){
+                isNoInArray.push(temp[tempIdx])
+            }
+            copyArray[index] = {
+                ...copyArray[index],
+                [option.CAT]: true
+            }
+        })
+
+        isNoInArray.forEach(data =>{
+            copyArray.push({
+                ...data,
+                [option.CAT]: true
+            })
+        })
+
+        return copyArray
+    }, [])
+    return matchIds
+}
+
+const getSpecialMatch = async (id) => {
+    //Group matkets 173 => cards || 32 => Score
+    const url = encodeURIComponent(
+        `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEventsInGroupV2?GROUPID=${id}&GROUPMARKETID=32&DISP=0&v_cache_version=1.156.4.921`
+    );
+    const response = await fetch(`https://api.allorigins.win/get?url=${url}`);
+
+    if (!response.ok) throw new Error("Network response was not ok.");
+
+    const data = await response.json();
+
+    const groupData = JSON.parse(data.contents).D
+    
+    const result = groupData.E.map(group => ({...group, MK: groupData.MK, TRANS: groupData.TRANS}))
+    
+    return result.map(match => formatSpecialMatches(match))
+
+}
+
+const formatSpecialMatches = (matchData) => {
+    if(!matchData.MK) return {...matchData, originalMarket:{}}
+
+    const newMarket = matchData.MK.map(v=>({
+        ...v,
+        MARKETID: v.ID,
+        DS: v.NAME,
+    }))
+
+    const formatData = {
+        ...matchData,
+        MK:newMarket
+    } 
+
+    const originalMarket = formatData.MK.reduce((obj, { MARKETID, DS, ID }) => {
+        return {
+            ...obj,
+            [MARKETID]: {
+                id: MARKETID,
+                name: DS,
+                nameEs: matchData.TRANS[`M#${ID}`].NAME,
+                options: formatMarketData(MARKETID, formatData)
+            }
+
+        }
+    }, {})
+    return {
+        ...matchData,
+        originalMarket
+    }
+}
+
+
+
+
+//----------------------------------------------------------------------------------------------
+
+
+
 const getMatchData = async (id) => {
     const url = encodeURIComponent(
         `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEvent?EVENTID=${id}&v_cache_version=1.156.4.915`
@@ -396,5 +501,7 @@ export default {
     getBetOfferceYajuego,
     getMatch,
     getAllBasketballEvents,
-    getAllTennisEvents
+    getAllTennisEvents,
+    getSpecialData,
+    getSpecialMatch
 }
