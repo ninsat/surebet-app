@@ -45,22 +45,63 @@ const getSpecialData = async () => {
     return matchIds
 }
 
-const getSpecialMatch = async (id) => {
+const getSpecialMatch = async (specialMatchInfo) => {
     //Group matkets 173 => cards || 32 => Score
-    const url = encodeURIComponent(
-        `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEventsInGroupV2?GROUPID=${id}&GROUPMARKETID=32&DISP=0&v_cache_version=1.156.4.921`
-    );
-    const response = await fetch(`https://api.allorigins.win/get?url=${url}`);
 
-    if (!response.ok) throw new Error("Network response was not ok.");
+    const dataArray = []
 
-    const data = await response.json();
-
-    const groupData = JSON.parse(data.contents).D
+    if(specialMatchInfo.SCORER){
+        const url = encodeURIComponent(
+            `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEventsInGroupV2?GROUPID=${specialMatchInfo.id}&GROUPMARKETID=32&DISP=0&v_cache_version=1.156.4.921`
+        );
+        const response = await fetch(`https://api.allorigins.win/get?url=${url}`);
     
-    const result = groupData.E.map(group => ({...group, MK: groupData.MK, TRANS: groupData.TRANS}))
+        if (!response.ok) throw new Error("Network response was not ok.");
     
-    return result.map(match => formatSpecialMatches(match))
+        const data = await response.json();
+    
+        const groupData = JSON.parse(data.contents).D
+        dataArray.push(groupData)
+    }
+    if(specialMatchInfo.CARDS){
+        const url = encodeURIComponent(
+            `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEventsInGroupV2?GROUPID=${specialMatchInfo.id}&GROUPMARKETID=173&DISP=0&v_cache_version=1.156.4.921`
+        );
+        const response = await fetch(`https://api.allorigins.win/get?url=${url}`);
+    
+        if (!response.ok) throw new Error("Network response was not ok.");
+    
+        const data = await response.json();
+    
+        const groupData = JSON.parse(data.contents).D
+        dataArray.push(groupData)
+    }
+
+    const results = dataArray.map(groupData => groupData.E.map(group => ({...group, MK: groupData.MK, TRANS: groupData.TRANS})))
+
+    const mergeData = results.map(result => result.map(match => formatSpecialMatches(match)))
+                                .reduce((arr, option)=> [...arr, ...option], [])
+                                .reduce((arr, player)=>{
+                                    const index = arr.findIndex(v => v.participant === player.DS)
+                                    if(index !== -1){
+                                        const copyArray = arr.slice()
+                                        copyArray[index] = {
+                                            ...copyArray[index],
+                                            originalMarket:{
+                                                ...copyArray[index].originalMarket,
+                                                ...player.originalMarket
+                                            }
+                                        }
+                                        return copyArray
+                                    }
+                                    return [...arr, {
+                                        participant: player.DS,
+                                        event: player.GN,
+                                        originalMarket: player.originalMarket
+                                    }]
+                                },[])
+    
+    return mergeData
 
 }
 
