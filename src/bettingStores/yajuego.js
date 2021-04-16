@@ -559,14 +559,11 @@ const getMatch = async (match, markets=[]) => {
             participants
         }
     }
-    console.log(newMatchData)
+    //console.log(newMatchData)
     const formatMarket = formatBetOffer(newMatchData, markets)
     return {
         ...match,
-        markets: {
-            ...formatMarket,
-            participants
-        },
+        markets: formatMarket
     }
 }
 
