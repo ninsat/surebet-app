@@ -987,6 +987,10 @@
         "marketId": "estadisticas-de-jugadores",
         "G": 2732
       },
+      "yajuego":{
+        "id": "participants",
+        "marketId": "S_ANYAST"
+      },
       "type": "OBJECT-PARTICIPANT",
       "options": {
         "YES": {
@@ -996,6 +1000,9 @@
           },
           "xbet": {
             "T": 3545
+          },
+          "yajuego":{
+            "name": "Yes"
           },
           "opposite":{
             "market": "Dará una asistencia",
@@ -1010,6 +1017,9 @@
           },
           "xbet": {
             "T": 3546
+          },
+          "yajuego":{
+            "name": "No"
           },
           "opposite":{
             "market": "Dará una asistencia",

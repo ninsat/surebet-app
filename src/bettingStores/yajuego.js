@@ -75,6 +75,19 @@ const getSpecialMatch = async (specialMatchInfo) => {
         const groupData = JSON.parse(data.contents).D
         dataArray.push(groupData)
     }
+    if(specialMatchInfo.ASSISTS){
+        const url = encodeURIComponent(
+            `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEventsInGroupV2?GROUPID=${specialMatchInfo.id}&GROUPMARKETID=211&DISP=0&v_cache_version=1.156.4.921`
+        );
+        const response = await fetch(`https://api.allorigins.win/get?url=${url}`);
+    
+        if (!response.ok) throw new Error("Network response was not ok.");
+    
+        const data = await response.json();
+    
+        const groupData = JSON.parse(data.contents).D
+        dataArray.push(groupData)
+    }
 
     const results = dataArray.map(groupData => groupData.E.map(group => ({...group, MK: groupData.MK, TRANS: groupData.TRANS})))
 
