@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDom from 'react-dom';
 
 
@@ -18,7 +18,7 @@ import markets from './markets.json'
 import basketBallMarkets from './markets/markets-basketball.json'
 import tennis_markets from './markets/markets-tennis.json'
 
-//import textData from './textData.json'
+import textData from './textData.json'
 
 
 import _ from 'lodash'
@@ -320,7 +320,7 @@ const testMatch = async (options, sportsOptions, cb, loadCb) => {
 
 const App = (props) => {
 
-  const [surebets, setSurebets] = useState([])
+  const [surebets, setSurebets] = useState(textData)
   const [load, setLoad] = useState(0)
   const [disabledActions, setDisabledActions] = useState(false)
   const [bookMarkets, setBookMarkets] = useState({
@@ -361,6 +361,9 @@ const App = (props) => {
     setDisabledActions(false)
   }
 
+  useEffect(()=>{
+    console.log(surebets)
+  }, [surebets])
 
   const handleChangeOption = (stateFunction) => (bookMarket)=>(e)=>{
     stateFunction(bm=>({

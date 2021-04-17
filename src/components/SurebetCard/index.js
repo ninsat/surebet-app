@@ -14,13 +14,14 @@ const useStyles = createUseStyles({
         display: "flex",
     },
     profit: {
-        width: 70,
+        width: 80,
         padding: "5px 10px",
         display: "flex",
         alignItems: "center",
         "& span": {
             fontWeight: 900,
-            color: "#FFF"
+            color: "#FFF",
+            fontsize: 15
         }
     },
     sport: {
@@ -31,6 +32,7 @@ const useStyles = createUseStyles({
         "& span": {
             color: "#FFF",
             fontWeight: 900,
+            fontsize: 15
         }
     },
     inversion:{
@@ -49,6 +51,7 @@ const useStyles = createUseStyles({
     time: {
         padding: "5px 10px",
         display: "flex",
+        fontSize: 13,
         alignItems: "center",
         "& span": {
             color: "#FFF",
@@ -56,13 +59,18 @@ const useStyles = createUseStyles({
     },
     item: {
         display: "flex",
-        background: "#eee"
+        background: "#f4f3f3",
+        "&:nth-child(2n)":{
+            background: "#fff",
+        }
     },
     company: {
-        width: 70,
+        width: 80,
         padding: "5px 10px",
         display: "flex",
         alignItems: "center",
+        color: "#3974a7",
+        fontSize: 15
     },
     event: {
         flex: 4,
@@ -71,8 +79,9 @@ const useStyles = createUseStyles({
     name: {
         font: {
             weight: 600,
-            size: 14
+            size: 13
         },
+        color: "#222222",
         display: "block",
     },
     date: {
@@ -80,6 +89,12 @@ const useStyles = createUseStyles({
             weight: 300,
             size: 13
         },
+        color: "#45515f",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        padding: "0px 12px"
     },
     market: {
         flex: 2,
@@ -89,6 +104,7 @@ const useStyles = createUseStyles({
         padding: "5px 10px",
         fontSize: 13,
         textAlign: "center",
+        color: "#3974a7"
     },
     odds:{
         flex: 1,
@@ -97,7 +113,8 @@ const useStyles = createUseStyles({
         alignItems: "center",
         padding: "5px 10px",
         fontSize: 15,
-        fontWeight: 700
+        fontWeight: 700,
+        color: "#1c476c"
     },
     value:{
         flex: 1,
@@ -105,6 +122,10 @@ const useStyles = createUseStyles({
         justifyContent: "center",
         alignItems: "center",
         padding: "5px 10px"
+    },
+    group:{
+        fontSize: 12,
+        color: "#45515f"
     }
 })
 
@@ -181,19 +202,22 @@ const SurebetCard = ({data, sports}) => {
                 {
                     data.options.map((option, index)=>(
                         <div key={index} className={clsx(classes.item)}>
-                            <div className={clsx(classes.company, "has-text-link has-text-weight-medium")}>
+                            <div className={clsx(classes.company, "has-text-weight-medium")}>
                                 {option.comapanyName}
+                            </div>
+                            <div className={classes.date}>
+                                {moment(option.date_start).format("DD MMM")}<br/>{moment(option.date_start).format("kk:mm")}
                             </div>
                             <div className={clsx(classes.event)}>
                                 <a target="_blank" href={option.url}>
-                                    <span className={clsx(classes.name, "has-text-black	")}>{option.eventName}</span>
+                                    <span className={clsx(classes.name)}>{option.eventName}</span>
                                 </a>
-                                <span className={clsx(classes.date)}>{moment(option.date_start).format("DD/MM/YYYY, h:mm a")}</span>
+                                <span className={clsx(classes.group)}>{option.group}</span>
                             </div>
                             <div className={clsx(classes.market)}>
                                 {option.market} - {option.oddsType} {option.type !== null? `(${option.type})` : ""}
                             </div>
-                            <div className={clsx(classes.odds, "has-text-info")}>
+                            <div className={clsx(classes.odds)}>
                                 {option.odds}
                             </div>
                             {
