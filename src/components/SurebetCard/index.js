@@ -19,7 +19,7 @@ const useStyles = createUseStyles({
         display: "flex",
         alignItems: "center",
         "& span": {
-            fontWeight: 900,
+            fontWeight: 700,
             color: "#FFF",
             fontsize: 15
         }
@@ -31,7 +31,7 @@ const useStyles = createUseStyles({
         alignItems: "center",
         "& span": {
             color: "#FFF",
-            fontWeight: 900,
+            fontWeight: 700,
             fontsize: 15
         }
     },
