@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, Fragment} from 'react';
 import { createUseStyles} from 'react-jss'
 import SurebetCard from './'
 import Calculator from './Calculator'
@@ -46,14 +46,23 @@ const SurbetGroup = props => {
                 }
             </div>
             <div className={classes.detailsPanel}>
-                <Calculator/>
-                <div className={classes.allSurebets}>
-                    {
-                        selectedGroup.map((surebet, index) => (
-                        <SurebetCard sports={props.sports} key={index} data={surebet} />
-                        ))
-                    }
-                </div>
+                {
+                    selectedGroup.length?
+                    <Fragment>
+                        <Calculator surebet={selectedGroup[0]}/>
+                        <div className={classes.allSurebets}>
+                            {
+                                selectedGroup.map((surebet, index) => (
+                                <SurebetCard sports={props.sports} key={index} data={surebet} />
+                                ))
+                            }
+                        </div>
+                    </Fragment>
+                    :
+                    <Fragment>
+                        Seleccione una Surebet
+                    </Fragment>
+                }
             </div>
         </div>
     )
