@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { createUseStyles} from 'react-jss'
 import clsx from 'clsx'
 import moment from 'moment'
@@ -104,6 +104,10 @@ const useStyles = createUseStyles({
         alignItems: "center",
         "& :nth-child(1)":{
             marginRight: 8
+        },
+        "& > *":{
+            flex: 1,
+            padding: "0px 5px"
         }
     },
     footer:{
@@ -126,23 +130,58 @@ const useStyles = createUseStyles({
     }
 })
 
-const Calculator = ({surebet}) => {
+const Calculator = ({surebet, sports}) => {
     const [inversion, setInversion] = useState("0")
     const [value, setValue] = useState(Array(surebet.options.length).fill(0))
+    const [cheks, setCheks] = useState(Array(surebet.options.length).fill(true))
+    const [revenue, setRevenue] = useState(Array(surebet.options.length).fill(0))
+    const [profits, setProfits] = useState(Array(surebet.options.length).fill(0))
     const classes = useStyles()
 
+    const handleChangeCheck =(index) => (e)=>{
+        
+        setCheks(v =>{
+            const copy = v.slice()
+            copy[index] = e.target.checked
+            if(copy.reduce((r, op)=> r || op, false)) return copy
+            return v
+        })
+
+        
+    }
+
+    useEffect(()=>{
+        let newtotal = numeral(inversion).value()
+        const inversionLocal = numeral(inversion).value()
+        cheks.forEach((chek, index) =>{
+            if(!chek) newtotal -= (inversionLocal/surebet.options[index].odds)
+        })
+
+        const percentList = surebet.options.map(v => (1/v.odds)*100)
+        const totalPercent = percentList.reduce((total, p, index)=> {
+            if(!cheks[index]) return total
+            return total + p
+        }, 0)
+
+        const valueList = percentList.map( (p, index) =>{ 
+            if(!cheks[index]) return (inversionLocal/surebet.options[index].odds)
+            return (newtotal*p)/totalPercent
+        })
+
+        const revenueData = valueList.map((stake, index)=>{
+            return (stake*surebet.options[index].odds) - inversionLocal
+        })
+
+        const profitData = revenueData.map(revenue=> (revenue/inversionLocal)).sort((a,b)=>b-a)
+        
+        setValue(valueList)
+        setRevenue(revenueData)
+        setProfits(profitData)
+
+    }, [cheks, inversion])
 
     const handleChangeInversion = (e)=>{
         const inputValue = numeral(e.target.value).format("0,0")
-        const totalInversion = numeral(e.target.value).value()
-        const percentList = surebet.options.map(v => (1/v.odds)*100)
-        const totalPercent = percentList.reduce((total, p)=> total + p, 0)
-        const valueList = percentList.map( p => (totalInversion*p)/totalPercent)
-        if(totalPercent){
-            setValue(valueList)
-        }else{
-            setValue(v => v.map(_ => 0))
-        }
         setInversion(inputValue)
     }
 
@@ -152,10 +191,10 @@ const Calculator = ({surebet}) => {
                 <div className={classes.profitInfo}>
                     <div className={classes.main}>
                         <div className={clsx(classes.profit, "has-background-success")}>
-                            <span>15.8%</span>
+                            <span>{numeral(profits[0] || (surebet.profit/100)).format("%0.00")}</span>
                         </div>
                         <div className={clsx(classes.profit, "has-background-info")}>
-                            <span>Futbol</span>
+                            <span>{sports[surebet.sport].name}</span>
                         </div>
                     </div>
                     <div className={clsx(classes.date, "has-background-info-light")}>
@@ -194,8 +233,8 @@ const Calculator = ({surebet}) => {
                                 {numeral(value[index]).format("$0,0")}
                             </div>
                             <div className={classes.revenue}>
-                                <input type="checkbox"/>
-                                <span>30.000</span>
+                                <input onChange={handleChangeCheck(index)} checked={cheks[index]} type="checkbox"/>
+                                <span>{numeral(revenue[index]).format("$0,0")}</span>
                             </div>
                         </div>
                     ))

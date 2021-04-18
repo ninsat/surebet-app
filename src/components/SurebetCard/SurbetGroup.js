@@ -50,7 +50,7 @@ const SurbetGroup = props => {
                 {
                     selectedGroup.length?
                     <Fragment>
-                        <Calculator surebet={selectedGroup[0]}/>
+                        <Calculator sports={props.sports} surebet={selectedGroup[0]}/>
                         <div className={classes.allSurebets}>
                             {
                                 selectedGroup.map((surebet, index) => (
