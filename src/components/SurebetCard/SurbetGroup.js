@@ -18,7 +18,8 @@ const useStyles = createUseStyles({
     detailsPanel:{
         flex: 1,
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        borderLeft: "4px solid #1c476c"
     },
     calculator:{
         

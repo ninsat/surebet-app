@@ -80,7 +80,7 @@ const useStyles = createUseStyles({
             flex: 1,
             textAlign: "center",
             fontSize: 13,
-            padding: "2px 0px",
+            padding: "4px 0px",
         },
         "&:nth-child(2n)":{
             background: "#f4f3f3",
@@ -97,6 +97,14 @@ const useStyles = createUseStyles({
     odds:{
         color: "#1c476c",
         fontWeight: 700
+    },
+    revenue:{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        "& :nth-child(1)":{
+            marginRight: 8
+        }
     },
     footer:{
         display: "flex",
@@ -172,7 +180,9 @@ const Calculator = ({surebet}) => {
                     surebet.options.map((option, index)=>(
                         <div key={index} className={clsx(classes.item)}>
                             <div className={classes.bookMarket}>
-                                {option.comapanyName}
+                                <a href={option.url} target="_blank">
+                                    {option.comapanyName}
+                                </a>
                             </div> 
                             <div className={classes.market}>
                                 {option.market} - {option.oddsType} {option.type !== null? `(${option.type})` : ""}
@@ -183,8 +193,9 @@ const Calculator = ({surebet}) => {
                             <div>
                                 {numeral(value[index]).format("$0,0")}
                             </div>
-                            <div>
-                                %30.000
+                            <div className={classes.revenue}>
+                                <input type="checkbox"/>
+                                <span>30.000</span>
                             </div>
                         </div>
                     ))
