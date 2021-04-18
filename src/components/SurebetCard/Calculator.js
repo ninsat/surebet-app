@@ -178,7 +178,7 @@ const Calculator = ({surebet, sports}) => {
         setRevenue(revenueData)
         setProfits(profitData)
 
-    }, [cheks, inversion])
+    }, [cheks, inversion, surebet])
 
     const handleChangeInversion = (e)=>{
         const inputValue = numeral(e.target.value).format("0,0")
