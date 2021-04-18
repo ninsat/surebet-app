@@ -6,7 +6,7 @@ import SurebetCard from './components/SurebetCard'
 import NavBar from './components/NavBar'
 import Configuration from './components/Configuration'
 import SurbetContainer from './components/SurebetCard/surbetContainer.js'
-
+import SurebetGroup from './components/SurebetCard/SurbetGroup'
 
 import utilities from './libs/utilities.js'
 import surebets from './libs/surebets.js'
@@ -128,7 +128,7 @@ const secondMain = async (cb) => {
 
 
 
-const testMatch = async (options, sportsOptions, cb, loadCb) => {
+const testMatch = async (options, sportsOptions, cb, loadCb, groupData=false) => {
 
     const bookMarkets = {
       betplay:{
@@ -304,7 +304,12 @@ const testMatch = async (options, sportsOptions, cb, loadCb) => {
   
   
         if(!surebetsData) continue
-        cb(v => [...surebetsData, ...v])
+        if(groupData){
+          const sortData = surebetsData.sort((a,b)=> b.profit - a.profit)
+          cb(v => [sortData, ...v])
+        }else{
+          cb(v => [...surebetsData, ...v])
+        }
       }
     }
     
@@ -357,7 +362,7 @@ const App = (props) => {
     setDisabledActions(true)
     await testMatch(bookMarkets,sports, setSurebets, (loadObject) => {
       setLoad(loadObject)
-    })
+    },true)
     setDisabledActions(false)
   }
 
@@ -379,7 +384,7 @@ const App = (props) => {
     <div>
       <NavBar disabledActions={disabledActions} onClick={handleClick} />
       <div className="columns">
-        <div className="column is-3">
+        <div className="column is-2">
           <Configuration
             onChangeBookMarkets={handleChangeOption(setBookMarkets)}
             onChangeSports={handleChangeOption(setSports)} 
@@ -388,13 +393,7 @@ const App = (props) => {
             loadData={load}/>
         </div>
         <div className="column">
-          <SurbetContainer>
-            {
-              surebets.map((surebet, index) => (
-                <SurebetCard sports={sports} key={index} data={surebet} />
-              ))
-            }
-          </SurbetContainer>
+          <SurebetGroup sports={sports} surebets={surebets}/>
         </div>
         
 

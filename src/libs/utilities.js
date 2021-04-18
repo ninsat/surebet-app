@@ -171,7 +171,14 @@ const getRoute = (object, route) =>
   }, object);
 
 
-
+  const createGroupId = (match)=>{
+    let string = ""
+    const bookMarkets = Object.keys(match)
+    bookMarkets.forEach(bookMarket =>{
+      string += (match[bookMarket].id)
+    })
+    return btoa(string)
+  }
 
   const matchAllMatches = (bookMarkets) => {
     const bookMarketsNames = Object.keys(bookMarkets);
@@ -233,5 +240,6 @@ export default {
   findSameMatches,
   delay,
   getRoute,
-  matchAllMatches
+  matchAllMatches,
+  createGroupId
 };

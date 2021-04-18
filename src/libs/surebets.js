@@ -19,6 +19,7 @@ const getProfit = (c1, c2) => {
 
 const compareFunction = (match, market, option1, option2) => {
   const resultSurebets = []
+  const groupId = utilities.createGroupId(match)
   const companies = Object.keys(match);
   companies.forEach((company) => {
     const marketList = match[company].markets[market];
@@ -115,6 +116,8 @@ const compareMatches = (matchGroup) => {
 
 
 const compareMatches2 = (matchGroup, markets = [], sportName) => {
+  //creo un Id de el grupo de partidos para mas adelante poder agrupar las surbets por evento
+  const groupId = utilities.createGroupId(matchGroup)
   const result = [];
   const companies = Object.keys(matchGroup);
   companies.forEach((company) => {
@@ -151,6 +154,7 @@ const compareMatches2 = (matchGroup, markets = [], sportName) => {
               result.push({
                 profit: getProfit(marketOption.over.v, otherCompanyOption.under.v),
                 date: new Date(),
+                groupId,
                 options: [
                   {
                     comapanyName: company,
@@ -185,6 +189,7 @@ const compareMatches2 = (matchGroup, markets = [], sportName) => {
               result.push({
                 profit: getProfit(marketOption.under.v, otherCompanyOption.over.v),
                 date: new Date(),
+                groupId,
                 options: [
                   {
                     comapanyName: company,
@@ -233,6 +238,7 @@ const compareMatches2 = (matchGroup, markets = [], sportName) => {
               result.push({
                 profit: getProfit(odds1, odds2),
                 date: new Date(),
+                groupId,
                 options: [
                   {
                     comapanyName: company,
@@ -284,6 +290,7 @@ const compareMatches2 = (matchGroup, markets = [], sportName) => {
               result.push({
                 profit: getProfit(marketOption.home.v, otherCompanyOption.away.v),
                 date: new Date(),
+                groupId,
                 options: [
                   {
                     comapanyName: company,
@@ -316,6 +323,7 @@ const compareMatches2 = (matchGroup, markets = [], sportName) => {
               result.push({
                 profit: getProfit(marketOption.away.v, otherCompanyOption.home.v),
                 date: new Date(),
+                groupId,
                 options: [
                   {
                     comapanyName: company,
@@ -364,6 +372,7 @@ const compareMatches2 = (matchGroup, markets = [], sportName) => {
                 result.push({
                   profit: getProfit(marketOption[option].v, otherCompanyOption[marketObject.options[option].opposite.route].v),
                   date: new Date(),
+                  groupId,
                   options: [
                     {
                       comapanyName: company,

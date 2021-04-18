@@ -42,10 +42,7 @@ const Configuration = ({loadData, bookMarkets, onChangeBookMarkets,onChangeSport
                 options={sports} 
                 title="Deportes"/>
             <hr/>
-            <div className="content">
-                <blockquote>No Se emocionen todavia, los deportes no estan funcionando, solo busca surebets en futbol ;) </blockquote>
-            </div>
-
+      
 
         </div>
     )

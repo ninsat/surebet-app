@@ -14,7 +14,7 @@ const useStyles = createUseStyles({
         display: "flex",
     },
     profit: {
-        width: 80,
+        width: 75,
         padding: "5px 10px",
         display: "flex",
         alignItems: "center",
@@ -65,12 +65,12 @@ const useStyles = createUseStyles({
         }
     },
     company: {
-        width: 80,
+        width: 75,
         padding: "5px 10px",
         display: "flex",
         alignItems: "center",
         color: "#3974a7",
-        fontSize: 15
+        fontSize: 14
     },
     event: {
         flex: 4,
@@ -94,7 +94,7 @@ const useStyles = createUseStyles({
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
-        padding: "0px 12px"
+        padding: "0px 10px"
     },
     market: {
         flex: 2,
@@ -102,7 +102,7 @@ const useStyles = createUseStyles({
         justifyContent: "center",
         alignItems: "center",
         padding: "5px 10px",
-        fontSize: 13,
+        fontSize: 12,
         textAlign: "center",
         color: "#3974a7"
     },
@@ -129,7 +129,7 @@ const useStyles = createUseStyles({
     }
 })
 
-const SurebetCard = ({data, sports}) => {
+const SurebetCard = ({data, sports, onSelect}) => {
 
     const classes = useStyles()
     const [calculator, setCalculator] = useState(false)
@@ -155,7 +155,7 @@ const SurebetCard = ({data, sports}) => {
 
     return (
         <div className={classes.card}>
-            <div className={clsx(classes.headers, "has-background-info")}>
+            <div onClick={onSelect} className={clsx(classes.headers, "has-background-info")}>
                 <div className={clsx(classes.profit, "has-background-success")}>
                     <span>{numeral(data.profit/100).format("%0.00")}</span>
                 </div>
