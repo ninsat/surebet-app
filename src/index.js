@@ -33,6 +33,7 @@ const testXbet = async () => {
   console.log("Empezo esto!");
   //const data = await xbet.getEvents1Xbet2({ id: 89864715 }, markets);
   const data = await yajuego.getMatch({id: "4075999"}, markets)
+  
   console.log(data);
 };
 
