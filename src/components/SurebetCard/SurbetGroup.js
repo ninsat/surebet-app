@@ -94,7 +94,7 @@ const SurbetGroup = ({surebets, ...props}) => {
                     </Fragment>
                     :
                     <Fragment>
-                        Seleccione una Surebet
+                        <h1 className="m-5 has-text-centered title is-2">Seleccione una Surebet</h1>
                     </Fragment>
                 }
             </div>

@@ -12,6 +12,13 @@ const useStyles = createUseStyles({
     },
     headers: {
         display: "flex",
+        cursor: "pointer",
+        "&:hover $sport":{
+            background: "#4a4a4a"
+        },
+        "&:hover $time":{
+            background: "#4a4a4a"
+        }
     },
     profit: {
         width: 75,
@@ -29,6 +36,7 @@ const useStyles = createUseStyles({
         padding: "5px 10px",
         display: "flex",
         alignItems: "center",
+        transition: ".3s",
         "& span": {
             color: "#FFF",
             fontWeight: 700,
@@ -52,6 +60,7 @@ const useStyles = createUseStyles({
         padding: "5px 10px",
         display: "flex",
         fontSize: 13,
+        transition: ".3s",
         alignItems: "center",
         "& span": {
             color: "#FFF",
@@ -126,10 +135,13 @@ const useStyles = createUseStyles({
     group:{
         fontSize: 12,
         color: "#45515f"
+    },
+    selected:{
+        background: "#000"
     }
 })
 
-const SurebetCard = ({data, sports, onSelect}) => {
+const SurebetCard = ({data, sports, onSelect, selected}) => {
 
     const classes = useStyles()
     const [calculator, setCalculator] = useState(false)
@@ -155,11 +167,11 @@ const SurebetCard = ({data, sports, onSelect}) => {
 
     return (
         <div className={classes.card}>
-            <div onClick={onSelect} className={clsx(classes.headers, "has-background-info")}>
+            <div onClick={onSelect} className={clsx(classes.headers, {["has-background-info"]: !selected, [classes.selected]: selected})}>
                 <div className={clsx(classes.profit, "has-background-success")}>
                     <span>{numeral(data.profit/100).format("%0.00")}</span>
                 </div>
-                <div className={clsx(classes.sport, `has-background-info has-text-weight-medium`)}>
+                <div className={clsx(classes.sport)}>
                     <span>{sports[data.sport].name}</span>
                 </div>
 
@@ -181,7 +193,7 @@ const SurebetCard = ({data, sports, onSelect}) => {
                         </div>
                     </Fragment>
                     :
-                    <div className={clsx(classes.time, "has-background-info")}>
+                    <div className={clsx(classes.time)}>
                         <span className="icon-text">
                             <span className="icon">
                                 <i className="far fa-clock"></i>
@@ -191,11 +203,15 @@ const SurebetCard = ({data, sports, onSelect}) => {
                     </div>
                 }
                 <div>
-                <button onClick={handleChangeCalculator} className="button is-ghost has-text-white">
-                    <span className="icon is-small">
-                        <i className="fas fa-calculator"></i>
-                    </span>
-                </button>
+                    {
+                        /*
+                        <button onClick={handleChangeCalculator} className="button is-ghost has-text-white">
+                            <span className="icon is-small">
+                                <i className="fas fa-calculator"></i>
+                            </span>
+                        </button>        
+                        */ 
+                    }
                 </div>
             </div>
             <div className="content">
