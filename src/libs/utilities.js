@@ -76,13 +76,14 @@ const matchTheMatch = (match, matches = []) => {
 const matchTheMatchFull = (match, matches = [], name1, name2) => {
   
   
-  const matchDate = new Date(match.date_start).getTime();
+  const matchDate = match.date_start;
   const sameDateMatches = matches.filter(
-    (v) => new Date(v.date_start).getTime() === matchDate
+    (v) => v.date_start === matchDate
   );
   
   
   if(!sameDateMatches.length){
+    console.log("no hay partidos a esta hora")
     return undefined;
   } 
 

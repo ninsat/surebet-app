@@ -267,7 +267,7 @@ const testMatch = async (options, sportsOptions, cb, loadCb, groupData=false) =>
 
     console.log("Partidos con match => ", sportsMatches)
 
-
+    //return
     
     let count = 0;
     const totalEvents = Object.keys(sportsMatches).reduce((count, sportName)=> sportsMatches[sportName].length + count ,0)
