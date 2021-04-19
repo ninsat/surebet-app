@@ -33,8 +33,9 @@ const testXbet = async () => {
   console.log("Empezo esto!");
   //const data = await xbet.getEvents1Xbet2({ id: 89864715 }, markets);
   const data = await yajuego.getMatch({id: "4075999"}, markets)
-  
-  console.log(data);
+  const res = await fetch("http://localhost:8080/https://1xbet.com.co/LineFeed/Get1x2_VZip?sports=1&count=1500&lng=es&tf=2200000&tz=-5&mode=4&country=1&getEmpty=true&virtualSports=true&menuSection=1%7C7")
+  const d = await res.json()
+  console.log(data, d);
 };
 
 //testXbet()
