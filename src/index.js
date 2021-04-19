@@ -362,13 +362,11 @@ const App = (props) => {
     setDisabledActions(true)
     await testMatch(bookMarkets,sports, setSurebets, (loadObject) => {
       setLoad(loadObject)
-    },true)
+    },false)
     setDisabledActions(false)
   }
 
-  useEffect(()=>{
-    console.log(surebets)
-  }, [surebets])
+ 
 
   const handleChangeOption = (stateFunction) => (bookMarket)=>(e)=>{
     stateFunction(bm=>({

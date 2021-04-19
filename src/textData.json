@@ -1,1374 +1,656 @@
 [
-    [
-        {
-            "profit": 3.518518518518519,
-            "date": "2021-04-17T23:21:30.229Z",
-            "groupId": "MTAwNzQ5NzgxMjk5Mjk2MTc0",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "Número total de tiros",
-                    "odds": 1.72,
-                    "type": 19.5,
-                    "oddsType": "Más de",
-                    "eventName": "Atlético Madrid - Eibar",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497812",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618755300000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Número total de tiros",
-                    "odds": 2.6,
-                    "type": 19.5,
-                    "oddsType": "Menos de",
-                    "eventName": "Atlético de Madrid - Eibar",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99296174-Atletico-Madrid-Eibar/",
-                    "sport": "Football",
-                    "date_start": 1618755300000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 3.518518518518519,
-            "date": "2021-04-17T23:21:30.240Z",
-            "groupId": "MTAwNzQ5NzgxMjk5Mjk2MTc0",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Número total de tiros",
-                    "odds": 2.6,
-                    "oddsType": "Menos de",
-                    "type": 19.5,
-                    "eventName": "Atlético de Madrid - Eibar",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99296174-Atletico-Madrid-Eibar/",
-                    "date_start": 1618755300000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Número total de tiros",
-                    "odds": 1.72,
-                    "type": 19.5,
-                    "oddsType": "Más de",
-                    "eventName": "Atlético Madrid - Eibar",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497812",
-                    "date_start": 1618755300000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 2.857142857142847,
-            "date": "2021-04-17T23:21:30.229Z",
-            "groupId": "MTAwNzQ5NzgxMjk5Mjk2MTc0",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "Número total de tiros por parte del local",
-                    "odds": 1.8,
-                    "oddsType": "Menos de",
-                    "type": 12.5,
-                    "eventName": "Atlético Madrid - Eibar",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497812",
-                    "date_start": 1618755300000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Número total de tiros por parte del local",
-                    "odds": 2.4,
-                    "type": 12.5,
-                    "oddsType": "Más de",
-                    "eventName": "Atlético de Madrid - Eibar",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99296174-Atletico-Madrid-Eibar/",
-                    "date_start": 1618755300000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 2.857142857142847,
-            "date": "2021-04-17T23:21:30.240Z",
-            "groupId": "MTAwNzQ5NzgxMjk5Mjk2MTc0",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Número total de tiros por parte del local",
-                    "odds": 2.4,
-                    "type": 12.5,
-                    "oddsType": "Más de",
-                    "eventName": "Atlético de Madrid - Eibar",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99296174-Atletico-Madrid-Eibar/",
-                    "sport": "Football",
-                    "date_start": 1618755300000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Número total de tiros por parte del local",
-                    "odds": 1.8,
-                    "type": 12.5,
-                    "oddsType": "Menos de",
-                    "eventName": "Atlético Madrid - Eibar",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497812",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618755300000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 2.5316455696202667,
-            "date": "2021-04-17T23:21:30.229Z",
-            "groupId": "MTAwNzQ5NzgxMjk5Mjk2MTc0",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "Total de fueras de juego",
-                    "odds": 1.5,
-                    "type": 3.5,
-                    "oddsType": "Más de",
-                    "eventName": "Atlético Madrid - Eibar",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497812",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618755300000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Total de fueras de juego",
-                    "odds": 3.24,
-                    "type": 3.5,
-                    "oddsType": "Menos de",
-                    "eventName": "Atlético de Madrid - Eibar",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99296174-Atletico-Madrid-Eibar/",
-                    "sport": "Football",
-                    "date_start": 1618755300000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 2.5316455696202667,
-            "date": "2021-04-17T23:21:30.240Z",
-            "groupId": "MTAwNzQ5NzgxMjk5Mjk2MTc0",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Total de fueras de juego",
-                    "odds": 3.24,
-                    "oddsType": "Menos de",
-                    "type": 3.5,
-                    "eventName": "Atlético de Madrid - Eibar",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99296174-Atletico-Madrid-Eibar/",
-                    "date_start": 1618755300000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Total de fueras de juego",
-                    "odds": 1.5,
-                    "type": 3.5,
-                    "oddsType": "Más de",
-                    "eventName": "Atlético Madrid - Eibar",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497812",
-                    "date_start": 1618755300000
-                }
-            ],
-            "sport": "football"
-        }
-    ],
-    [
-        {
-            "profit": 9.200000000000003,
-            "date": "2021-04-17T23:21:29.023Z",
-            "groupId": "MTAwNzQ5NzgxNzk5Mjk2MTgw",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "Número total de tiros por parte del local",
-                    "odds": 2.1,
-                    "type": 10.5,
-                    "oddsType": "Más de",
-                    "eventName": "Alavés - Huesca",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497817",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618755300000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Número total de tiros por parte del local",
-                    "odds": 2.275,
-                    "type": 10.5,
-                    "oddsType": "Menos de",
-                    "eventName": "Deportivo Alavés - Huesca",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99296180-Deportivo-Alaves-Huesca/",
-                    "sport": "Football",
-                    "date_start": 1618755300000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 9.200000000000003,
-            "date": "2021-04-17T23:21:29.038Z",
-            "groupId": "MTAwNzQ5NzgxNzk5Mjk2MTgw",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Número total de tiros por parte del local",
-                    "odds": 2.275,
-                    "oddsType": "Menos de",
-                    "type": 10.5,
-                    "eventName": "Deportivo Alavés - Huesca",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99296180-Deportivo-Alaves-Huesca/",
-                    "date_start": 1618755300000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Número total de tiros por parte del local",
-                    "odds": 2.1,
-                    "type": 10.5,
-                    "oddsType": "Más de",
-                    "eventName": "Alavés - Huesca",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497817",
-                    "date_start": 1618755300000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 2.4137931034482705,
-            "date": "2021-04-17T23:21:29.023Z",
-            "groupId": "MTAwNzQ5NzgxNzk5Mjk2MTgw",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "Número total de tiros por parte del visitante",
-                    "odds": 1.65,
-                    "oddsType": "Menos de",
-                    "type": 10.5,
-                    "eventName": "Alavés - Huesca",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497817",
-                    "date_start": 1618755300000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Número total de tiros por parte del visitante",
-                    "odds": 2.7,
-                    "type": 10.5,
-                    "oddsType": "Más de",
-                    "eventName": "Deportivo Alavés - Huesca",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99296180-Deportivo-Alaves-Huesca/",
-                    "date_start": 1618755300000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 2.4137931034482705,
-            "date": "2021-04-17T23:21:29.038Z",
-            "groupId": "MTAwNzQ5NzgxNzk5Mjk2MTgw",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Número total de tiros por parte del visitante",
-                    "odds": 2.7,
-                    "type": 10.5,
-                    "oddsType": "Más de",
-                    "eventName": "Deportivo Alavés - Huesca",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99296180-Deportivo-Alaves-Huesca/",
-                    "sport": "Football",
-                    "date_start": 1618755300000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Número total de tiros por parte del visitante",
-                    "odds": 1.65,
-                    "type": 10.5,
-                    "oddsType": "Menos de",
-                    "eventName": "Alavés - Huesca",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497817",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618755300000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 1.0810810810810807,
-            "date": "2021-04-17T23:21:29.023Z",
-            "groupId": "MTAwNzQ5NzgxNzk5Mjk2MTgw",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "Total de fueras de juego",
-                    "odds": 2.2,
-                    "type": 4.5,
-                    "oddsType": "Más de",
-                    "eventName": "Alavés - Huesca",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497817",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618755300000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Total de fueras de juego",
-                    "odds": 1.87,
-                    "type": 4.5,
-                    "oddsType": "Menos de",
-                    "eventName": "Deportivo Alavés - Huesca",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99296180-Deportivo-Alaves-Huesca/",
-                    "sport": "Football",
-                    "date_start": 1618755300000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 1.0810810810810807,
-            "date": "2021-04-17T23:21:29.038Z",
-            "groupId": "MTAwNzQ5NzgxNzk5Mjk2MTgw",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Total de fueras de juego",
-                    "odds": 1.87,
-                    "oddsType": "Menos de",
-                    "type": 4.5,
-                    "eventName": "Deportivo Alavés - Huesca",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99296180-Deportivo-Alaves-Huesca/",
-                    "date_start": 1618755300000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Total de fueras de juego",
-                    "odds": 2.2,
-                    "type": 4.5,
-                    "oddsType": "Más de",
-                    "eventName": "Alavés - Huesca",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497817",
-                    "date_start": 1618755300000
-                }
-            ],
-            "sport": "football"
-        }
-    ],
-    [
-        {
-            "profit": 2.439024390243901,
-            "date": "2021-04-17T23:21:27.774Z",
-            "groupId": "MTAwNzQ5NzgxNDk5Mjk1Njk0",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "Número total de tiros por parte del visitante",
-                    "odds": 2.1,
-                    "type": 8.5,
-                    "oddsType": "Más de",
-                    "eventName": "Osasuna - Elche",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497814",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618747200000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Número total de tiros por parte del visitante",
-                    "odds": 2,
-                    "type": 8.5,
-                    "oddsType": "Menos de",
-                    "eventName": "Osasuna (Pamplona) - FC Elche",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99295694-Osasuna-Elche/",
-                    "sport": "Football",
-                    "date_start": 1618747200000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 2.439024390243901,
-            "date": "2021-04-17T23:21:27.793Z",
-            "groupId": "MTAwNzQ5NzgxNDk5Mjk1Njk0",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Número total de tiros por parte del visitante",
-                    "odds": 2,
-                    "oddsType": "Menos de",
-                    "type": 8.5,
-                    "eventName": "Osasuna (Pamplona) - FC Elche",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99295694-Osasuna-Elche/",
-                    "date_start": 1618747200000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Número total de tiros por parte del visitante",
-                    "odds": 2.1,
-                    "type": 8.5,
-                    "oddsType": "Más de",
-                    "eventName": "Osasuna - Elche",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497814",
-                    "date_start": 1618747200000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 1.2330316742081493,
-            "date": "2021-04-17T23:21:27.775Z",
-            "groupId": "MTAwNzQ5NzgxNDk5Mjk1Njk0",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "Total de tarjetas Local",
-                    "odds": 2.85,
-                    "oddsType": "Menos de",
-                    "type": 1.5,
-                    "eventName": "Osasuna - Elche",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497814",
-                    "date_start": 1618747200000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Total de tarjetas Local",
-                    "odds": 1.57,
-                    "type": 1.5,
-                    "oddsType": "Más de",
-                    "eventName": "Osasuna (Pamplona) - FC Elche",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99295694-Osasuna-Elche/",
-                    "date_start": 1618747200000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 1.2330316742081493,
-            "date": "2021-04-17T23:21:27.794Z",
-            "groupId": "MTAwNzQ5NzgxNDk5Mjk1Njk0",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Total de tarjetas Local",
-                    "odds": 1.57,
-                    "type": 1.5,
-                    "oddsType": "Más de",
-                    "eventName": "Osasuna (Pamplona) - FC Elche",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99295694-Osasuna-Elche/",
-                    "sport": "Football",
-                    "date_start": 1618747200000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Total de tarjetas Local",
-                    "odds": 2.85,
-                    "type": 1.5,
-                    "oddsType": "Menos de",
-                    "eventName": "Osasuna - Elche",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497814",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618747200000
-                }
-            ],
-            "sport": "football"
-        }
-    ],
-    [
-        {
-            "profit": 0.8641975308641889,
-            "date": "2021-04-17T23:21:26.566Z",
-            "groupId": "MTAwNzQ5NzgxNTk5Mjk1NzAx",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "Número total de tiros por parte del local",
-                    "odds": 1.9,
-                    "type": 10.5,
-                    "oddsType": "Más de",
-                    "eventName": "Real Sociedad - Sevilla",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497815",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618747200000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Número total de tiros por parte del local",
-                    "odds": 2.15,
-                    "type": 10.5,
-                    "oddsType": "Menos de",
-                    "eventName": "Real Sociedad - FC Sevilla",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99295701-Real-Sociedad-Sevilla/",
-                    "sport": "Football",
-                    "date_start": 1618747200000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 0.8641975308641889,
-            "date": "2021-04-17T23:21:26.581Z",
-            "groupId": "MTAwNzQ5NzgxNTk5Mjk1NzAx",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Número total de tiros por parte del local",
-                    "odds": 2.15,
-                    "oddsType": "Menos de",
-                    "type": 10.5,
-                    "eventName": "Real Sociedad - FC Sevilla",
-                    "group": "Spain. La Liga",
-                    "url": "https://1xbet.com.co/es/line/Football/127733-Spain-La-Liga/99295701-Real-Sociedad-Sevilla/",
-                    "date_start": 1618747200000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Número total de tiros por parte del local",
-                    "odds": 1.9,
-                    "type": 10.5,
-                    "oddsType": "Más de",
-                    "eventName": "Real Sociedad - Sevilla",
-                    "group": "La Liga",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007497815",
-                    "date_start": 1618747200000
-                }
-            ],
-            "sport": "football"
-        }
-    ],
-    [
-        {
-            "profit": 0.7430997876857788,
-            "date": "2021-04-17T23:21:23.105Z",
-            "groupId": "MTAwNzQ5OTAwMjk5ODkyMDQx",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "1X2",
-                    "odds": 3.25,
-                    "oddsType": "X",
-                    "type": null,
-                    "eventName": "UD Tamaraceite - Real Murcia",
-                    "group": "Segunda B - Gr. IV",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007499002",
-                    "date_start": 1618743600000,
-                    "sport": "FOOTBALL"
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Doble oportunidad",
-                    "odds": 1.46,
-                    "type": null,
-                    "oddsType": "12",
-                    "eventName": "Tamaraceite - Real Murcia",
-                    "group": "Campeonato de España. Segunda División. Grupo 4",
-                    "url": "https://1xbet.com.co/es/line/Football/246549-Spain-Segunda-Division-B.-Group-4/99892041-Tamaraceite-Real-Murcia/",
-                    "sport": "Football",
-                    "date_start": 1618743600000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 0.36680810938237585,
-            "date": "2021-04-17T23:21:23.105Z",
-            "groupId": "MTAwNzQ5OTAwMjk5ODkyMDQx",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "1X2",
-                    "odds": 2.612,
-                    "oddsType": "1",
-                    "type": null,
-                    "eventName": "Tamaraceite - Real Murcia",
-                    "group": "Campeonato de España. Segunda División. Grupo 4",
-                    "url": "https://1xbet.com.co/es/line/Football/246549-Spain-Segunda-Division-B.-Group-4/99892041-Tamaraceite-Real-Murcia/",
-                    "date_start": 1618743600000,
-                    "sport": "Football"
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Doble oportunidad",
-                    "odds": 1.63,
-                    "type": null,
-                    "oddsType": "2X",
-                    "eventName": "UD Tamaraceite - Real Murcia",
-                    "group": "Segunda B - Gr. IV",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007499002",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618743600000
-                }
-            ],
-            "sport": "football"
-        }
-    ],
-    [
-        {
-            "profit": 0.9253731343283533,
-            "date": "2021-04-17T23:21:15.039Z",
-            "groupId": "MTAwNzQ5OTAyNTk5ODk1MjUz",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "1X2",
-                    "odds": 3.22,
-                    "oddsType": "X",
-                    "type": null,
-                    "eventName": "Celta De Vigo II - Burgos",
-                    "group": "Campeonato de España. Segunda División. Grupo 1",
-                    "url": "https://1xbet.com.co/es/line/Football/246545-Spain-Segunda-Division-B.-Group-1/99895253-Celta-De-Vigo-II-Burgos/",
-                    "date_start": 1618740000000,
-                    "sport": "Football"
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Doble oportunidad",
-                    "odds": 1.47,
-                    "type": null,
-                    "oddsType": "12",
-                    "eventName": "Celta Vigo B - Burgos CF",
-                    "group": "Segunda B-1",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007499025",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618740000000
-                }
-            ],
-            "sport": "football"
-        }
-    ],
-    [
-        {
-            "profit": 4.1635961680176905,
-            "date": "2021-04-17T23:20:57.411Z",
-            "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 5.5,
-                    "type": "SI",
-                    "oddsType": "Mohamed Salah",
-                    "eventName": "Leeds United FC - Liverpool FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
-                    "sport": "Football",
-                    "date_start": 1618858800000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 1.285,
-                    "type": "NO",
-                    "oddsType": "Mohamed Salah",
-                    "eventName": "Leeds United FC - Liverpool FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
-                    "sport": "Football",
-                    "date_start": 1618858800000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 4.1635961680176905,
-            "date": "2021-04-17T23:20:57.411Z",
-            "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 1.285,
-                    "type": "NO",
-                    "oddsType": "Mohamed Salah",
-                    "eventName": "Leeds United FC - Liverpool FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
-                    "sport": "Football",
-                    "date_start": 1618858800000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 5.5,
-                    "type": "SI",
-                    "oddsType": "Mohamed Salah",
-                    "eventName": "Leeds United FC - Liverpool FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
-                    "sport": "Football",
-                    "date_start": 1618858800000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 4.132231404958688,
-            "date": "2021-04-17T23:20:57.399Z",
-            "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "Dará una asistencia",
-                    "odds": 1.26,
-                    "type": "NO",
-                    "oddsType": "Mané, Sadio",
-                    "eventName": "Leeds United - Liverpool",
-                    "group": "Premier League",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007489336",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618858800000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 6,
-                    "type": "SI",
-                    "oddsType": "Sadio Mané",
-                    "eventName": "Leeds United FC - Liverpool FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
-                    "sport": "Football",
-                    "date_start": 1618858800000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 4.132231404958688,
-            "date": "2021-04-17T23:20:57.411Z",
-            "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 6,
-                    "type": "SI",
-                    "oddsType": "Sadio Mané",
-                    "eventName": "Leeds United FC - Liverpool FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
-                    "sport": "Football",
-                    "date_start": 1618858800000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Dará una asistencia",
-                    "odds": 1.26,
-                    "type": "NO",
-                    "oddsType": "Mané, Sadio",
-                    "eventName": "Leeds United - Liverpool",
-                    "group": "Premier League",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007489336",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618858800000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 3.448275862068968,
-            "date": "2021-04-17T23:20:57.411Z",
-            "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 6,
-                    "type": "SI",
-                    "oddsType": "Sadio Mané",
-                    "eventName": "Leeds United FC - Liverpool FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
-                    "sport": "Football",
-                    "date_start": 1618858800000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 1.25,
-                    "type": "NO",
-                    "oddsType": "Sadio Mané",
-                    "eventName": "Leeds United FC - Liverpool FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
-                    "sport": "Football",
-                    "date_start": 1618858800000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 3.448275862068968,
-            "date": "2021-04-17T23:20:57.411Z",
-            "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 1.25,
-                    "type": "NO",
-                    "oddsType": "Sadio Mané",
-                    "eventName": "Leeds United FC - Liverpool FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
-                    "sport": "Football",
-                    "date_start": 1618858800000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 6,
-                    "type": "SI",
-                    "oddsType": "Sadio Mané",
-                    "eventName": "Leeds United FC - Liverpool FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
-                    "sport": "Football",
-                    "date_start": 1618858800000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 2.227525855210814,
-            "date": "2021-04-17T23:20:57.399Z",
-            "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "Dará una asistencia",
-                    "odds": 5,
-                    "type": "SI",
-                    "oddsType": "Firmino, Roberto",
-                    "eventName": "Leeds United - Liverpool",
-                    "group": "Premier League",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007489336",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618858800000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 1.285,
-                    "type": "NO",
-                    "oddsType": "Roberto Firmino",
-                    "eventName": "Leeds United FC - Liverpool FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
-                    "sport": "Football",
-                    "date_start": 1618858800000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 2.227525855210814,
-            "date": "2021-04-17T23:20:57.410Z",
-            "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 1.285,
-                    "type": "NO",
-                    "oddsType": "Roberto Firmino",
-                    "eventName": "Leeds United FC - Liverpool FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
-                    "sport": "Football",
-                    "date_start": 1618858800000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Dará una asistencia",
-                    "odds": 5,
-                    "type": "SI",
-                    "oddsType": "Firmino, Roberto",
-                    "eventName": "Leeds United - Liverpool",
-                    "group": "Premier League",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007489336",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618858800000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 1.298701298701289,
-            "date": "2021-04-17T23:20:57.411Z",
-            "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 6.5,
-                    "type": "SI",
-                    "oddsType": "Diogo Jota",
-                    "eventName": "Leeds United FC - Liverpool FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
-                    "sport": "Football",
-                    "date_start": 1618858800000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 1.2,
-                    "type": "NO",
-                    "oddsType": "Diogo Jota",
-                    "eventName": "Leeds United FC - Liverpool FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
-                    "sport": "Football",
-                    "date_start": 1618858800000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 1.298701298701289,
-            "date": "2021-04-17T23:20:57.411Z",
-            "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 1.2,
-                    "type": "NO",
-                    "oddsType": "Diogo Jota",
-                    "eventName": "Leeds United FC - Liverpool FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
-                    "sport": "Football",
-                    "date_start": 1618858800000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 6.5,
-                    "type": "SI",
-                    "oddsType": "Diogo Jota",
-                    "eventName": "Leeds United FC - Liverpool FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
-                    "sport": "Football",
-                    "date_start": 1618858800000
-                }
-            ],
-            "sport": "football"
-        }
-    ],
-    [
-        {
-            "profit": 0.22727272727273373,
-            "date": "2021-04-17T23:20:57.025Z",
-            "groupId": "MTAwNzQ4OTMzMjk4NzgzODY0",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "Total Tarjetas Visitante",
-                    "odds": 4.9,
-                    "type": 2.5,
-                    "oddsType": "Más de",
-                    "eventName": "Manchester United - Burnley",
-                    "group": "Premier League",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007489332",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618758000000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Total de tarjetas Amarillas Visitante",
-                    "odds": 1.26,
-                    "type": 2.5,
-                    "oddsType": "Menos de",
-                    "eventName": "Manchester United FC - Burnley FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98783864-Manchester-United-Burnley/",
-                    "sport": "Football",
-                    "date_start": 1618758000000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 0.22727272727273373,
-            "date": "2021-04-17T23:20:57.039Z",
-            "groupId": "MTAwNzQ4OTMzMjk4NzgzODY0",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Total de tarjetas Amarillas Visitante",
-                    "odds": 1.26,
-                    "oddsType": "Menos de",
-                    "type": 2.5,
-                    "eventName": "Manchester United FC - Burnley FC",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98783864-Manchester-United-Burnley/",
-                    "date_start": 1618758000000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Total Tarjetas Visitante",
-                    "odds": 4.9,
-                    "type": 2.5,
-                    "oddsType": "Más de",
-                    "eventName": "Manchester United - Burnley",
-                    "group": "Premier League",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007489332",
-                    "date_start": 1618758000000
-                }
-            ],
-            "sport": "football"
-        }
-    ],
-    [
-        {
-            "profit": 100.67162329615866,
-            "date": "2021-04-17T23:20:56.185Z",
-            "groupId": "MTAwNzUyNjc1MDEwMDIwNTkxMA==",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "1X2",
-                    "odds": 4.33,
-                    "oddsType": "1",
-                    "type": null,
-                    "eventName": "Wolverhampton Wanderers (W) - Blackburn Rovers (F)",
-                    "group": "FA Cup (F)",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007526750",
-                    "date_start": 1618750800000,
-                    "sport": "FOOTBALL"
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Doble oportunidad",
-                    "odds": 3.74,
-                    "type": null,
-                    "oddsType": "2X",
-                    "eventName": "Everton (Mujeres) - Durham (Women)",
-                    "group": "Copa de Inglaterra. Mujeres",
-                    "url": "https://1xbet.com.co/es/line/Football/147147-England-FA-Cup.-Women/100205910-Everton-(Women)-Durham-(Women)/",
-                    "sport": "Football",
-                    "date_start": 1618750800000
-                }
-            ],
-            "sport": "football"
-        }
-    ],
-    [
-        {
-            "profit": 4.761904761904759,
-            "date": "2021-04-17T23:20:55.928Z",
-            "groupId": "MTAwNzQ4OTM0MDk4NzgzODYz",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "Número total de tiros",
-                    "odds": 2,
-                    "type": 22.5,
-                    "oddsType": "Más de",
-                    "eventName": "Arsenal - Fulham",
-                    "group": "Premier League",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007489340",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618749000000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Número total de tiros",
-                    "odds": 2.2,
-                    "type": 22.5,
-                    "oddsType": "Menos de",
-                    "eventName": "Arsenal - Fulham (Londres)",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98783863-Arsenal-Fulham/",
-                    "sport": "Football",
-                    "date_start": 1618749000000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 4.761904761904759,
-            "date": "2021-04-17T23:20:55.938Z",
-            "groupId": "MTAwNzQ4OTM0MDk4NzgzODYz",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Número total de tiros",
-                    "odds": 2.2,
-                    "oddsType": "Menos de",
-                    "type": 22.5,
-                    "eventName": "Arsenal - Fulham (Londres)",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98783863-Arsenal-Fulham/",
-                    "date_start": 1618749000000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Número total de tiros",
-                    "odds": 2,
-                    "type": 22.5,
-                    "oddsType": "Más de",
-                    "eventName": "Arsenal - Fulham",
-                    "group": "Premier League",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007489340",
-                    "date_start": 1618749000000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 2.4137931034482705,
-            "date": "2021-04-17T23:20:55.928Z",
-            "groupId": "MTAwNzQ4OTM0MDk4NzgzODYz",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "Total de fueras de juego",
-                    "odds": 1.65,
-                    "type": 2.5,
-                    "oddsType": "Más de",
-                    "eventName": "Arsenal - Fulham",
-                    "group": "Premier League",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007489340",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618749000000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Total de fueras de juego",
-                    "odds": 2.7,
-                    "type": 2.5,
-                    "oddsType": "Menos de",
-                    "eventName": "Arsenal - Fulham (Londres)",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98783863-Arsenal-Fulham/",
-                    "sport": "Football",
-                    "date_start": 1618749000000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 2.4137931034482705,
-            "date": "2021-04-17T23:20:55.938Z",
-            "groupId": "MTAwNzQ4OTM0MDk4NzgzODYz",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Total de fueras de juego",
-                    "odds": 2.7,
-                    "oddsType": "Menos de",
-                    "type": 2.5,
-                    "eventName": "Arsenal - Fulham (Londres)",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98783863-Arsenal-Fulham/",
-                    "date_start": 1618749000000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Total de fueras de juego",
-                    "odds": 1.65,
-                    "type": 2.5,
-                    "oddsType": "Más de",
-                    "eventName": "Arsenal - Fulham",
-                    "group": "Premier League",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007489340",
-                    "date_start": 1618749000000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 2.227525855210814,
-            "date": "2021-04-17T23:20:55.935Z",
-            "groupId": "MTAwNzQ4OTM0MDk4NzgzODYz",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "Dará una asistencia",
-                    "odds": 5,
-                    "type": "SI",
-                    "oddsType": "Pepe, Nicolas",
-                    "eventName": "Arsenal - Fulham",
-                    "group": "Premier League",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007489340",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618749000000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 1.285,
-                    "type": "NO",
-                    "oddsType": "Nicolas Pépé",
-                    "eventName": "Arsenal - Fulham (Londres)",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98783863-Arsenal-Fulham/",
-                    "sport": "Football",
-                    "date_start": 1618749000000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 2.227525855210814,
-            "date": "2021-04-17T23:20:55.946Z",
-            "groupId": "MTAwNzQ4OTM0MDk4NzgzODYz",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Dará una asistencia",
-                    "odds": 1.285,
-                    "type": "NO",
-                    "oddsType": "Nicolas Pépé",
-                    "eventName": "Arsenal - Fulham (Londres)",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98783863-Arsenal-Fulham/",
-                    "sport": "Football",
-                    "date_start": 1618749000000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Dará una asistencia",
-                    "odds": 5,
-                    "type": "SI",
-                    "oddsType": "Pepe, Nicolas",
-                    "eventName": "Arsenal - Fulham",
-                    "group": "Premier League",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007489340",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618749000000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 0.29850746268657247,
-            "date": "2021-04-17T23:20:55.928Z",
-            "groupId": "MTAwNzQ4OTM0MDk4NzgzODYz",
-            "options": [
-                {
-                    "comapanyName": "betplay",
-                    "market": "Número total de tiros a puerta por parte del visitante",
-                    "odds": 2.1,
-                    "type": 3.5,
-                    "oddsType": "Más de",
-                    "eventName": "Arsenal - Fulham",
-                    "group": "Premier League",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007489340",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618749000000
-                },
-                {
-                    "comapanyName": "xbet",
-                    "market": "Número total de tiros a puerta por parte del visitante",
-                    "odds": 1.92,
-                    "type": 3.5,
-                    "oddsType": "Menos de",
-                    "eventName": "Arsenal - Fulham (Londres)",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98783863-Arsenal-Fulham/",
-                    "sport": "Football",
-                    "date_start": 1618749000000
-                }
-            ],
-            "sport": "football"
-        },
-        {
-            "profit": 0.29850746268657247,
-            "date": "2021-04-17T23:20:55.938Z",
-            "groupId": "MTAwNzQ4OTM0MDk4NzgzODYz",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Número total de tiros a puerta por parte del visitante",
-                    "odds": 1.92,
-                    "oddsType": "Menos de",
-                    "type": 3.5,
-                    "eventName": "Arsenal - Fulham (Londres)",
-                    "group": "Campeonato de Inglaterra. Premier League",
-                    "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98783863-Arsenal-Fulham/",
-                    "date_start": 1618749000000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Número total de tiros a puerta por parte del visitante",
-                    "odds": 2.1,
-                    "type": 3.5,
-                    "oddsType": "Más de",
-                    "eventName": "Arsenal - Fulham",
-                    "group": "Premier League",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1007489340",
-                    "date_start": 1618749000000
-                }
-            ],
-            "sport": "football"
-        }
-    ],
-    [
-        {
-            "profit": 1.211072664359861,
-            "date": "2021-04-17T23:20:55.543Z",
-            "groupId": "MTAwNjcyMjQ5ODk5Mjc0Njk0",
-            "options": [
-                {
-                    "comapanyName": "xbet",
-                    "market": "Recibirá una tarjeta",
-                    "odds": 7.5,
-                    "type": "SI",
-                    "oddsType": "Shaun MacDonald",
-                    "eventName": "Roterem Unidas (Sheffield) - Birmingham City FC",
-                    "group": "Campeonato de Inglaterra. Campeonato",
-                    "url": "https://1xbet.com.co/es/line/Football/105759-England-Championship/99274694-Rotherham-United-Birmingham-City/",
-                    "sport": "Football",
-                    "date_start": 1618743600000
-                },
-                {
-                    "comapanyName": "betplay",
-                    "market": "Recibirá una tarjeta",
-                    "odds": 1.17,
-                    "type": "NO",
-                    "oddsType": "MacDonald, Angus",
-                    "eventName": "Rotherham United - Birmingham",
-                    "group": "Championship",
-                    "url": "https://www.rushbet.co/?page=sportsbook#event/1006722498",
-                    "sport": "FOOTBALL",
-                    "date_start": 1618743600000
-                }
-            ],
-            "sport": "football"
-        }
-    ]
+    {
+        "profit": 0.3577661431064598,
+        "date": "2021-04-19T00:30:09.405Z",
+        "groupId": "MTAwNjcyMjQzMjEwMDIyMTEyMg==",
+        "_id": "8d39d1c0-6345-4f9d-a33d-fdd3c94cd54d",
+        "options": [
+            {
+                "comapanyName": "betplay",
+                "market": "Hándicap Asiático",
+                "odds": 3.1,
+                "type": -0.25,
+                "oddsType": "AFC Wimbledon",
+                "eventName": "AFC Wimbledon - Oxford United",
+                "group": "Liga Uno",
+                "url": "https://www.rushbet.co/?page=sportsbook#event/1006722432",
+                "sport": "FOOTBALL",
+                "date_start": 1618941600000
+            },
+            {
+                "comapanyName": "xbet",
+                "market": "Hándicap Asiático",
+                "odds": 1.484,
+                "type": 0.25,
+                "oddsType": "FC Oxford United",
+                "eventName": "Uimbledon (Londres) - FC Oxford United",
+                "group": "England. League One",
+                "url": "https://1xbet.com.co/es/line/Football/13709-England-League-One/100221122-Wimbledon-Oxford-United/",
+                "sport": "Football",
+                "date_start": 1618941600000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 1.25,
+        "date": "2021-04-19T00:30:09.405Z",
+        "groupId": "MTAwNjcyMjQzMjEwMDIyMTEyMg==",
+        "_id": "e7d45a9f-112f-4db6-9b45-ecc3cc7926f5",
+        "options": [
+            {
+                "comapanyName": "betplay",
+                "market": "Hádicap Asiático",
+                "odds": 2.7,
+                "type": 0,
+                "oddsType": "AFC Wimbledon",
+                "eventName": "AFC Wimbledon - Oxford United",
+                "group": "Liga Uno",
+                "url": "https://www.rushbet.co/?page=sportsbook#event/1006722432",
+                "sport": "FOOTBALL",
+                "date_start": 1618941600000
+            },
+            {
+                "comapanyName": "xbet",
+                "market": "Hándicap",
+                "odds": 1.62,
+                "type": 0,
+                "oddsType": "FC Oxford United",
+                "eventName": "Uimbledon (Londres) - FC Oxford United",
+                "group": "England. League One",
+                "url": "https://1xbet.com.co/es/line/Football/13709-England-League-One/100221122-Wimbledon-Oxford-United/",
+                "sport": "Football",
+                "date_start": 1618941600000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 0.3577661431064598,
+        "date": "2021-04-19T00:30:09.412Z",
+        "groupId": "MTAwNjcyMjQzMjEwMDIyMTEyMg==",
+        "_id": "aac0cb70-3b8a-41c2-bfcd-afd8d1d67bb0",
+        "options": [
+            {
+                "comapanyName": "xbet",
+                "market": "Hándicap Asiático",
+                "odds": 1.484,
+                "type": 0.25,
+                "oddsType": "FC Oxford United",
+                "eventName": "Uimbledon (Londres) - FC Oxford United",
+                "group": "England. League One",
+                "url": "https://1xbet.com.co/es/line/Football/13709-England-League-One/100221122-Wimbledon-Oxford-United/",
+                "sport": "Football",
+                "date_start": 1618941600000
+            },
+            {
+                "comapanyName": "betplay",
+                "market": "Hándicap Asiático",
+                "odds": 3.1,
+                "type": -0.25,
+                "oddsType": "AFC Wimbledon",
+                "eventName": "AFC Wimbledon - Oxford United",
+                "group": "Liga Uno",
+                "url": "https://www.rushbet.co/?page=sportsbook#event/1006722432",
+                "sport": "FOOTBALL",
+                "date_start": 1618941600000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 1.25,
+        "date": "2021-04-19T00:30:09.412Z",
+        "groupId": "MTAwNjcyMjQzMjEwMDIyMTEyMg==",
+        "_id": "bc2713d2-e749-4203-8959-5442a2818ae5",
+        "options": [
+            {
+                "comapanyName": "xbet",
+                "market": "Hándicap",
+                "odds": 1.62,
+                "type": 0,
+                "oddsType": "FC Oxford United",
+                "eventName": "Uimbledon (Londres) - FC Oxford United",
+                "group": "England. League One",
+                "url": "https://1xbet.com.co/es/line/Football/13709-England-League-One/100221122-Wimbledon-Oxford-United/",
+                "sport": "Football",
+                "date_start": 1618941600000
+            },
+            {
+                "comapanyName": "betplay",
+                "market": "Hádicap Asiático",
+                "odds": 2.7,
+                "type": 0,
+                "oddsType": "AFC Wimbledon",
+                "eventName": "AFC Wimbledon - Oxford United",
+                "group": "Liga Uno",
+                "url": "https://www.rushbet.co/?page=sportsbook#event/1006722432",
+                "sport": "FOOTBALL",
+                "date_start": 1618941600000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 6.115007012622712,
+        "date": "2021-04-19T00:30:08.671Z",
+        "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
+        "_id": "20179fe6-8dcb-4560-b43a-8a7b7610bb9d",
+        "options": [
+            {
+                "comapanyName": "betplay",
+                "market": "Número total de tiros por parte del local",
+                "odds": 1.95,
+                "oddsType": "Menos de",
+                "type": 10.5,
+                "eventName": "Leeds United - Liverpool",
+                "group": "Premier League",
+                "url": "https://www.rushbet.co/?page=sportsbook#event/1007489336",
+                "date_start": 1618858800000
+            },
+            {
+                "comapanyName": "xbet",
+                "market": "Número total de tiros por parte del local",
+                "odds": 2.328,
+                "type": 10.5,
+                "oddsType": "Más de",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "date_start": 1618858800000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 2.227525855210814,
+        "date": "2021-04-19T00:30:08.682Z",
+        "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
+        "_id": "372e92b9-a801-4dcc-a1ef-b0c337d0a682",
+        "options": [
+            {
+                "comapanyName": "betplay",
+                "market": "Dará una asistencia",
+                "odds": 5,
+                "type": "SI",
+                "oddsType": "Firmino, Roberto",
+                "eventName": "Leeds United - Liverpool",
+                "group": "Premier League",
+                "url": "https://www.rushbet.co/?page=sportsbook#event/1007489336",
+                "sport": "FOOTBALL",
+                "date_start": 1618858800000
+            },
+            {
+                "comapanyName": "xbet",
+                "market": "Dará una asistencia",
+                "odds": 1.285,
+                "type": "NO",
+                "oddsType": "Roberto Firmino",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 4.132231404958688,
+        "date": "2021-04-19T00:30:08.682Z",
+        "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
+        "_id": "0cb17a2e-8c8f-48fe-b5ca-8aeb77a913c2",
+        "options": [
+            {
+                "comapanyName": "betplay",
+                "market": "Dará una asistencia",
+                "odds": 1.26,
+                "type": "NO",
+                "oddsType": "Mané, Sadio",
+                "eventName": "Leeds United - Liverpool",
+                "group": "Premier League",
+                "url": "https://www.rushbet.co/?page=sportsbook#event/1007489336",
+                "sport": "FOOTBALL",
+                "date_start": 1618858800000
+            },
+            {
+                "comapanyName": "xbet",
+                "market": "Dará una asistencia",
+                "odds": 6,
+                "type": "SI",
+                "oddsType": "Sadio Mané",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 6.115007012622712,
+        "date": "2021-04-19T00:30:08.684Z",
+        "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
+        "_id": "2aeba886-4153-4835-8fb3-bad6ade6e523",
+        "options": [
+            {
+                "comapanyName": "xbet",
+                "market": "Número total de tiros por parte del local",
+                "odds": 2.328,
+                "type": 10.5,
+                "oddsType": "Más de",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            },
+            {
+                "comapanyName": "betplay",
+                "market": "Número total de tiros por parte del local",
+                "odds": 1.95,
+                "type": 10.5,
+                "oddsType": "Menos de",
+                "eventName": "Leeds United - Liverpool",
+                "group": "Premier League",
+                "url": "https://www.rushbet.co/?page=sportsbook#event/1007489336",
+                "sport": "FOOTBALL",
+                "date_start": 1618858800000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 2.227525855210814,
+        "date": "2021-04-19T00:30:08.694Z",
+        "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
+        "_id": "3974f906-607b-4618-859d-051ec9a2ab08",
+        "options": [
+            {
+                "comapanyName": "xbet",
+                "market": "Dará una asistencia",
+                "odds": 1.285,
+                "type": "NO",
+                "oddsType": "Roberto Firmino",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            },
+            {
+                "comapanyName": "betplay",
+                "market": "Dará una asistencia",
+                "odds": 5,
+                "type": "SI",
+                "oddsType": "Firmino, Roberto",
+                "eventName": "Leeds United - Liverpool",
+                "group": "Premier League",
+                "url": "https://www.rushbet.co/?page=sportsbook#event/1007489336",
+                "sport": "FOOTBALL",
+                "date_start": 1618858800000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 4.1635961680176905,
+        "date": "2021-04-19T00:30:08.695Z",
+        "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
+        "_id": "5ce94b5c-833c-45d3-9d59-74d81119f1f3",
+        "options": [
+            {
+                "comapanyName": "xbet",
+                "market": "Dará una asistencia",
+                "odds": 5.5,
+                "type": "SI",
+                "oddsType": "Mohamed Salah",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            },
+            {
+                "comapanyName": "xbet",
+                "market": "Dará una asistencia",
+                "odds": 1.285,
+                "type": "NO",
+                "oddsType": "Mohamed Salah",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 4.1635961680176905,
+        "date": "2021-04-19T00:30:08.695Z",
+        "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
+        "_id": "73804fec-4857-459a-8f40-d4e074e98c32",
+        "options": [
+            {
+                "comapanyName": "xbet",
+                "market": "Dará una asistencia",
+                "odds": 1.285,
+                "type": "NO",
+                "oddsType": "Mohamed Salah",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            },
+            {
+                "comapanyName": "xbet",
+                "market": "Dará una asistencia",
+                "odds": 5.5,
+                "type": "SI",
+                "oddsType": "Mohamed Salah",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 4.132231404958688,
+        "date": "2021-04-19T00:30:08.695Z",
+        "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
+        "_id": "ac5577f8-1927-4306-b70a-1954d81323c1",
+        "options": [
+            {
+                "comapanyName": "xbet",
+                "market": "Dará una asistencia",
+                "odds": 6,
+                "type": "SI",
+                "oddsType": "Sadio Mané",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            },
+            {
+                "comapanyName": "betplay",
+                "market": "Dará una asistencia",
+                "odds": 1.26,
+                "type": "NO",
+                "oddsType": "Mané, Sadio",
+                "eventName": "Leeds United - Liverpool",
+                "group": "Premier League",
+                "url": "https://www.rushbet.co/?page=sportsbook#event/1007489336",
+                "sport": "FOOTBALL",
+                "date_start": 1618858800000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 3.448275862068968,
+        "date": "2021-04-19T00:30:08.695Z",
+        "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
+        "_id": "eb97731a-00f3-4130-b6be-9e0873d19cc7",
+        "options": [
+            {
+                "comapanyName": "xbet",
+                "market": "Dará una asistencia",
+                "odds": 6,
+                "type": "SI",
+                "oddsType": "Sadio Mané",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            },
+            {
+                "comapanyName": "xbet",
+                "market": "Dará una asistencia",
+                "odds": 1.25,
+                "type": "NO",
+                "oddsType": "Sadio Mané",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 3.448275862068968,
+        "date": "2021-04-19T00:30:08.695Z",
+        "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
+        "_id": "be6dcb28-0106-446b-848b-9b1ecf34c633",
+        "options": [
+            {
+                "comapanyName": "xbet",
+                "market": "Dará una asistencia",
+                "odds": 1.25,
+                "type": "NO",
+                "oddsType": "Sadio Mané",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            },
+            {
+                "comapanyName": "xbet",
+                "market": "Dará una asistencia",
+                "odds": 6,
+                "type": "SI",
+                "oddsType": "Sadio Mané",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 1.298701298701289,
+        "date": "2021-04-19T00:30:08.695Z",
+        "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
+        "_id": "ad024b9b-d4f8-41e7-9e51-10335403f9aa",
+        "options": [
+            {
+                "comapanyName": "xbet",
+                "market": "Dará una asistencia",
+                "odds": 6.5,
+                "type": "SI",
+                "oddsType": "Diogo Jota",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            },
+            {
+                "comapanyName": "xbet",
+                "market": "Dará una asistencia",
+                "odds": 1.2,
+                "type": "NO",
+                "oddsType": "Diogo Jota",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 1.298701298701289,
+        "date": "2021-04-19T00:30:08.695Z",
+        "groupId": "MTAwNzQ4OTMzNjk4NzkxMzc3",
+        "_id": "054b8e2d-61ec-4150-b727-8840c0a687a1",
+        "options": [
+            {
+                "comapanyName": "xbet",
+                "market": "Dará una asistencia",
+                "odds": 1.2,
+                "type": "NO",
+                "oddsType": "Diogo Jota",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            },
+            {
+                "comapanyName": "xbet",
+                "market": "Dará una asistencia",
+                "odds": 6.5,
+                "type": "SI",
+                "oddsType": "Diogo Jota",
+                "eventName": "Leeds United FC - Liverpool FC",
+                "group": "Campeonato de Inglaterra. Premier League",
+                "url": "https://1xbet.com.co/es/line/Football/88637-England-Premier-League/98791377-Leeds-United-Liverpool/",
+                "sport": "Football",
+                "date_start": 1618858800000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 3.629976580796253,
+        "date": "2021-04-19T00:30:08.416Z",
+        "groupId": "MTAwNzUyOTg0NDEwMDAzNjczNQ==",
+        "_id": "648c0654-2ae6-46bd-b8c7-4edeb77416aa",
+        "options": [
+            {
+                "comapanyName": "betplay",
+                "market": "Total de Goles",
+                "odds": 2.5,
+                "type": 2.5,
+                "oddsType": "Más de",
+                "eventName": "Boca Juniors de Cali - Valledupar FC",
+                "group": "Copa BetPlay Dimayor",
+                "url": "https://www.rushbet.co/?page=sportsbook#event/1007529844",
+                "sport": "FOOTBALL",
+                "date_start": 1619035200000
+            },
+            {
+                "comapanyName": "xbet",
+                "market": "Total de Goles",
+                "odds": 1.77,
+                "type": 2.5,
+                "oddsType": "Menos de",
+                "eventName": "Union La Calera - FC LDU Quito",
+                "group": "Fútbol. Copa Libertadores",
+                "url": "https://1xbet.com.co/es/line/Football/142091-Copa-Libertadores/100036735-Union-La-Calera-Liga-Deportiva-Universitaria-de-Quito/",
+                "sport": "Football",
+                "date_start": 1619035200000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 0.9224318658280879,
+        "date": "2021-04-19T00:30:08.416Z",
+        "groupId": "MTAwNzUyOTg0NDEwMDAzNjczNQ==",
+        "_id": "4b97015c-25eb-4c28-875b-94cbfcb23eb1",
+        "options": [
+            {
+                "comapanyName": "betplay",
+                "market": "Total de Goles",
+                "odds": 1.45,
+                "type": 1.5,
+                "oddsType": "Más de",
+                "eventName": "Boca Juniors de Cali - Valledupar FC",
+                "group": "Copa BetPlay Dimayor",
+                "url": "https://www.rushbet.co/?page=sportsbook#event/1007529844",
+                "sport": "FOOTBALL",
+                "date_start": 1619035200000
+            },
+            {
+                "comapanyName": "xbet",
+                "market": "Total de Goles",
+                "odds": 3.32,
+                "type": 1.5,
+                "oddsType": "Menos de",
+                "eventName": "Union La Calera - FC LDU Quito",
+                "group": "Fútbol. Copa Libertadores",
+                "url": "https://1xbet.com.co/es/line/Football/142091-Copa-Libertadores/100036735-Union-La-Calera-Liga-Deportiva-Universitaria-de-Quito/",
+                "sport": "Football",
+                "date_start": 1619035200000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 0.9224318658280879,
+        "date": "2021-04-19T00:30:08.416Z",
+        "groupId": "MTAwNzUyOTg0NDEwMDAzNjczNQ==",
+        "_id": "9f498f78-a510-475e-bae0-8b88b2625732",
+        "options": [
+            {
+                "comapanyName": "xbet",
+                "market": "Total de Goles",
+                "odds": 3.32,
+                "oddsType": "Menos de",
+                "type": 1.5,
+                "eventName": "Union La Calera - FC LDU Quito",
+                "group": "Fútbol. Copa Libertadores",
+                "url": "https://1xbet.com.co/es/line/Football/142091-Copa-Libertadores/100036735-Union-La-Calera-Liga-Deportiva-Universitaria-de-Quito/",
+                "date_start": 1619035200000
+            },
+            {
+                "comapanyName": "betplay",
+                "market": "Total de Goles",
+                "odds": 1.45,
+                "type": 1.5,
+                "oddsType": "Más de",
+                "eventName": "Boca Juniors de Cali - Valledupar FC",
+                "group": "Copa BetPlay Dimayor",
+                "url": "https://www.rushbet.co/?page=sportsbook#event/1007529844",
+                "date_start": 1619035200000
+            }
+        ],
+        "sport": "football"
+    },
+    {
+        "profit": 3.629976580796253,
+        "date": "2021-04-19T00:30:08.416Z",
+        "groupId": "MTAwNzUyOTg0NDEwMDAzNjczNQ==",
+        "_id": "3e651430-9d93-4308-a5fa-346858b7c531",
+        "options": [
+            {
+                "comapanyName": "xbet",
+                "market": "Total de Goles",
+                "odds": 1.77,
+                "oddsType": "Menos de",
+                "type": 2.5,
+                "eventName": "Union La Calera - FC LDU Quito",
+                "group": "Fútbol. Copa Libertadores",
+                "url": "https://1xbet.com.co/es/line/Football/142091-Copa-Libertadores/100036735-Union-La-Calera-Liga-Deportiva-Universitaria-de-Quito/",
+                "date_start": 1619035200000
+            },
+            {
+                "comapanyName": "betplay",
+                "market": "Total de Goles",
+                "odds": 2.5,
+                "type": 2.5,
+                "oddsType": "Más de",
+                "eventName": "Boca Juniors de Cali - Valledupar FC",
+                "group": "Copa BetPlay Dimayor",
+                "url": "https://www.rushbet.co/?page=sportsbook#event/1007529844",
+                "date_start": 1619035200000
+            }
+        ],
+        "sport": "football"
+    }
 ]

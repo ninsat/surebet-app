@@ -155,6 +155,7 @@ const compareMatches2 = (matchGroup, markets = [], sportName) => {
                 profit: getProfit(marketOption.over.v, otherCompanyOption.under.v),
                 date: new Date(),
                 groupId,
+                _id: utilities.createTimeId(),
                 options: [
                   {
                     comapanyName: company,
@@ -190,6 +191,7 @@ const compareMatches2 = (matchGroup, markets = [], sportName) => {
                 profit: getProfit(marketOption.under.v, otherCompanyOption.over.v),
                 date: new Date(),
                 groupId,
+                _id: utilities.createTimeId(),
                 options: [
                   {
                     comapanyName: company,
@@ -239,6 +241,7 @@ const compareMatches2 = (matchGroup, markets = [], sportName) => {
                 profit: getProfit(odds1, odds2),
                 date: new Date(),
                 groupId,
+                _id: utilities.createTimeId(),
                 options: [
                   {
                     comapanyName: company,
@@ -291,6 +294,7 @@ const compareMatches2 = (matchGroup, markets = [], sportName) => {
                 profit: getProfit(marketOption.home.v, otherCompanyOption.away.v),
                 date: new Date(),
                 groupId,
+                _id: utilities.createTimeId(),
                 options: [
                   {
                     comapanyName: company,
@@ -324,6 +328,7 @@ const compareMatches2 = (matchGroup, markets = [], sportName) => {
                 profit: getProfit(marketOption.away.v, otherCompanyOption.home.v),
                 date: new Date(),
                 groupId,
+                _id: utilities.createTimeId(),
                 options: [
                   {
                     comapanyName: company,
@@ -373,6 +378,7 @@ const compareMatches2 = (matchGroup, markets = [], sportName) => {
                   profit: getProfit(marketOption[option].v, otherCompanyOption[marketObject.options[option].opposite.route].v),
                   date: new Date(),
                   groupId,
+                  _id: utilities.createTimeId(),
                   options: [
                     {
                       comapanyName: company,

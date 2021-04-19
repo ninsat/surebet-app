@@ -1,4 +1,4 @@
-import React, {useState, Fragment} from 'react';
+import React, {useState, Fragment, useEffect} from 'react';
 import { createUseStyles} from 'react-jss'
 import SurebetCard from './'
 import Calculator from './Calculator'
@@ -29,32 +29,65 @@ const useStyles = createUseStyles({
     }
 })
 
-const SurbetGroup = props => {
+const SurbetGroup = ({surebets, ...props}) => {
     const [selectedGroup, setSelectedGroup] = useState([])
+    const [principalSurbets, setPrincipalSurbets] = useState([])
+    const [selectedSurebet, setSelectedSurebet] = useState(null)
     const classes = useStyles()
+
+
+    useEffect(()=>{
+        const copySurebets = surebets.slice()
+        const groupData = surebets.reduce((result, surebet)=>{
+            const isInArray = result.findIndex(v => v.groupId === surebet.groupId)
+            if(isInArray !== -1) return result
+            const groupSurebet = copySurebets.filter(v => v.groupId === surebet.groupId).sort((a,b)=> b.profit - a.profit)
+            return [...result, groupSurebet[0]]
+        },[])
+        setPrincipalSurbets(groupData)
+    },[surebets])
+
+
 
     const handleSelectGrouo = (group)=>()=>{
         setSelectedGroup(group)
+    }
+
+
+    const handleSelect = (surebet) => ()=>{
+        setSelectedSurebet(surebet)
+        const surebetGroup = surebets.filter(v => v.groupId === surebet.groupId).sort((a,b)=> b.profit - a.profit)
+        setSelectedGroup(surebetGroup)
     }
 
     return(
         <div className={clsx(classes.root, "box")}>
             <div className={classes.mainPanel}>
                 {
-                    props.surebets.map((surebet, index) => (
-                    <SurebetCard onSelect={handleSelectGrouo(surebet)} sports={props.sports} key={surebet[0].groupId} data={surebet[0]} />
+                   principalSurbets.map((surebet) => (
+                    <SurebetCard
+                        selected={selectedSurebet?._id === surebet._id} 
+                        onSelect={handleSelect(surebet)} 
+                        sports={props.sports} 
+                        key={surebet.groupId} 
+                        data={surebet} />
                     ))
                 }
             </div>
             <div className={classes.detailsPanel}>
                 {
-                    selectedGroup.length?
+                    selectedSurebet?
                     <Fragment>
-                        <Calculator sports={props.sports} surebet={selectedGroup[0]}/>
+                        <Calculator sports={props.sports} surebet={selectedSurebet}/>
                         <div className={classes.allSurebets}>
                             {
                                 selectedGroup.map((surebet, index) => (
-                                <SurebetCard sports={props.sports} key={index} data={surebet} />
+                                <SurebetCard
+                                    selected={selectedSurebet._id === surebet._id} 
+                                    onSelect={handleSelect(surebet)} 
+                                    sports={props.sports} 
+                                    key={surebet._id} 
+                                    data={surebet} />
                                 ))
                             }
                         </div>

@@ -1,5 +1,6 @@
 import stringSimilarity from "string-similarity";
 import _ from 'lodash'
+import { v4 as uuidv4 } from 'uuid';
 //paso un partido de betPlay para que encuentre el mismo partido pero en 1XBet
 //match = partido de betplay
 // matches = arreglo de partidos de 1XBET
@@ -180,6 +181,10 @@ const getRoute = (object, route) =>
     return btoa(string)
   }
 
+  const createTimeId = () =>{
+    return uuidv4()
+  }
+
   const matchAllMatches = (bookMarkets) => {
     const bookMarketsNames = Object.keys(bookMarkets);
     const bookMarketsNamesCopy = bookMarketsNames.slice();
@@ -241,5 +246,6 @@ export default {
   delay,
   getRoute,
   matchAllMatches,
-  createGroupId
+  createGroupId,
+  createTimeId
 };
