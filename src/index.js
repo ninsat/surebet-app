@@ -325,7 +325,7 @@ const testMatch = async (options, sportsOptions, cb, loadCb, groupData=false) =>
 
 const App = (props) => {
 
-  const [surebets, setSurebets] = useState(textData)
+  const [surebets, setSurebets] = useState([])
   const [load, setLoad] = useState(0)
   const [disabledActions, setDisabledActions] = useState(false)
   const [bookMarkets, setBookMarkets] = useState({
