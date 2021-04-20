@@ -515,6 +515,60 @@
       "enable": true
     },
     {
+      "label": "Conseguirá un triple-doble - Prórroga incluida",
+      "id": 1001336532,
+      "betplay": {
+        "id": 1001336532
+      },
+      "name": "toRecordATripleDoubleIncludingOvertime",
+      "xbet": {
+        "marketId": "estadisticas-de-jugadores",
+        "G": 9124
+      },
+      "yajuego":{
+        "id": "participants",
+        "marketId": "S_ANYSCORERYCARD"
+      },
+      "type": "OBJECT-PARTICIPANT",
+      "options": {
+        "YES": {
+          "label": "SI",
+          "betplay": {
+            "type": "OT_YES"
+          },
+          "xbet": {
+            "T": 9298
+          },
+          "yajuego":{
+            "name": "Yes"
+          },
+          "opposite":{
+            "market": "Conseguirá un triple-doble - Prórroga incluida",
+            "label": "NO",
+            "route": "NO"
+          }
+        },
+        "NO": {
+          "label": "NO",
+          "betplay": {
+            "type": "OT_NO"
+          },
+          "xbet": {
+            "T": 9299
+          },
+          "yajuego":{
+            "name": "No"
+          },
+          "opposite":{
+            "market": "Conseguirá un triple-doble - Prórroga incluida",
+            "label": "SI",
+            "route": "YES"
+          }
+        }
+      },
+      "enable": true
+    },
+    {
       "label": "Puntos, rebotes y asistencias por el jugador - Prórroga incluida",
       "id": 1002098847,
       "betplay": {
@@ -538,6 +592,90 @@
       "under":{
           "betplay": "Under",
           "xbet": 1881,
+          "yajuego": "?"
+      },
+      "enable": true
+    },
+    {
+      "label": "Puntos obtenidos por el jugador - Prórroga incluida",
+      "id": 1001223303,
+      "betplay": {
+        "id": 1001223303
+      },
+      "name": "pointsScoredByThePlayerIncludingOvertime",
+      "xbet": {
+        "marketId": "estadisticas-de-jugadores",
+        "G": 850
+      },
+      "yajuego":{
+        "id": "participants",
+        "marketId": "S_ANYSCORERYCARD"
+      },
+      "type": "OVER/UNDER-PARTICIPANT",
+      "over":{
+          "betplay": "Over",
+          "xbet": 1807,
+          "yajuego": "?"
+      },
+      "under":{
+          "betplay": "Under",
+          "xbet": 1806,
+          "yajuego": "?"
+      },
+      "enable": true
+    },
+    {
+      "label": "Asistencias del jugador - Prórroga incluida",
+      "id": 1001225285,
+      "betplay": {
+        "id": 1001225285
+      },
+      "name": "assistsByThePlayerIncludingOvertime",
+      "xbet": {
+        "marketId": "asistencias",
+        "G": 751
+      },
+      "yajuego":{
+        "id": "participants",
+        "marketId": "S_ANYSCORERYCARD"
+      },
+      "type": "OVER/UNDER-PARTICIPANT",
+      "over":{
+          "betplay": "Over",
+          "xbet": 1491,
+          "yajuego": "?"
+      },
+      "under":{
+          "betplay": "Under",
+          "xbet": 1492,
+          "yajuego": "?"
+      },
+      "enable": true
+    },
+    {
+      "label": "Rebotes del jugador - Prórroga incluida",
+      "id": 1001225286,
+      "betplay": {
+        "id": 1001225286
+      },
+      "name": "reboundsByThePlayerIncludingOvertime",
+      "xbet": {
+        "marketId": "rebotes",
+        "G": 749
+      },
+      "yajuego":{
+        "id": "participants",
+        "marketId": "S_ANYSCORERYCARD"
+      },
+      "type": "OVER/UNDER-PARTICIPANT",
+      "over":{
+          "betplay": "Over",
+          "xbet": 1489,
+          "yajuego": "?"
+      },
+      "under":{
+          "betplay": "Under",
+          "xbet": 1490,
           "yajuego": "?"
       },
       "enable": true
