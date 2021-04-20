@@ -412,6 +412,59 @@
       "enable": true
     },
     {
+      "label": "Equipo que anotará puntos primero",
+      "id": 1002608880,
+      "betplay": {
+        "id": 1002608880
+      },
+      "xbet": {
+        "marketId": "main",
+        "G": 230
+      },
+      "name": "nextTeamToScoreAtScore0",
+      "yajuego":{
+        "id": "?"
+      },
+      "type": "OBJECT",
+      "options": {
+        "OT_1": {
+          "label": "1",
+          "betplay": {
+            "type": "OT_ONE"
+          },
+          "xbet": {
+            "T": 1052
+          },
+          "yajuego":{
+            "name": "1"
+          },
+          "opposite":{
+            "market": "Equipo que anotará puntos primero",
+            "label": "2",
+            "route": "nextTeamToScoreAtScore0.OT_2"
+          }
+        },
+        "OT_2": {
+          "label": "2",
+          "betplay": {
+            "type": "OT_TWO"
+          },
+          "xbet": {
+            "T": 1053
+          },
+          "yajuego":{
+            "name": "2"
+          },
+          "opposite":{
+            "market": "Equipo que anotará puntos primero",
+            "label": "1",
+            "route": "nextTeamToScoreAtScore0.OT_1"
+          }
+        }
+      },
+      "enable": true
+    },
+    {
       "label": "Apuesta sin empate - 2.ª parte",
       "id": 1001906830,
       "betplay": {
