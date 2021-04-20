@@ -63,7 +63,7 @@ const addAllBetOffers2 = async (matches = [], cb) => {
   let count = 0;
   for (let match of matches) {
     await delay(300);
-    if(!match.event?.id) continue
+    if (!match.event?.id) continue
     const data = await getBetOffersBetPlay(match.event.id);
     resultArray.push({ ...match, betOffers: data });
     console.log("YA");
@@ -123,7 +123,7 @@ const getEventsBetPlay = async () => {
     date_start: new Date(match.event.start).getTime(),
     sport: match.event.sport,
     group: match.event.group,
-    url: `https://www.rushbet.co/?page=sportsbook#event/${match.event.id}` 
+    url: `https://www.rushbet.co/?page=sportsbook#event/${match.event.id}`
   }));
 };
 
@@ -175,7 +175,7 @@ const getBasketballEventsBetPlay = async () => {
     date_start: new Date(match.event.start).getTime(),
     sport: match.event.sport,
     group: match.event.group,
-    url: `https://www.rushbet.co/?page=sportsbook#event/${match.event.id}` 
+    url: `https://www.rushbet.co/?page=sportsbook#event/${match.event.id}`
   }));
 };
 
@@ -225,11 +225,11 @@ const getTennisEventsBetPlay = async () => {
     date_start: new Date(match.event.start).getTime(),
     sport: match.event.sport,
     group: match.event.group,
-    url: `https://www.rushbet.co/?page=sportsbook#event/${match.event.id}` 
+    url: `https://www.rushbet.co/?page=sportsbook#event/${match.event.id}`
   }));
 };
 
-const getCountryMatches = async (country = "france", sport="football") => {
+const getCountryMatches = async (country = "france", sport = "football") => {
   const myHeaders = new Headers();
   myHeaders.append("Connection", "keep-alive");
   myHeaders.append("sec-ch-ua", "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"");
@@ -262,13 +262,13 @@ const getCountryMatches = async (country = "france", sport="football") => {
     date_start: new Date(match.event.start).getTime(),
     sport: match.event.sport,
     group: match.event.group,
-    url: `https://www.rushbet.co/?page=sportsbook#event/${match.event.id}` 
+    url: `https://www.rushbet.co/?page=sportsbook#event/${match.event.id}`
   }));
 
 }
 
 
-const getAllEventsFull = async () =>{
+const getAllEventsFull = async () => {
   const countries = [
     "colombia",
     "copa_sudamericana",
@@ -335,13 +335,13 @@ const getAllEventsFull = async () =>{
 
   const countriesPromises = countries.map(country => getCountryMatches(country))
   const countriesData = await Promise.all(countriesPromises)
-  const firsData = countriesData.reduce((arr, option)=> [...arr, ...option], [])
+  const firsData = countriesData.reduce((arr, option) => [...arr, ...option], [])
   const secondData = await getEventsBetPlay()
 
   firsData.forEach(match => {
     const cloneIndex = secondData.findIndex(v => v.id === match.id)
-    if(cloneIndex === -1) return
-    secondData.splice(cloneIndex,1)
+    if (cloneIndex === -1) return
+    secondData.splice(cloneIndex, 1)
   })
 
   return [...firsData, ...secondData]
@@ -350,7 +350,7 @@ const getAllEventsFull = async () =>{
 
 
 
-const getAllEventsBasketBallFull = async () =>{
+const getAllEventsBasketBallFull = async () => {
   const countries = [
     "nba",
     "euroleague",
@@ -374,12 +374,12 @@ const getAllEventsBasketBallFull = async () =>{
 
   const countriesPromises = countries.map(country => getCountryMatches(country, "basketball"))
   const countriesData = await Promise.all(countriesPromises)
-  const firsData = countriesData.reduce((arr, option)=> [...arr, ...option], [])
+  const firsData = countriesData.reduce((arr, option) => [...arr, ...option], [])
   const secondData = await getBasketballEventsBetPlay()
   firsData.forEach(match => {
     const cloneIndex = secondData.findIndex(v => v.id === match.id)
-    if(cloneIndex === -1) return
-    secondData.splice(cloneIndex,1)
+    if (cloneIndex === -1) return
+    secondData.splice(cloneIndex, 1)
   })
 
   return [...firsData, ...secondData]
@@ -387,7 +387,7 @@ const getAllEventsBasketBallFull = async () =>{
 }
 
 
-const getAllEventsTennisFull = async () =>{
+const getAllEventsTennisFull = async () => {
   const countries = [
     "grand_slam",
     "atp",
@@ -401,12 +401,12 @@ const getAllEventsTennisFull = async () =>{
 
   const countriesPromises = countries.map(country => getCountryMatches(country, "tennis"))
   const countriesData = await Promise.all(countriesPromises)
-  const firsData = countriesData.reduce((arr, option)=> [...arr, ...option], [])
+  const firsData = countriesData.reduce((arr, option) => [...arr, ...option], [])
   const secondData = await getTennisEventsBetPlay()
   firsData.forEach(match => {
     const cloneIndex = secondData.findIndex(v => v.id === match.id)
-    if(cloneIndex === -1) return
-    secondData.splice(cloneIndex,1)
+    if (cloneIndex === -1) return
+    secondData.splice(cloneIndex, 1)
   })
 
   return [...firsData, ...secondData]
@@ -459,7 +459,7 @@ const formatBetOffer2 = (match, markets) => {
 const formatBetOffer3 = (match, markets) => {
   return markets.reduce((obj, market) => {
 
-    if(!match.betOffers) return obj
+    if (!match.betOffers) return obj
 
     const betOffer = match.betOffers.filter(
       (v) => v.criterion.id === market.id
@@ -547,6 +547,48 @@ const formatBetOffer3 = (match, markets) => {
         ...obj,
         [market.name]: formatOffers
       }
+    } else if (market.type === "OVER/UNDER-PARTICIPANT") {
+
+      const formatData = betOffer.map(outcomeContainer => {
+        const overOdds = outcomeContainer.outcomes.find(v => v.englishLabel.startsWith(market.over.betplay)).odds
+        const underOdds = outcomeContainer.outcomes.find(v => v.englishLabel.startsWith(market.under.betplay)).odds
+        const type = outcomeContainer.outcomes.find(v => v.englishLabel.startsWith("Over")).englishLabel.replace(`${market.over.betplay} `, "")
+        return {
+          participant: outcomeContainer.outcomes[0].participant,
+          type: parseFloat(type),
+          over: {
+            v: parseFloat(overOdds) / 1000
+          },
+          under: {
+            v: parseFloat(underOdds) / 1000
+          }
+        }
+      })
+
+      const formatOffers = formatData.reduce((arrayMarket, option) => {
+        const isInTheArray = arrayMarket.findIndex(v => v.participant === option.participant)
+        if (isInTheArray !== -1) return arrayMarket
+        const sameParticipant = formatData.filter(v => v.participant === option.participant)
+      
+        return [...arrayMarket, {
+          participant: option.participant,
+          options: sameParticipant.map(data => ({
+            type: data.type,
+            over: {
+              v: data.over.v
+            },
+            under: {
+              v: data.under.v
+            }
+          }))
+        }]
+      }, [])
+
+      return {
+        ...obj,
+        [market.name]: formatOffers
+      }
+
     }
 
     return obj;
@@ -582,11 +624,11 @@ const formatBetsMarkets = (array = []) => {
 };
 
 
-const getMatch = async(match, markets) => {
+const getMatch = async (match, markets) => {
   const betOffers = await getBetOffersBetPlay(match.id);
   const matchData = { ...match, betOffers }
   const marketsData = formatBetOffer3(matchData, markets)
-  return {...matchData, markets: marketsData }
+  return { ...matchData, markets: marketsData }
 }
 
 export default {

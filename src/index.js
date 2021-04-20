@@ -32,13 +32,12 @@ import yajuego from './bettingStores/yajuego.js';
 const testXbet = async () => {
   console.log("Empezo esto!");
   //const data = await xbet.getEvents1Xbet2({ id: 89864715 }, markets);
-  const data = await yajuego.getMatch({id: "4075999"}, markets)
-  const res = await fetch("http://localhost:8080/https://1xbet.com.co/LineFeed/Get1x2_VZip?sports=1&count=1500&lng=es&tf=2200000&tz=-5&mode=4&country=1&getEmpty=true&virtualSports=true&menuSection=1%7C7")
-  const d = await res.json()
-  console.log(data, d);
+  const data = await xbet.getMatch({id: 100400421}, basketBallMarkets)
+  
+  console.log(data);
 };
 
-//testXbet()
+testXbet()
 
 // Segundo intento de conseguir los matches
 const secondMain = async (cb) => {

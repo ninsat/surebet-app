@@ -459,6 +459,88 @@
         }
       },
       "enable": true
+    },
+    {
+      "label": "Conseguirá un doble-doble - Prórroga incluida",
+      "id": 1001225291,
+      "betplay": {
+        "id": 1001225291
+      },
+      "name": "toRecordADoubleDoubleIncludingOvertime",
+      "xbet": {
+        "marketId": "estadisticas-de-jugadores",
+        "G": 9123
+      },
+      "yajuego":{
+        "id": "participants",
+        "marketId": "S_ANYSCORERYCARD"
+      },
+      "type": "OBJECT-PARTICIPANT",
+      "options": {
+        "YES": {
+          "label": "SI",
+          "betplay": {
+            "type": "OT_YES"
+          },
+          "xbet": {
+            "T": 9296
+          },
+          "yajuego":{
+            "name": "Yes"
+          },
+          "opposite":{
+            "market": "Conseguirá un doble-doble - Prórroga incluida",
+            "label": "NO",
+            "route": "NO"
+          }
+        },
+        "NO": {
+          "label": "NO",
+          "betplay": {
+            "type": "OT_NO"
+          },
+          "xbet": {
+            "T": 9297
+          },
+          "yajuego":{
+            "name": "No"
+          },
+          "opposite":{
+            "market": "Conseguirá un doble-doble - Prórroga incluida",
+            "label": "SI",
+            "route": "YES"
+          }
+        }
+      },
+      "enable": true
+    },
+    {
+      "label": "Puntos, rebotes y asistencias por el jugador - Prórroga incluida",
+      "id": 1002098847,
+      "betplay": {
+        "id": 1002098847
+      },
+      "name": "pointsReboundsAssistsByPlayerIncludingOvertime",
+      "xbet": {
+        "marketId": "pts-+-rebotes-+-asistencias",
+        "G": 912
+      },
+      "yajuego":{
+        "id": "participants",
+        "marketId": "S_ANYSCORERYCARD"
+      },
+      "type": "OVER/UNDER-PARTICIPANT",
+      "over":{
+          "betplay": "Over",
+          "xbet": 1880,
+          "yajuego": "?"
+      },
+      "under":{
+          "betplay": "Under",
+          "xbet": 1881,
+          "yajuego": "?"
+      },
+      "enable": true
     }
   ]
   
