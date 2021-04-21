@@ -417,6 +417,7 @@ const compareMatches2 = (matchGroup, markets = [], sportName) => {
             const otherCompanyMarket = matchGroup[otherCompany].markets[mathcMarket];
             if (!otherCompanyMarket) return;
             const otherCompanyParticipantNames = otherCompanyMarket.map(v=> typeof(v.participant) === "string" ? v.participant : "" )
+            if(!otherCompanyParticipantNames.length) return
             const {bestMatchIndex, bestMatch} = stringSimilarity.findBestMatch(marketOption.participant, otherCompanyParticipantNames)
             if(bestMatch.rating < 0.55) return
             const otherCompanyOption = otherCompanyMarket[bestMatchIndex]
@@ -424,7 +425,7 @@ const compareMatches2 = (matchGroup, markets = [], sportName) => {
               const otherComanySametype = otherCompanyOption.options.find(v=> v.type === typeOption.type)
               if(!otherComanySametype) return
               const opOver = isSurebet(typeOption.over.v, otherComanySametype.under.v);
-              const opUnder = isSurebet(typeOption.under.v, otherComanySametype.over.v);
+              const opUnder = isSurebet(typeOption.under.v, otherComanySametype.over.v);   
               if(opOver){
                 result.push({
                   profit: getProfit(typeOption.over.v, otherComanySametype.under.v),
