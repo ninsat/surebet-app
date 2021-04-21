@@ -135,8 +135,7 @@ const compareMatches2 = (matchGroup, markets = [], sportName) => {
         const marketOptions = companyMatchMarket[mathcMarket];
         marketOptions.forEach((marketOption) => {
           companies.forEach((otherCompany) => {
-            const otherCompanyMarket =
-              matchGroup[otherCompany].markets[mathcMarket];
+            const otherCompanyMarket = matchGroup[otherCompany].markets[mathcMarket];
             if (!otherCompanyMarket) return;
             const otherCompanyOption = otherCompanyMarket.find(
               (v) => v.type === marketOption.type
@@ -410,6 +409,94 @@ const compareMatches2 = (matchGroup, markets = [], sportName) => {
             })
           })
         })
+      } else if (marketObject.type === "OVER/UNDER-PARTICIPANT") {
+
+        const marketOptions = companyMatchMarket[mathcMarket];
+        marketOptions.forEach((marketOption) => {
+          companies.forEach((otherCompany) => {
+            const otherCompanyMarket = matchGroup[otherCompany].markets[mathcMarket];
+            if (!otherCompanyMarket) return;
+            const otherCompanyParticipantNames = otherCompanyMarket.map(v=> typeof(v.participant) === "string" ? v.participant : "" )
+            const {bestMatchIndex, bestMatch} = stringSimilarity.findBestMatch(marketOption.participant, otherCompanyParticipantNames)
+            if(bestMatch.rating < 0.55) return
+            const otherCompanyOption = otherCompanyMarket[bestMatchIndex]
+            marketOption.options.forEach(typeOption =>{
+              const otherComanySametype = otherCompanyOption.options.find(v=> v.type === typeOption.type)
+              if(!otherComanySametype) return
+              const opOver = isSurebet(typeOption.over.v, otherComanySametype.under.v);
+              const opUnder = isSurebet(typeOption.under.v, otherComanySametype.over.v);
+              if(opOver){
+                result.push({
+                  profit: getProfit(typeOption.over.v, otherComanySametype.under.v),
+                  date: new Date(),
+                  groupId,
+                  _id: utilities.createTimeId(),
+                  options: [
+                    {
+                      comapanyName: company,
+                      market: marketObject[company]?.market ? marketObject[company]?.market : marketObject.label,
+                      odds: typeOption.over.v,
+                      type: `Más de ${typeOption.type}`,
+                      oddsType: marketOption.participant,
+                      eventName: matchGroup[company].eventName,
+                      group: matchGroup[company].group,
+                      url: matchGroup[company].url,
+                      sport: matchGroup[company].sport,
+                      date_start: matchGroup[company].date_start
+                    },
+                    {
+                      comapanyName: otherCompany,
+                      market: marketObject[otherCompany]?.market ? marketObject[otherCompany]?.market : marketObject.label,
+                      odds: otherComanySametype.under.v,
+                      type: `Menos de ${otherComanySametype.type}`,
+                      oddsType: otherCompanyOption.participant,
+                      eventName: matchGroup[otherCompany].eventName,
+                      group: matchGroup[otherCompany].group,
+                      url: matchGroup[otherCompany].url,
+                      sport: matchGroup[otherCompany].sport,
+                      date_start: matchGroup[otherCompany].date_start
+                    }
+                  ]
+                })
+              }
+              if(opUnder){
+                result.push({
+                  profit: getProfit(typeOption.under.v, otherComanySametype.over.v),
+                  date: new Date(),
+                  groupId,
+                  _id: utilities.createTimeId(),
+                  options: [
+                    {
+                      comapanyName: company,
+                      market: marketObject[company]?.market ? marketObject[company]?.market : marketObject.label,
+                      odds: typeOption.under.v,
+                      type: `Menos de ${typeOption.type}`,
+                      oddsType: marketOption.participant,
+                      eventName: matchGroup[company].eventName,
+                      group: matchGroup[company].group,
+                      url: matchGroup[company].url,
+                      sport: matchGroup[company].sport,
+                      date_start: matchGroup[company].date_start
+                    },
+                    {
+                      comapanyName: otherCompany,
+                      market: marketObject[otherCompany]?.market ? marketObject[otherCompany]?.market : marketObject.label,
+                      odds: otherComanySametype.over.v,
+                      type:`Más de ${otherComanySametype.type}`,
+                      oddsType: otherCompanyOption.participant,
+                      eventName: matchGroup[otherCompany].eventName,
+                      group: matchGroup[otherCompany].group,
+                      url: matchGroup[otherCompany].url,
+                      sport: matchGroup[otherCompany].sport,
+                      date_start: matchGroup[otherCompany].date_start
+                    }
+                  ]
+                })
+              }
+            })
+          })
+        })
+
       }
     });
   });
