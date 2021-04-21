@@ -1,6 +1,12 @@
-const getSpecialData = async () => {
+const getSpecialData = async (sport="Soccer") => {
+
+    const sports = {
+        Soccer: 2000001,
+        Basketball: 2000002
+    }
+
     const url = encodeURIComponent(
-        `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetPlayers?SID=2000001&v_cache_version=1.156.4.921`
+        `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetPlayers?SID=${sports[sport]}&v_cache_version=1.156.4.921`
     );
     const response = await fetch(`https://api.allorigins.win/get?url=${url}`);
 
@@ -28,14 +34,22 @@ const getSpecialData = async () => {
             }
             copyArray[index] = {
                 ...copyArray[index],
-                [option.CAT]: true
+                [option.CAT]: option.GMID,
+                options:{
+                    ...(copyArray[index]?.options || {}),
+                    [option.CAT]: option.GMID,
+                }
             }
         })
 
         isNoInArray.forEach(data =>{
             copyArray.push({
                 ...data,
-                [option.CAT]: true
+                [option.CAT]: option.GMID,
+                options:{
+                    ...data.options,
+                    [option.CAT]: option.GMID,
+                }
             })
         })
 
@@ -49,6 +63,23 @@ const getSpecialMatch = async (specialMatchInfo) => {
 
     const dataArray = []
 
+    const options = Object.keys(specialMatchInfo.options)
+
+    for(option of options){
+        const url = encodeURIComponent(
+            `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEventsInGroupV2?GROUPID=${specialMatchInfo.id}&GROUPMARKETID=${specialMatchInfo.options[option]}&DISP=0&v_cache_version=1.156.4.921`
+        );
+        const response = await fetch(`https://api.allorigins.win/get?url=${url}`);
+    
+        if (!response.ok) throw new Error("Network response was not ok.");
+    
+        const data = await response.json();
+    
+        const groupData = JSON.parse(data.contents).D
+        dataArray.push(groupData)
+    }
+
+    /*
     if(specialMatchInfo.SCORER){
         const url = encodeURIComponent(
             `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEventsInGroupV2?GROUPID=${specialMatchInfo.id}&GROUPMARKETID=32&DISP=0&v_cache_version=1.156.4.921`
@@ -88,7 +119,8 @@ const getSpecialMatch = async (specialMatchInfo) => {
         const groupData = JSON.parse(data.contents).D
         dataArray.push(groupData)
     }
-
+    */
+    
     const results = dataArray.map(groupData => groupData.E.map(group => ({...group, MK: groupData.MK, TRANS: groupData.TRANS})))
 
     const mergeData = results.map(result => result.map(match => formatSpecialMatches(match)))
@@ -537,6 +569,28 @@ const formatBetOffer = (match, markets) => {
                 ...obj,
                 [market.name]: formatOffers
             };
+        } else if(market.type === "OVER/UNDER-PARTICIPANT"){
+            const formatOffers = betOffer.filter(v=> v.originalMarket[market.yajuego.marketId] ).map(option => { 
+                const marketOptionsArray = option.originalMarket[market.yajuego.marketId].options.map(v => {
+                    return {
+                        type: v.type,
+                        over:{
+                            v: v[market.over.yajuego].v
+                        },
+                        under:{
+                            v: v[market.under.yajuego].v
+                        }
+                    }
+                })
+                return {
+                    participant: option.participant,
+                    options: marketOptionsArray
+                }
+            })
+            return {
+                ...obj,
+                [market.name]: formatOffers
+            };
         }
 
         return obj;
@@ -557,9 +611,13 @@ const formatAllBetOfers = (matches=[], markets)=>{
 const getMatch = async (match, markets=[]) => {
     const matchData = await getMatchData(match.id)
     let specialEvets = []
+
     if(matchData.S === "Soccer"){
-        specialEvets = await getSpecialData()
+        specialEvets = await getSpecialData("Soccer")
+    } else if (matchData.S === "Basketball"){
+        specialEvets = await getSpecialData("Basketball")
     }
+
     const specialData = specialEvets.find(v => v.EVENT_NAME === matchData.DS)
     let participants = []
     if(specialData){

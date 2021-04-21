@@ -524,10 +524,6 @@
         "marketId": "estadisticas-de-jugadores",
         "G": 9123
       },
-      "yajuego":{
-        "id": "participants",
-        "marketId": "S_ANYSCORERYCARD"
-      },
       "type": "OBJECT-PARTICIPANT",
       "options": {
         "YES": {
@@ -577,10 +573,6 @@
       "xbet": {
         "marketId": "estadisticas-de-jugadores",
         "G": 9124
-      },
-      "yajuego":{
-        "id": "participants",
-        "marketId": "S_ANYSCORERYCARD"
       },
       "type": "OBJECT-PARTICIPANT",
       "options": {
@@ -632,10 +624,6 @@
         "marketId": "pts-+-rebotes-+-asistencias",
         "G": 912
       },
-      "yajuego":{
-        "id": "participants",
-        "marketId": "S_ANYSCORERYCARD"
-      },
       "type": "OVER/UNDER-PARTICIPANT",
       "over":{
           "betplay": "Over",
@@ -662,18 +650,18 @@
       },
       "yajuego":{
         "id": "participants",
-        "marketId": "S_ANYSCORERYCARD"
+        "marketId": "SB_OU"
       },
       "type": "OVER/UNDER-PARTICIPANT",
       "over":{
           "betplay": "Over",
           "xbet": 1807,
-          "yajuego": "?"
+          "yajuego": "Over"
       },
       "under":{
           "betplay": "Under",
           "xbet": 1806,
-          "yajuego": "?"
+          "yajuego": "Under"
       },
       "enable": true
     },
@@ -690,18 +678,18 @@
       },
       "yajuego":{
         "id": "participants",
-        "marketId": "S_ANYSCORERYCARD"
+        "marketId": "SB_OUAS"
       },
       "type": "OVER/UNDER-PARTICIPANT",
       "over":{
           "betplay": "Over",
           "xbet": 1491,
-          "yajuego": "?"
+          "yajuego": "Over"
       },
       "under":{
           "betplay": "Under",
           "xbet": 1492,
-          "yajuego": "?"
+          "yajuego": "Under"
       },
       "enable": true
     },
@@ -718,18 +706,46 @@
       },
       "yajuego":{
         "id": "participants",
-        "marketId": "S_ANYSCORERYCARD"
+        "marketId": "SB_OUREB"
       },
       "type": "OVER/UNDER-PARTICIPANT",
       "over":{
           "betplay": "Over",
           "xbet": 1489,
-          "yajuego": "?"
+          "yajuego": "Over"
       },
       "under":{
           "betplay": "Under",
           "xbet": 1490,
-          "yajuego": "?"
+          "yajuego": "Under"
+      },
+      "enable": true
+    },
+    {
+      "label": "Triples anotados",
+      "id": null,
+      "betplay": {
+        "id": null
+      },
+      "name": "tripleScoreByPlayer",
+      "xbet": {
+        "marketId": "triples-anotados",
+        "G": 755
+      },
+      "yajuego":{
+        "id": "participants",
+        "marketId": "SB_OU3FIELD"
+      },
+      "type": "OVER/UNDER-PARTICIPANT",
+      "over":{
+          "betplay": "Over",
+          "xbet": 1495,
+          "yajuego": "Over"
+      },
+      "under":{
+          "betplay": "Under",
+          "xbet": 1496,
+          "yajuego": "Under"
       },
       "enable": true
     }
