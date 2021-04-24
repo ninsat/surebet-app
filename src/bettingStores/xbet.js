@@ -58,18 +58,13 @@ const getEvents1Xbet2 = async () => {
   };
 
 
-  const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://1xbet.com.co/LineFeed/Get1x2_VZip?sports=1&count=1500&lng=es&tf=2200000&tz=-5&mode=4&country=1&getEmpty=true&virtualSports=true&menuSection=1%7C7')}`)
+  const response = await fetch(`https://cors-proxy-surbet.herokuapp.com/${('https://1xbet.com.co/LineFeed/Get1x2_VZip?sports=1&count=1500&lng=es&tf=2200000&tz=-5&mode=4&country=1&getEmpty=true&virtualSports=true&menuSection=1%7C7')}`)
   if (!response.ok) throw new Error('Network response was not ok.')
 
   const responseData = await response.json()
 
-  /*
-  const res = await fetch(
-    "https://cors-anywhere.herokuapp.com/https://1xbet.com.co/LineFeed/Get1x2_VZip?sports=1&count=1000&lng=es&tf=2200000&tz=-5&mode=4&country=1&getEmpty=true",
-    requestOptions
-  );
-  */
-  const data = JSON.parse(responseData.contents);
+
+  const data = responseData
   return data.Value.map((match) => ({
     id: match.CI,
     team1: match.O1,
@@ -80,7 +75,7 @@ const getEvents1Xbet2 = async () => {
     date_start: match.S * 1000,
     sport: match.SE,
     group: match.L,
-    url: `https://1xbet.com.co/es/line/${match.SE}/${(match.LI)}-${normalizeText(match.LE)}/${match.CI}-${normalizeText(match.O1E)}-${normalizeText(match.O2E || "")}/`
+    url: `https://1x-bet93432.world/es/line/${match.SE}/${(match.LI)}-${normalizeText(match.LE)}/${match.CI}-${normalizeText(match.O1E)}-${normalizeText(match.O2E || "")}/`
   }));
 };
 
@@ -92,18 +87,12 @@ const getBasketballEvents1Xbet = async () => {
   };
 
 
-  const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://1xbet.com.co/LineFeed/Get1x2_VZip?sports=3&count=1500&lng=es&tf=2200000&tz=-5&mode=4&country=1&getEmpty=true')}`)
-  if (!response.ok) throw new Error('Network response was not ok.')
+  const response = await fetch(`https://cors-proxy-surbet.herokuapp.com/${('https://1xbet.com.co/LineFeed/Get1x2_VZip?sports=3&count=1500&lng=es&tf=2200000&tz=-5&mode=4&country=1&getEmpty=true')}`)
+  
 
   const responseData = await response.json()
 
-  /*
-  const res = await fetch(
-    "https://cors-anywhere.herokuapp.com/https://1xbet.com.co/LineFeed/Get1x2_VZip?sports=1&count=1000&lng=es&tf=2200000&tz=-5&mode=4&country=1&getEmpty=true",
-    requestOptions
-  );
-  */
-  const data = JSON.parse(responseData.contents);
+  const data = responseData
   return data.Value.map((match) => ({
     id: match.CI,
     team1: match.O1,
@@ -114,7 +103,7 @@ const getBasketballEvents1Xbet = async () => {
     date_start: match.S * 1000,
     sport: match.SE,
     group: match.L,
-    url: `https://1xbet.com.co/es/line/${match.SE}/${(match.LI)}-${normalizeText(match.LE)}/${match.CI}-${normalizeText(match.O1E)}-${normalizeText(match.O2E || "")}/`
+    url: `https://1x-bet93432.world/es/line/${match.SE}/${(match.LI)}-${normalizeText(match.LE)}/${match.CI}-${normalizeText(match.O1E)}-${normalizeText(match.O2E || "")}/`
   }));
 };
 
@@ -124,18 +113,10 @@ const getTennisEvents1Xbet = async () => {
   };
 
 
-  const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://1xbet.com.co/LineFeed/Get1x2_VZip?sports=4&count=1500&lng=es&tf=2200000&tz=-5&mode=4&country=1&getEmpty=true')}`)
-  if (!response.ok) throw new Error('Network response was not ok.')
-
+  const response = await fetch(`https://cors-proxy-surbet.herokuapp.com/${('https://1xbet.com.co/LineFeed/Get1x2_VZip?sports=4&count=1500&lng=es&tf=2200000&tz=-5&mode=4&country=1&getEmpty=true')}`)
+  
   const responseData = await response.json()
-
-  /*
-  const res = await fetch(
-    "https://cors-anywhere.herokuapp.com/https://1xbet.com.co/LineFeed/Get1x2_VZip?sports=1&count=1000&lng=es&tf=2200000&tz=-5&mode=4&country=1&getEmpty=true",
-    requestOptions
-  );
-  */
-  const data = JSON.parse(responseData.contents);
+  const data = responseData;
   return data.Value.map((match) => ({
     id: match.CI,
     team1: match.O1,
@@ -146,7 +127,7 @@ const getTennisEvents1Xbet = async () => {
     date_start: match.S * 1000,
     sport: match.SE,
     group: match.L,
-    url: `https://1xbet.com.co/es/line/${match.SE}/${(match.LI)}-${normalizeText(match.LE)}/${match.CI}-${normalizeText(match.O1E)}-${normalizeText(match.O2E || "")}/`
+    url: `https://1x-bet93432.world/es/line/${match.SE}/${(match.LI)}-${normalizeText(match.LE)}/${match.CI}-${normalizeText(match.O1E)}-${normalizeText(match.O2E || "")}/`
   }));
 };
 
@@ -173,24 +154,13 @@ const getmarket = async (id) => {
     method: "GET",
     headers: myHeaders
   };
-  const url = encodeURIComponent(`https://1xbet.com.co/LineFeed/GetGameZip?id=${id}&lng=es&cfview=0&isSubGames=true&GroupEvents=true&allEventsGroupSubGames=true&countevents=1000&marketType=1`)
-  const response = await fetch(`https://api.allorigins.win/get?url=${url}`)
-
-  if (!response.ok) throw new Error('Network response was not ok.')
+  const url = (`https://1xbet.com.co/LineFeed/GetGameZip?id=${id}&lng=es&cfview=0&isSubGames=true&GroupEvents=true&allEventsGroupSubGames=true&countevents=1000&marketType=1`)
+  const response = await fetch(`https://cors-proxy-surbet.herokuapp.com/${url}`)
 
   const data = await response.json()
 
-  return JSON.parse(data.contents).Value;
+  return data.Value;
 
-  /*
-  const url = encodeURIComponent('https://1xbet.com.co/LineFeed/GetGameZip?id=89864715&lng=es&cfview=0&isSubGames=true&GroupEvents=true&allEventsGroupSubGames=true&countevents=250&marketType=1')
-  const res = await fetch(
-    `https://api.allorigins.win/get?url=${url}`,
-    requestOptions
-  );
-  const data = await res.json();
-  return JSON.parse(data.contents).Value;
-  */
 };
 
 const getBetOfferceXbet2 = async (match, markets = []) => {

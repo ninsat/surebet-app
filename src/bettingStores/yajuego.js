@@ -5,16 +5,13 @@ const getSpecialData = async (sport="Soccer") => {
         Basketball: 2000002
     }
 
-    const url = encodeURIComponent(
-        `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetPlayers?SID=${sports[sport]}&v_cache_version=1.156.4.921`
-    );
-    const response = await fetch(`https://api.allorigins.win/get?url=${url}`);
+    const url = (`https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetPlayers?SID=${sports[sport]}&v_cache_version=1.156.4.921`);
+    const response = await fetch(`https://cors-proxy-surbet.herokuapp.com/${url}`);
 
-    if (!response.ok) throw new Error("Network response was not ok.");
 
     const data = await response.json();
 
-    const matchData = JSON.parse(data.contents).D
+    const matchData = data.D
     const specialOptions = matchData.PLY
 
     const matchIds = specialOptions.reduce((arr, option)=>{
@@ -66,16 +63,13 @@ const getSpecialMatch = async (specialMatchInfo) => {
     const options = Object.keys(specialMatchInfo.options)
 
     for(option of options){
-        const url = encodeURIComponent(
-            `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEventsInGroupV2?GROUPID=${specialMatchInfo.id}&GROUPMARKETID=${specialMatchInfo.options[option]}&DISP=0&v_cache_version=1.156.4.921`
-        );
-        const response = await fetch(`https://api.allorigins.win/get?url=${url}`);
+        const url = (`https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEventsInGroupV2?GROUPID=${specialMatchInfo.id}&GROUPMARKETID=${specialMatchInfo.options[option]}&DISP=0&v_cache_version=1.156.4.921`);
+        const response = await fetch(`https://cors-proxy-surbet.herokuapp.com/${url}`);
     
-        if (!response.ok) throw new Error("Network response was not ok.");
     
         const data = await response.json();
     
-        const groupData = JSON.parse(data.contents).D
+        const groupData = data.D
         dataArray.push(groupData)
     }
 
@@ -189,16 +183,16 @@ const formatSpecialMatches = (matchData) => {
 
 
 const getMatchData = async (id) => {
-    const url = encodeURIComponent(
+    const url = (
         `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEvent?EVENTID=${id}&v_cache_version=1.156.4.915`
     );
-    const response = await fetch(`https://api.allorigins.win/get?url=${url}`);
+    const response = await fetch(`https://cors-proxy-surbet.herokuapp.com/${url}`);
 
-    if (!response.ok) throw new Error("Network response was not ok.");
+    
 
     const data = await response.json();
 
-    const matchData = JSON.parse(data.contents).D;
+    const matchData = data.D;
 
     if(!matchData.MK) return {...matchData, originalMarket:{}}
 
@@ -359,16 +353,13 @@ const formatMarketData = (maketId, match) => {
 
 
 const getGroupsIds = async (sport) => {
-    const url = encodeURIComponent(
-        `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetSports?DISP=0&v_cache_version=1.156.4.915`
-    );
-    const response = await fetch(`https://api.allorigins.win/get?url=${url}`);
+    const url = (`https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetSports?DISP=0&v_cache_version=1.156.4.915`);
+    const response = await fetch(`https://cors-proxy-surbet.herokuapp.com/${url}`);
 
-    if (!response.ok) throw new Error("Network response was not ok.");
 
     const data = await response.json();
 
-    const allSports = JSON.parse(data.contents).D.PAL;
+    const allSports = data.D.PAL;
     
     const soccerId = Object.keys(allSports).find(v => allSports[v].S_DESC === sport)
     const soccer = allSports[soccerId].SG
@@ -381,37 +372,27 @@ const getGroupsIds = async (sport) => {
 
 
 const getLeagueMatches = async (leagueId) => {
-    const url = encodeURIComponent(
-        `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEventsInGroupV2?GROUPID=${leagueId}&DISP=0&GROUPMARKETID=1&v_cache_version=1.156.4.915`
-    );
-    const response = await fetch(`https://api.allorigins.win/get?url=${url}`);
-
-    if (!response.ok) throw new Error("Network response was not ok.");
+    const url = (`https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEventsInGroupV2?GROUPID=${leagueId}&DISP=0&GROUPMARKETID=1&v_cache_version=1.156.4.915`);
+    const response = await fetch(`https://cors-proxy-surbet.herokuapp.com/${url}`);
 
     const data = await response.json();
-    return JSON.parse(data.contents).D.E
+    return data.D.E
 }
+
 const getBasketballLeagueMatches = async (leagueId) => {
-    const url = encodeURIComponent(
-        `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEventsInGroupV2?GROUPID=${leagueId}&DISP=0&GROUPMARKETID=12&v_cache_version=1.156.4.915`
-    );
-    const response = await fetch(`https://api.allorigins.win/get?url=${url}`);
-
-    if (!response.ok) throw new Error("Network response was not ok.");
+    const url = (`https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEventsInGroupV2?GROUPID=${leagueId}&DISP=0&GROUPMARKETID=12&v_cache_version=1.156.4.915`);
+    const response = await fetch(`https://cors-proxy-surbet.herokuapp.com/${url}`);
 
     const data = await response.json();
-    return JSON.parse(data.contents).D.E
+    return data.D.E
 }
-const getTennisLeagueMatches = async (leagueId) => {
-    const url = encodeURIComponent(
-        `https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEventsInGroupV2?GROUPID=${leagueId}&DISP=0&GROUPMARKETID=61&v_cache_version=1.156.4.915`
-    );
-    const response = await fetch(`https://api.allorigins.win/get?url=${url}`);
 
-    if (!response.ok) throw new Error("Network response was not ok.");
+const getTennisLeagueMatches = async (leagueId) => {
+    const url = (`https://sports.yajuego.co/desktop/feapi/PalimpsestAjax/GetEventsInGroupV2?GROUPID=${leagueId}&DISP=0&GROUPMARKETID=61&v_cache_version=1.156.4.915`);
+    const response = await fetch(`https://cors-proxy-surbet.herokuapp.com/${url}`);
 
     const data = await response.json();
-    return JSON.parse(data.contents).D.E
+    return data.D.E
 }
 
 

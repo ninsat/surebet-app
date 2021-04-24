@@ -33,12 +33,12 @@ const testXbet = async () => {
   console.log("Empezo esto!");
   //const data = await xbet.getEvents1Xbet2({ id: 89864715 }, markets);
   //const data = await betplay.getMatch({id: 1007391581}, basketBallMarkets)
-  const data = await yajuego.getMatch({id: "4111738"}, basketBallMarkets)
+  const data = await yajuego.getMatch({id: "4105039"}, markets)
   
   console.log(data);
 };
 
-//testXbet()
+testXbet()
 
 // Segundo intento de conseguir los matches
 const secondMain = async (cb) => {
