@@ -225,7 +225,8 @@
         "G": 17
       },
       "yajuego":{
-        "id": "9"
+        "id": "9",
+        "liveId": "LIVES_OUCORNER"
       },
       "type": "OVER/UNDER",
       "enable": true
@@ -240,7 +241,8 @@
         "G": 15
       },
       "yajuego":{
-        "id": "2889"
+        "id": "2889",
+        "liveId": "LIVES_OUCORNERSHOME"
       },
       "type": "OVER/UNDER",
       "enable": true
@@ -255,7 +257,8 @@
         "G": 62
       },
       "yajuego":{
-        "id": "2890"
+        "id": "2890",
+        "liveId": "LIVES_OUCORNERSAWAY"
       },
       "type": "OVER/UNDER",
       "enable": true
@@ -270,7 +273,8 @@
         "G": 17
       },
       "yajuego":{
-        "id": "94"
+        "id": "94",
+        "liveId": "LIVES_OU"
       },
       "type": "OVER/UNDER",
       "enable": true
@@ -285,7 +289,8 @@
         "G": 15
       },
       "yajuego":{
-        "id": "48"
+        "id": "48",
+        "liveId": "LIVES_OUHOME"
       },
       "type": "OVER/UNDER",
       "enable": true
@@ -300,7 +305,8 @@
         "G": 62
       },
       "yajuego":{
-        "id": "47"
+        "id": "47",
+        "liveId": "LIVES_OUAWAY"
       },
       "type": "OVER/UNDER",
       "enable": true
@@ -315,7 +321,8 @@
         "G": 99
       },
       "yajuego":{
-        "id": "90"
+        "id": "90",
+        "liveId": "LIVES_AOU"
       },
       "type": "OVER/UNDER",
       "enable": true
@@ -488,7 +495,8 @@
         "away": "team2"
       },
       "yajuego":{
-        "id": "89"
+        "id": "89",
+        "liveId": "LIVES_12HND"
       },
       "type": "HANDICAP",
       "enable": true
@@ -529,7 +537,8 @@
         "G": 1
       },
       "yajuego":{
-        "id": "353"
+        "id": "353",
+        "liveId": "LIVES_1X2"
       },
       "type": "OBJECT",
       "options": {
@@ -599,7 +608,8 @@
         "G": 8
       },
       "yajuego":{
-        "id": "85"
+        "id": "85",
+        "liveId": "LIVES_DC"
       },
       "type": "OBJECT",
       "options": {
@@ -669,7 +679,8 @@
         "G": 19
       },
       "yajuego":{
-        "id": "82"
+        "id": "82",
+        "liveId": "LIVES_GGNG"
       },
       "type": "OBJECT",
       "options": {

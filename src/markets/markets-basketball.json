@@ -9,7 +9,8 @@
         "G": 17
       },
       "yajuego":{
-        "id": "141"
+        "id": "141",
+        "liveId": "LIVEB_OUOT"
       },
       "type": "OVER/UNDER",
       "enable": true
@@ -24,7 +25,8 @@
         "G": 15
       },
       "yajuego":{
-        "id": "158"
+        "id": "158",
+        "liveId": "LIVEB_OUHOME"
       },
       "type": "OVER/UNDER",
       "enable": true
@@ -39,7 +41,8 @@
         "G": 62
       },
       "yajuego":{
-        "id": "157"
+        "id": "157",
+        "liveId": "LIVEB_OUAWAY"
       },
       "type": "OVER/UNDER",
       "enable": true
@@ -66,7 +69,8 @@
         "G": 17
       },
       "yajuego":{
-        "id": "167"
+        "id": "167",
+        "liveId": "LIVEB_OU1P"
       },
       "type": "OVER/UNDER",
       "enable": true
@@ -80,6 +84,9 @@
         "marketId": "2-cuarto",
         "G": 17
       },
+      "yajuego":{
+        "liveId": "LIVEB_OU2P"
+      },
       "type": "OVER/UNDER",
       "enable": true
     },
@@ -92,6 +99,9 @@
         "marketId": "3-cuarto",
         "G": 17
       },
+      "yajuego": {
+        "liveId": "LIVEB_OU3P"
+      },
       "type": "OVER/UNDER",
       "enable": true
     },
@@ -103,6 +113,9 @@
       "xbet": {
         "marketId": "4-cuarto",
         "G": 17
+      },
+      "yajuego": {
+        "liveId": "LIVEB_OU4P"
       },
       "type": "OVER/UNDER",
       "enable": true
@@ -118,7 +131,8 @@
       },
       "yajuego":{
         "id": "153",
-        "market": "2a mitad - Totales"
+        "market": "2a mitad - Totales",
+        "liveId": "LIVEB_OU2T"
       },
       "type": "OVER/UNDER",
       "enable": true
@@ -188,7 +202,8 @@
       },
       "yajuego":{
         "id": "140",
-        "market": "Spreads de puntos"
+        "market": "Spreads de puntos",
+        "liveId": "LIVEB_12HNDOT"
       },
       "type": "HANDICAP",
       "enable": true
@@ -321,7 +336,8 @@
         "G": 101
       },
       "yajuego":{
-        "id": "318"
+        "id": "318",
+        "liveId": "LIVEB_12"
       },
       "type": "OBJECT",
       "options": {
@@ -370,7 +386,8 @@
       },
       "name": "DrawNoBet1stHalf",
       "yajuego":{
-        "id": "154"
+        "id": "154",
+        "liveId": "LIVEB_DNB1T"
       },
       "type": "OBJECT",
       "options": {
@@ -472,7 +489,8 @@
       },
       "name": "DrawNoBet2stHalf",
       "yajuego":{
-        "id": "156"
+        "id": "156",
+        "liveId": "LIVEB_DNB2T"
       },
       "type": "OBJECT",
       "options": {

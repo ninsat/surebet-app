@@ -216,15 +216,12 @@ const getMatchData = async (id) => {
     );
     const response = await fetch(`https://cors-proxy-surbet.herokuapp.com/${url}`);
 
-    
-
     const data = await response.json();
 
     const matchData = data.D;
 
     if(!matchData.MK) return {...matchData, originalMarket:{}}
 
-    
     const originalMarket = matchData.MK.reduce((obj, { MARKETID, DS, ID }) => {
         return {
             ...obj,
@@ -241,7 +238,34 @@ const getMatchData = async (id) => {
         ...matchData,
         originalMarket
     }
+}
 
+const getLiveMatchData = async (id) => {
+    const url = (`https://sports.yajuego.co/desktop/feapi/PalimpsestLiveAjax/GetLiveEventV2?EVENTID=${id}&ISMKT=1&v_cache_version=1.156.4.921`);
+    const response = await fetch(`https://cors-proxy-surbet.herokuapp.com/${url}`);
+
+    const data = await response.json();
+
+    const matchData = data.D;
+
+    if(!matchData.MKT) return {...matchData, originalMarket:{}}
+
+    const originalMarket = Object.values(matchData.MKT).reduce((obj, { M_LABEL, ID }) => {
+        return {
+            ...obj,
+            [ID]: {
+                id: ID,
+                name: M_LABEL,
+                nameEs: matchData.TRANS[`M#${ID}`]?.NAME,
+                options: formatLiveMarketData(ID, matchData)
+            }
+
+        }
+    }, {})
+    return {
+        ...matchData,
+        originalMarket
+    }
 }
 
 const getBetOfferceYajuego = async (match, markets = []) => {
@@ -363,6 +387,134 @@ const formatMarketData = (maketId, match) => {
                 variant,
                 ID: v,
                 odds: parseFloat(match.O[v])
+            };
+        });
+
+        const formatMarket = marketObject.SGNK.reduce((obj, option, index) => {
+            return {
+                ...obj,
+                [marketObject.SGN[index]]: {
+                    v: formatOptions.find((v) => v.variant === option)?.odds
+                }
+            };
+        }, {});
+
+        return formatMarket;
+    }
+};
+
+
+const formatLiveMarketData = (maketId, match) => {
+    const handicapsMarketsIds = ["T_HND"]
+    const markets = Object.values(match.MKT);
+    const marketObject = markets.find((v) => v.ID === maketId);
+
+    if (!marketObject) return {};
+
+    const options = marketObject.SGNK.reduce((arr, option) => {
+        const expresionRegular = new RegExp(
+            `${marketObject.ID}(@-?[0-9]+)?(\\.[0-9]+)?_${option}$`,
+            "g"
+        );
+        const odds = Object.keys(match.O).filter((v) => expresionRegular.test(v));
+        return [...arr, ...odds];
+    }, []);
+
+    //reviso si es tipo over/under o handicap
+    const typeOverUder = options.reduce((type, option) => {
+        return type && /@-?[0-9]+(\.[0-9]+)?/g.test(option);
+    }, true);
+    const typeHandicap = options.reduce((type, option) => {
+        return type && /@-?[0-9]+(\.[0-9]+)?.*H$/g.test(option);
+    }, true);
+
+    const typeHandicapExeptions = handicapsMarketsIds.reduce((result, option)=> result || (option === marketObject.ID), false)
+
+    if (typeHandicap || typeHandicapExeptions) {
+        const formatOptions = options.map((v) => {
+            const [type, variant] = v.replace(marketObject.ID + "@", "").split("_");
+            let formatType = parseFloat(type);
+            if (variant !== marketObject.SGNK[0]) formatType = formatType * -1;
+            return {
+                type: formatType,
+                variant,
+                ID: v,
+                odds: match.O[v].v
+            };
+        });
+
+
+
+        const formatMarket = formatOptions.reduce((arrMarket, option) => {
+            const isInTheArray =
+                arrMarket.findIndex((v) => v.type === option.type) !== -1;
+
+            if (isInTheArray) return arrMarket;
+
+            const mergeObject = marketObject.SGNK.reduce(
+                (obj, variant, index) => {
+                    let odds = formatOptions
+                        .filter((v) => v.type === option.type)
+                        .find((v) => v.variant === variant)?.odds;
+                    if (variant === option.variant) odds = option.odds;
+                    return {
+                        ...obj,
+                        [marketObject.SGN[index]]: {
+                            v: odds
+                        }
+                    };
+                },
+                { type: parseFloat(option.type) }
+            );
+
+            return [...arrMarket, mergeObject];
+        }, []);
+
+        return formatMarket;
+    } else if (typeOverUder) {
+        const formatOptions = options.map((v) => {
+            const [type, variant] = v.replace(marketObject.ID + "@", "").split("_");
+            return {
+                type: parseFloat(type),
+                variant,
+                ID: v,
+                odds: match.O[v].v
+            };
+        });
+
+        const formatMarket = formatOptions.reduce((arrMarket, option) => {
+            const isInTheArray =
+                arrMarket.findIndex((v) => v.type === option.type) !== -1;
+            if (isInTheArray) return arrMarket;
+            const sameTypeOptions = formatOptions.filter(
+                (v) => v.type === option.type
+            );
+
+            const mergeObject = marketObject.SGNK.reduce(
+                (obj, variant, index) => {
+                    return {
+                        ...obj,
+                        [marketObject.SGN[index]]: {
+                            v: sameTypeOptions.find((v) => v.variant === variant)?.odds
+                        }
+                    };
+                },
+                { type: parseFloat(option.type) }
+            );
+
+            return [...arrMarket, mergeObject];
+        }, []);
+
+        return formatMarket;
+    } else {
+        //Es un tipo OPTION
+        const formatOptions = options.map((v) => {
+            const variant = v.replace(marketObject.ID + "_", "");
+
+            return {
+                variant,
+                ID: v,
+                odds: match.O[v].v
             };
         });
 
@@ -504,10 +656,10 @@ const getAllTennisEvents = async () => {
 }
 
 
-const formatBetOffer = (match, markets) => {
+const formatBetOffer = (match, markets, live=false) => {
     return markets.reduce((obj, market) => {
-
-        const betOffer = match.originalMarket[market.yajuego?.id]
+        const actualMarketId = live? market.yajuego?.liveId : market.yajuego?.id
+        const betOffer = match.originalMarket[actualMarketId]
         if (!betOffer) return obj;
 
         if (market.type === "OVER/UNDER") {
@@ -533,7 +685,7 @@ const formatBetOffer = (match, markets) => {
                 return {
                     ...merketObj,
                     [option]: {
-                        v: betOffer.options[market.options[option].yajuego.name].v
+                        v: betOffer.options[market.options[option].yajuego.name]?.v
                     }
                 };
             }, {});
@@ -605,6 +757,8 @@ const formatBetOffer = (match, markets) => {
 }
 
 
+
+
 const formatAllBetOfers = (matches=[], markets)=>{
     return matches.map(match=>{
         return{
@@ -645,6 +799,17 @@ const getMatch = async (match, markets=[]) => {
 }
 
 
+const getLiveMatch = async (match, markets=[]) => {
+    const matchData = await getLiveMatchData(match.id)
+    console.log(matchData)
+    const formatMarket = formatBetOffer(matchData, markets, true)
+    return {
+        ...match,
+        markets: formatMarket
+    }
+}
+
+
 export default {
     getAllEvents,
     getMatchData,
@@ -656,5 +821,6 @@ export default {
     getAllTennisEvents,
     getSpecialData,
     getSpecialMatch,
-    getLiveEvents
+    getLiveEvents,
+    getLiveMatch
 }
