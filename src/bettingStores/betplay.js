@@ -128,6 +128,17 @@ const getEventsBetPlay = async () => {
 };
 
 
+const getLiveEvents = async (sport="football") =>{
+   const sports = {
+      football: "FOOTBALL",
+      basketball: "BASKETBALL",
+      tennis: "TENNIS"
+   }
+   const res = await fetch(`https://us1-api.aws.kambicdn.com/offering/v2018/bp/event/live/open.json?lang=es_ES&market=CO&client_id=2&channel_id=1&ncid=${new Date().getTime()}`)
+   const data = await res.json()
+   return data.liveEvents.filter(v => v.event.sport === sports[sport])
+}
+
 
 
 const getBasketballEventsBetPlay = async () => {
@@ -644,5 +655,6 @@ export default {
   getMatch,
   getBasketballEventsBetPlay,
   getAllEventsBasketBallFull,
-  getAllEventsTennisFull
+  getAllEventsTennisFull,
+  getLiveEvents
 };

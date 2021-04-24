@@ -178,9 +178,37 @@ const formatSpecialMatches = (matchData) => {
 
 
 
-//----------------------------------------------------------------------------------------------
+//-------------------------------------------LIVE---------------------------------------------------
+
+const getLiveEvents = async (sport="football") =>{
+    const sports = {
+        football: 3000001,
+        basketball: 3000002,
+        tennis: 3000005
+    }
+    const url = `https://sports.yajuego.co/desktop/feapi/PalimpsestLiveAjax/GetLiveEventsV3?SID=${sports[sport]}&v_cache_version=1.156.4.921`
+    const res = await fetch(`https://cors-proxy-surbet.herokuapp.com/${url}`)
+    const data = await res.json()
+    return Object.keys(data.D.E).map(v=> data.D.E[v]).map(match => {
+        const [team1, team2] = match.DS.split("||v||").map(v => v.replace("|", ""))
+        return {
+            ...match,
+            id: match.ID,
+            team1,
+            team1En: team1,
+            team2,
+            team2En: team2,
+            eventName: `${team1} - ${team2}`,
+            date_start: new Date(match.STARTDATE).getTime(),
+            sport,
+            group: match.GN,
+            url: `https://sports.yajuego.co/liveEvent/${match.ID}`
+        }
+    })
+}
 
 
+//----------------------------------------------------------------
 
 const getMatchData = async (id) => {
     const url = (
@@ -476,8 +504,6 @@ const getAllTennisEvents = async () => {
 }
 
 
-
-
 const formatBetOffer = (match, markets) => {
     return markets.reduce((obj, market) => {
 
@@ -579,7 +605,6 @@ const formatBetOffer = (match, markets) => {
 }
 
 
-
 const formatAllBetOfers = (matches=[], markets)=>{
     return matches.map(match=>{
         return{
@@ -630,5 +655,6 @@ export default {
     getAllBasketballEvents,
     getAllTennisEvents,
     getSpecialData,
-    getSpecialMatch
+    getSpecialMatch,
+    getLiveEvents
 }
