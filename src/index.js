@@ -33,7 +33,7 @@ const testXbet = async () => {
   console.log("Empezo esto!");
   //const data = await xbet.getEvents1Xbet2({ id: 89864715 }, markets);
   //const data = await betplay.getMatch({id: 1007391581}, basketBallMarkets)
-  const data = await yajuego.getLiveEvents("football")
+  const data = await betplay.getLiveEvents()
   
   console.log(data);
 };

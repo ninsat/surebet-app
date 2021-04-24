@@ -32,6 +32,13 @@ const getBetOffersBetPlay = async (id) => {
   return data.betOffers;
 };
 
+
+const getLiveBetOffersBetPlay = async (id) => {
+  const res = await fetch(`https://us1-api.aws.kambicdn.com/offering/v2018/bp/betoffer/event/${id}.json?lang=es_ES&market=CO&client_id=2&channel_id=1&ncid=${new Date().getTime()}&includeParticipants=true`);
+  const data = await res.json();
+  return data.betOffers;
+};
+
 const addAllBetOffers = (matches = []) => {
   let index = 0;
   const resultArray = [];
@@ -128,15 +135,27 @@ const getEventsBetPlay = async () => {
 };
 
 
-const getLiveEvents = async (sport="football") =>{
-   const sports = {
-      football: "FOOTBALL",
-      basketball: "BASKETBALL",
-      tennis: "TENNIS"
-   }
-   const res = await fetch(`https://us1-api.aws.kambicdn.com/offering/v2018/bp/event/live/open.json?lang=es_ES&market=CO&client_id=2&channel_id=1&ncid=${new Date().getTime()}`)
-   const data = await res.json()
-   return data.liveEvents.filter(v => v.event.sport === sports[sport])
+const getLiveEvents = async (sport = "football") => {
+  const sports = {
+    football: "FOOTBALL",
+    basketball: "BASKETBALL",
+    tennis: "TENNIS"
+  }
+  const res = await fetch(`https://us1-api.aws.kambicdn.com/offering/v2018/bp/event/live/open.json?lang=es_ES&market=CO&client_id=2&channel_id=1&ncid=${new Date().getTime()}`)
+  const data = await res.json()
+  return data.liveEvents.filter(v => v.event.sport === sports[sport]).map(match => ({
+    ...match,
+    id: match.event.id,
+    team1: match.event.homeName,
+    team1En: match.event.englishName.split(" " + match.event.nameDelimiter + " ").map(v => v.trim())[0],
+    team2: match.event.awayName ? match.event.awayName : "",
+    team2En: match.event.englishName.split(" " + match.event.nameDelimiter + " ").map(v => v.trim())[1],
+    eventName: match.event.name,
+    date_start: new Date(match.event.start).getTime(),
+    sport: match.event.sport,
+    group: match.event.group,
+    url: `https://www.rushbet.co/?page=sportsbook#event/live/${match.event.id}`
+  }));
 }
 
 
@@ -580,7 +599,7 @@ const formatBetOffer3 = (match, markets) => {
         const isInTheArray = arrayMarket.findIndex(v => v.participant === option.participant)
         if (isInTheArray !== -1) return arrayMarket
         const sameParticipant = formatData.filter(v => v.participant === option.participant)
-      
+
         return [...arrayMarket, {
           participant: option.participant,
           options: sameParticipant.map(data => ({
@@ -642,6 +661,14 @@ const getMatch = async (match, markets) => {
   return { ...matchData, markets: marketsData }
 }
 
+
+const getLiveMatch = async (match, markets) => {
+  const betOffers = await getLiveBetOffersBetPlay(match.id);
+  const matchData = { ...match, betOffers }
+  const marketsData = formatBetOffer3(matchData, markets)
+  return { ...matchData, markets: marketsData }
+}
+
 export default {
   addAllBetOffers,
   formatBetsMarkets,
@@ -656,5 +683,6 @@ export default {
   getBasketballEventsBetPlay,
   getAllEventsBasketBallFull,
   getAllEventsTennisFull,
-  getLiveEvents
+  getLiveEvents,
+  getLiveMatch
 };

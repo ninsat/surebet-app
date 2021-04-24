@@ -158,7 +158,7 @@ const getTennisEvents1Xbet = async () => {
 
 
 
-const getmarket = async (id) => {
+const getmarket = async (id, live=false) => {
   const myHeaders = new Headers();
   myHeaders.append("authority", "1xbet.com.co");
   myHeaders.append(
@@ -179,7 +179,7 @@ const getmarket = async (id) => {
     method: "GET",
     headers: myHeaders
   };
-  const url = (`https://1xbet.com.co/LineFeed/GetGameZip?id=${id}&lng=es&cfview=0&isSubGames=true&GroupEvents=true&allEventsGroupSubGames=true&countevents=1000&marketType=1`)
+  const url = (`https://1xbet.com.co/${live? "LiveFeed":"LineFeed"}/GetGameZip?id=${id}&lng=es&cfview=0&isSubGames=true&GroupEvents=true&allEventsGroupSubGames=true&countevents=1000&marketType=1`)
   const response = await fetch(`https://cors-proxy-surbet.herokuapp.com/${url}`)
 
   const data = await response.json()
@@ -188,9 +188,9 @@ const getmarket = async (id) => {
 
 };
 
-const getBetOfferceXbet2 = async (match, markets = []) => {
+const getBetOfferceXbet2 = async (match, markets = [], live=false) => {
   //consigo el mercado principal que es el que contiene los ids de los demas mercados
-  const mainMarket = await getmarket(match.id);
+  const mainMarket = await getmarket(match.id, live);
 
   if (!mainMarket) {
     return {
@@ -223,7 +223,7 @@ const getBetOfferceXbet2 = async (match, markets = []) => {
   );
 
   //creo las promesas para traerme todos los mercados
-  const marketPromises = filterMarkets.map((m) => getmarket(m.id));
+  const marketPromises = filterMarkets.map((m) => getmarket(m.id, live));
 
   //consigo todos los mercados
   const fullMarkets = await Promise.all(marketPromises);
@@ -381,12 +381,213 @@ const getBetOfferceXbet2 = async (match, markets = []) => {
     markets: formatedMarkets
   };
 };
+const getLiveBetOfferceXbet2 = async (match, markets = []) => {
+  //consigo el mercado principal que es el que contiene los ids de los demas mercados
+  const mainMarket = await getmarket(match.id, true);
+
+  if (!mainMarket) {
+    return {
+      ...match,
+      markets: {}
+    };
+  }
+
+  if (!mainMarket.SG) {
+    mainMarket.SG = []
+  }
+  //mapeo el mercado para que me quden los ids de los mercdos con los nombres
+  //para poder identificarlos
+  //ejemplo tiros-entre-los-tres-palos
+
+  const allMarkets = mainMarket.SG.map((m) => ({
+    id: m.I,
+    label: (m.TG ? m.TG : "") + (m.PN ? ` ${m.PN}` : ""),
+    textId: ((m.TG ? m.TG : "") + (m.PN ? ` ${m.PN}` : ""))
+      .trim()
+      .replaceAll(" ", "-")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+  }));
+
+  //filtro solo los mercados que me interesan que estan en el archivo markets.json
+  const filterMarkets = allMarkets.filter(
+    (m) => markets.findIndex((v) => v.xbet?.marketId === m.textId) >= 0
+  );
+
+  //creo las promesas para traerme todos los mercados
+  const marketPromises = filterMarkets.map((m) => getmarket(m.id, true));
+
+  //consigo todos los mercados
+  const fullMarkets = await Promise.all(marketPromises);
+
+  //mezvlo los mercados con el partido, ya esta listo para darle el mismo formato
+  //que en betplay, ahora si empieza lo bueno
+  const readyToFormat = filterMarkets.reduce(
+    (obj, market) => {
+      return {
+        ...obj,
+        [market.textId]: fullMarkets.find((v) => v?.I === market.id).GE
+      };
+    },
+    { main: mainMarket.GE }
+  );
+
+  //formatear los datos con los mercados que se especifican en market.json
+  const formatedMarkets = markets.reduce((obj, market) => {
+    const marketObject = readyToFormat[market.xbet?.marketId];
+    if (!marketObject) return obj;
+    const actualMarket = marketObject.find((v) => v.G === market.xbet.G);
+
+    if (!actualMarket) return obj;
+
+    if (market.type === "OVER/UNDER") {
+      const actualMarketFormated = actualMarket.E[0].map((odd) => {
+        return {
+          type: odd.P,
+          over: {
+            v: odd.C
+          },
+          under: {
+            v: actualMarket.E[1].find((v) => v.P === odd.P).C
+          }
+        };
+      });
+
+      return {
+        ...obj,
+        [market.name]: actualMarketFormated
+      };
+    } else if (market.type === "OBJECT") {
+      const options = Object.keys(market.options);
+      const actualMarketFormated = options.reduce((marketObject, option) => {
+        return {
+          ...marketObject,
+          [option]: {
+            v: actualMarket.E.find(
+              (v) =>
+                v.findIndex((op) => op.T === market.options[option].xbet.T) >= 0
+            )?.find((op) => op.T === market.options[option].xbet.T).C
+          }
+        };
+      }, {});
+      return {
+        ...obj,
+        [market.name]: actualMarketFormated
+      };
+    } else if (market.type === "HANDICAP") {
+      //aqui va el algoritmo para formatear los datos del handicap en 1Xbet
+      const outcomes = actualMarket.E.reduce((arr, option) => [...arr, ...option], [])
+      const actualMarketFormated = outcomes.reduce((marketObject, option) => {
+        const isLineOption = marketObject.findIndex(v => v.type === (option.P || 0)) !== -1;
+        if (isLineOption) return marketObject
+        const actualLines = outcomes.filter(v => v.P === option.P)
+        const homeOdds = actualLines.find(v => v.T === market.xbet.home)?.C
+        const awayOdds = actualLines.find(v => v.T === market.xbet.away)?.C
+        return [...marketObject, {
+          type: (option.P || 0),
+          home: {
+            v: homeOdds
+          },
+          away: {
+            v: awayOdds
+          }
+        }]
+      }, [])
+
+      return {
+        ...obj,
+        [market.name]: actualMarketFormated
+      };
+
+    } else if (market.type === "OBJECT-PARTICIPANT") {
+      //aqui va el algoritmo para formatear los mercados con participantes
+      // ejemplo: Pepito Marca YES/NO
+      const outcomes = actualMarket.E.reduce((arr, option) => [...arr, ...option], [])
+      const actualMarketFormated = outcomes.reduce((marketObject, option) => {
+        if (!option.PL) return marketObject
+        const isLineOption = marketObject.findIndex(v => v.participant === option.PL.N) !== -1;
+        if (isLineOption) return marketObject
+        const actualParticipants = outcomes.filter(v => v.PL?.N === option.PL.N)
+        const optionObject = Object.keys(market.options).reduce((mObj, marketOption) => {
+          return {
+            ...mObj,
+            [marketOption]: {
+              v: actualParticipants.find(v => v.T === market.options[marketOption].xbet.T)?.C
+            }
+          }
+        }, {})
+
+        return [...marketObject, {
+          participant: option.PL?.N,
+          ...optionObject
+        }]
+      }, [])
+
+      return {
+        ...obj,
+        [market.name]: actualMarketFormated
+      };
+
+    } else if (market.type === "OVER/UNDER-PARTICIPANT") {
+      const outcomes = actualMarket.E.reduce((arr, option) => [...arr, ...option], [])
+      const actualMarketFormated = outcomes.reduce((marketObject, option) => {
+        if (!option.PL) return marketObject
+        const isLineOption = marketObject.findIndex(v => v.participant === option.PL.N) !== -1;
+        if (isLineOption) return marketObject
+        const actualParticipants = outcomes.filter(v => v.PL?.N === option.PL.N)
+
+        const optionArray = actualParticipants.reduce((opArray, option)=>{
+            const isInArray = opArray.findIndex(v => v.type === option.P) !== -1;
+            if(isInArray) return opArray
+            const sameType = actualParticipants.filter(v => v.P === option.P)
+            const overOdds = sameType.find(v=> v.T === market.over.xbet)?.C
+            const underOdds = sameType.find(v=> v.T === market.under.xbet)?.C
+            return[...opArray,{
+              type: option.P,
+              over:{
+                v: overOdds
+              },
+              under:{
+                v: underOdds
+              }
+            }]
+        },[])
+
+        return [...marketObject, {
+          participant: option.PL?.N,
+          options: optionArray
+        }]
+      }, [])
+
+      return {
+        ...obj,
+        [market.name]: actualMarketFormated
+      };
+
+    }
+    return obj;
+  }, {});
+
+  return {
+    ...match,
+    markets: formatedMarkets
+  };
+};
 
 
 const getMatch = async (match, markets) => {
   const data = await getBetOfferceXbet2(match, markets)
   return data
 }
+
+
+const getLiveMatch = async (match, markets) => {
+  const data = await getLiveBetOfferceXbet2(match, markets, true)
+  return data
+}
+
+
 
 export default {
   getEvents1Xbet,
@@ -397,5 +598,6 @@ export default {
   getMatch,
   getBasketballEvents1Xbet,
   getTennisEvents1Xbet,
-  getLiveEvents
+  getLiveEvents,
+  getLiveMatch
 };
