@@ -27,18 +27,20 @@ import xbet from './bettingStores/xbet.js';
 import yajuego from './bettingStores/yajuego.js';
 
 
+import mainFlow from './libs/mainFlow'
 
 
 const testXbet = async () => {
   console.log("Empezo esto!");
   //const data = await xbet.getEvents1Xbet2({ id: 89864715 }, markets);
   //const data = await betplay.getMatch({id: 1007391581}, basketBallMarkets)
-  const data = await yajuego.getLiveMatch({id: "4141653"}, basketBallMarkets)
+  //const data = await yajuego.getLiveMatch({id: "4141653"}, basketBallMarkets)
+  const data = await yajuego.getLiveEvents("football")
   
   console.log(data);
 };
 
-
+mainFlow.getLiveSurebets()
 //testXbet()
 
 // Segundo intento de conseguir los matches
