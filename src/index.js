@@ -40,7 +40,7 @@ const testXbet = async () => {
   console.log(data);
 };
 
-mainFlow.getLiveSurebets()
+//mainFlow.getLiveSurebets()
 //testXbet()
 
 // Segundo intento de conseguir los matches
@@ -364,11 +364,17 @@ const App = (props) => {
   })
 
   const handleClick = async () => {
+  
     setDisabledActions(true)
     await testMatch(bookMarkets,sports, setSurebets, (loadObject) => {
       setLoad(loadObject)
     },false)
     setDisabledActions(false)
+  
+    //setSurebets([])
+    //await mainFlow.getLiveSurebets((surebetsData)=>{
+    //    setSurebets(v => [...surebetsData, ...v])
+    //})
   }
 
  

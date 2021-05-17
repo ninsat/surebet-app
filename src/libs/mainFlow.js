@@ -15,7 +15,7 @@ import surebets from "./surebets"
 
 
 
-const getLiveSurebets = async () => {
+const getLiveSurebets = async (cb) => {
     const bookMarkets = {
         betplay: {
             getMatch: betplay.getLiveMatch,
@@ -36,12 +36,12 @@ const getLiveSurebets = async () => {
 
     const sports = {
         football: {
-            active: true,
+            active: false,
             market: footballMarket,
             name: "Futbol"
         },
         basketball: {
-            active: false,
+            active: true,
             market: basketballMarkets,
             name: "Baloncesto"
         },
@@ -101,7 +101,7 @@ const getLiveSurebets = async () => {
           console.log("YA")
     
           if(!surebetsData) continue
-          console.log("hay Surbet")
+          cb && cb(surebetsData)
       }
     }
 
